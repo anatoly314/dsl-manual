@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Строение словаря DSL</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="page_styles.css" rel="stylesheet" type="text/css"/>
+
+  
+
+
+<link href="calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../index.html">Справочник по DSL
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Unknown
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="create.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="entry.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+<div id="header" class="calibre7">Справочник по DSL</div>
+<div id="main" class="calibre8">
+<h1 class="calibre9">Строение словаря DSL</h1>
+<p class="content"><img src="line.png" class="calibre10"/></p>
+<p class="content"><a href="#main" class="content1 pcalibre">Общие сведения</a></p>
+<p class="content"><a href="#names" class="content1 pcalibre">Наименование файлов словаря</a></p>
+<p class="content"><a href="#dsl" class="content1 pcalibre">Файл основного текста</a></p>
+<p class="content"><a href="#ann" class="content1 pcalibre">Файл аннотации</a></p>
+<p class="content"><a href="#bmp" class="content1 pcalibre">Иконка</a></p>
+<p class="content"><a href="#abrv" class="content1 pcalibre">Файл аббревиатур</a></p>
+<p class="content"><img src="line.png" class="calibre10"/></p>
+<a name="main" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Общие сведения</h2>
+<p class="calibre13">Словарь в формате DSL – это электронный словарь, состоящий из нескольких отдельных файлов, как правило четырёх: основного текста, аннотации, иконки и списка аббревиатур. Имена файлов должны быть одинаковыми, за исключением расширений. Таковой является основная, базовая комплектация словаря, из которой, впрочем, только основной текст является обязательной частью, а остальные три могут не использоваться.</p>
+<p class="calibre13">Словарь DSL нельзя подключить к программе ABBYY Lingvo непосредственно, для этого его нужно преобразовать в словарь LSD. Процесс преобразования называется компиляцией. При компиляции данные из исходных файлов объединяются, сжимаются, кодируются и помещаются в один результирующий контейнер – файл <span class="code_names">*.lsd</span>.</p>
+<p class="calibre13">Дополнительно DSL словарь может содержать иллюстрации, звуковые и видео материалы. Файлы мультимедиа, соответствующие этому содержимому, именуются свободно и располагаются в одной папке с основными файлами. Чтобы медиа-файлы отобразились в результирующем словаре LSD, с ними нужно поступить одним из двух следующих способов.</p>
+<ol class="calibre17">
+<li class="calibre18">Их можно упаковать внутрь контейнера LSD – для этого во время компиляции они должны находиться рядом с файлом основного текста. Компилятор считывает имена медиа-файлов в тэгах мультимедиа, проверяет их наличие в папке со словарём, и всякий раз, когда не находит, сообщает об этом в специальном отчёте <span class="code_names">*.dde</span>.</li>
+<li class="calibre18">Если результирующий LSD был откомпилирован без файлов мультимедиа, их необходимо будет разместить рядом с LSD в одной папке – только тогда они станут доступны для просмотра в Lingvo.</li>
+</ol>
+<p class="calibre13">Программа GoldenDict работает по-другому: к ней словари DSL можно подключать напрямую, без дополнительных преобразований. Мультимедиа файлы при этом необходимо упаковывать в отдельный zip-архив, имя которого должно повторять имена других файлов словаря с прибавлением окончания <span class="code_names">*.dsl.files.zip</span>. Например, <span class="code_names">rus-rus_encyclopedia_we.dsl.files.zip</span>.</p>
+<p class="calibre13">Далее в настоящем разделе собраны сведения о правилах создания и устройстве каждого из четырёх файлов DSL словаря. Часть этих сведений, в основном общего характера, опубликована в официальном справочном руководстве к программе ABBYY Lingvo. Остальная часть была сформулирована или разработана стараниями сообщества лексикографов на компьютерном портале Ru-Board.</p>
+<a name="names" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Наименование файлов словаря</h2>
+<p class="calibre13">В официальной справке к Lingvo вопрос наименований файлов не затрагивается. Этот пробел восполняется «Соглашением о наименованиях», составленным сообществом лексикографов на Ru-Board. В соответствии с «Соглашением» в именах файлов словарей принято указывать:</p>
+<ol class="calibre17">
+<li class="calibre18">На первом месте: языковую пару словаря через дефис. Для обозначения языков определено применять 3-буквенные сокращения согласно международному стандарту <a href="langs.html#iso" class="pcalibre calibre11">ISO-639-2</a> или <a href="langs.html#iso" class="pcalibre calibre11">ISO-639-3</a>.</li>
+<li class="calibre18">На втором месте: краткое название словаря или аббревиатуру его названия.</li>
+<li class="calibre18">На третьем месте: сокращение (желательно 2-буквенное) имени автора конвертации в формат DSL.</li>
+</ol>
+<p class="calibre13"><em class="calibre16">Полный список 3- и 2-буквенных сокращений см. в разделе «<a href="langs.html" class="pcalibre calibre11">Списки языков</a>».</em></p>
+<p class="calibre13">Если словарь предназначен для распространения и упакован в архив, то в наименовании архива следует также указать номер версии словаря и его формат (обычно DSL или LSD).</p>
+<p class="calibre13"><i class="calibre16">Примечание: «Соглашение» рекомендует указывать версию также и в именах файлов словаря. Однако составитель справочника придерживается мнения, что такая практика создаёт неудобства при подключении словарей к программе. Изменение имён файлов с каждой новой версией потребует многократного отключения старых и подключения новых файлов через диалоги настроек программы. В то время как при сохранении единого имени, каждую новую версию достаточно всего лишь перезаписывать поверх старой. Программа, обнаружив при старте обновлённый файл, будет только автоматически перестраивать индекс.</i></p>
+<p class="calibre13">В именах файлов следует употреблять только символы основной латиницы, знаки дефиса и подчёркивания. Настоятельно не рекомендуется употреблять пробелы, диакритические знаки, апострофы, точки, запятые, двоеточия и символы национальных алфавитов (в т.ч. русского), т.к. технически это может существенно затруднить как использование словарей, так и их пересылку. Например, пробелы, апострофы и диакритика некорректно обрабатываются некоторыми программами (<em class="calibre16">в первую очередь сетевыми</em>), а точка в имени файла иконки может привести к тому, что иконка не будет отображаться.</p>
+<p class="calibre2"><img src="names.png" class="calibre3"/></p>
+<p class="calibre13">На рисунке приведён пример наименования файла англо-английского словаря «Oxford American Writer Thesaurus», отконвертированного в формат DSL лексикографом weros. Как видно, версия словаря указана только в имени zip-архива.</p>
+<a name="dsl" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Файл основного текста</h2>
+<p class="calibre13">Очевидно, что наличие этой части словаря строго обязательно, в отличие от других трёх частей.</p>
+<p class="calibre13">Файл основного текста словаря – это простой текстовый документ в кодировке ANSI или Unicode (UTF-16 LE)<a href="#comm1" class="pcalibre calibre11"><sup class="calibre21">[1]</sup></a>. Строки должны оканчиваться управляющим символом перевода строки LF, т.е. допустимы окончания строк, принятые в системах Windows (CRLF) и Unix (LF)<a href="#comm2" class="pcalibre calibre11"><sup class="calibre21">[2]</sup></a>, но недопустимы принятые в системе Mac (CR). При сохранении, стандартное расширение файла <span class="code_names">*.txt</span> необходимо поменять на <span class="code_names">*.dsl</span>. Например: <span class="code_names">rus-rus_ExplanatoryKuznetsov.dsl</span>.</p>
+<p class="calibre13">Файл основного текста состоит из словарных статей с заголовками – собственно это и есть сам словарь. В первых трёх строчках файла должны содержаться три обязательные директивы предварительной обработки. Принят следующий порядок их следования и оформления:</p>
+<ol class="calibre17">
+<li class="calibre18">На первой строке: директива предварительной обработки <span class="code1">#NAME</span>, за ней знак пробела или табуляции, за ними в кавычках краткое, «внутреннее» название словаря.</li>
+<li class="calibre18">На второй строке: директива предварительной обработки <span class="code1">#INDEX_LANGUAGE</span>, за ней знак пробела или табуляции, за ними в кавычках полное английское наименование языка заголовков.</li>
+<li class="calibre18">На третьей строке: директива предварительной обработки <span class="code1">#CONTENTS_LANGUAGE</span>, за ней знак пробела или табуляции, за ними в кавычках полное английское наименование языка статей.</li>
+</ol>
+<p class="calibre13">О других существующих директивах можно узнать в главе «<a href="directives.html" class="pcalibre calibre11">Директивы предварительной обработки</a>».</p>
+<div class="codebox">
+<p class="codeboxhead">Первые три строчки (шапка) основного файла :: Запись в DSL</p>
+<div class="code"><pre class="calibre19">#NAME			"Словарь синонимов (Ru-Ru)"
+#INDEX_LANGUAGE		"Russian"
+#CONTENTS_LANGUAGE	"Russian"
+
+карточка
+	[m1]фотография, снимок; визитка[/m]</pre></div></div>
+<p class="calibre13">После того, как словарь будет подключен к Lingvo, его «внутреннее» название, указанное в первой директиве, будет отображаться в правой, верхней части словарных карточек и во всех списках подключенных словарей. Это название должно быть кратким для того, чтобы оно лучше воспринималось и умещалось в упомянутых местах. В конце названия рекомендуется указывать языковую пару словаря в скобках через дефис. В словарях от ABBYY, поставляемых вместе с Lingvo, пары языков обозначаются 2-буквенными сокращениями, согласно стандарту <a href="langs.html#supported" class="pcalibre calibre11">ISO-639-1</a>. «Соглашение» лексикографов в данном случае предписывает использовать 3-буквенные сокращения, по стандарту <a href="langs.html#iso" class="pcalibre calibre11">ISO-639-3</a> (или <a href="langs.html#iso" class="pcalibre calibre11">ISO-639-2</a>).</p>
+<p class="calibre13">Следующие две директивы содержат английские наименования языков, на которых написаны заголовки и статьи словаря. Эти наименования должны: a) числиться в <a href="langs.html#supported" class="pcalibre calibre11">списке поддерживаемых</a> в Lingvo языков и b) соответствовать стандарту <a href="langs.html#iso" class="pcalibre calibre11">ISO-639-2</a>. Если указать неподдерживаемый язык, то компилятор DSL выдаст ошибку и словарь не будет откомпилирован. Первую часть этого правила можно не учитывать в том случае, если словарь изначально предназначен для использования в альтернативных программах, например, в GoldenDict. Вторую часть желательно учитывать в любом случае.</p>
+<div class="entrybox">
+<p class="entryboxhead">Первые три строчки (шапка) основного файла :: Вид в словарной карточке</p>
+<div class="entry"><div class="entrytitle"><span class="entrytitle1">Словарь синонимов (Ru-Ru)</span></div><span class="dsl_headword1">карточка</span><div class="dsl_m1">фотография, снимок; визитка</div></div></div>
+<p class="calibre13">Далее следуют заголовки и текст словарных статей. Подробнее о них см. в главе «<a href="entry.html" class="pcalibre calibre11">Структура словарной статьи</a>».</p>
+<a name="ann" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Файл аннотации</h2>
+<p class="calibre13">Файл аннотации – это простой текстовый документ в кодировке ANSI или Unicode (UTF-16 LE)<a href="#comm1" class="pcalibre calibre11"><sup class="calibre21">[1]</sup></a>. Строки должны оканчиваться управляющим символом перевода строки LF, т.е. допустимы окончания строк, принятые в системах Windows (CRLF) и Unix (LF)<a href="#comm2" class="pcalibre calibre11"><sup class="calibre21">[2]</sup></a>, но недопустимы принятые в системе Mac (CR). При сохранении, стандартное расширение файла <span class="code_names">*.txt</span> необходимо поменять на <span class="code_names">*.ann</span>. Имя файла аннотации должно в точности соответствовать имени файла основного текста, за исключением расширения. Например: <span class="code_names">rus-rus_ExplanatoryKuznetsov.ann</span>.</p>
+<p class="calibre13">Аннотация не является обязательной частью словаря, правила допускают её отсутствие. Тем не менее создание аннотаций настоятельно рекомендуется.</p>
+<p class="calibre13">Содержанием аннотации является краткое описание словаря, характеристики его состава и сведения об авторах. «Соглашение» считает обязательным указывать в аннотации следующие данные:</p>
+<ol class="calibre17">
+<li class="calibre18">Полное название словаря (<em class="calibre16">более подробное и развёрнутое по сравнению с кратким, «внутренним» названием</em>). Полное название может занимать более одной строчки. При этом в конце первой строчки следует указать языковое направление (<em class="calibre16">языковую пару</em>) в круглых скобках, через дефис. Для обозначения языков могут использоваться как 2-буквенные сокращения по стандарту <a href="langs.html#supported" class="pcalibre calibre11">ISO-639-1</a>, так и 3-буквенные по стандартам <a href="langs.html#iso" class="pcalibre calibre11">ISO-639-3</a> или <a href="langs.html#iso" class="pcalibre calibre11">ISO-639-2</a>.</li>
+<li class="calibre18">Номер электронной версии словаря. Рекомендуемый формат: две цифры через точку, или три цифры через точку. Например: <span class="code1">4.2</span> или <span class="code1">2.1.6</span>.</li>
+<li class="calibre18">Количество заголовков и количество карточек. Или раздельно на двух соседних строках, или в одну строку через косую черту. Например: <span class="code1">Заголовков/Карточек: 34266/33850</span>.</li>
+<li class="calibre18">Информацию об источнике: интернет сайте или печатном издании.</li>
+</ol>
+<div class="codebox">
+<p class="codeboxhead">Пример обязательной информации :: Запись в ANN</p>
+<div class="code"><pre class="calibre19">Большой толковый словарь под ред. Кузнецова (Ru-Ru)
+
+DSL версия: 3.2.0
+
+Заголовков: 79109
+Карточек: 76298
+
+Источник: Большой толковый словарь русского языка. Сост. и гл. ред. С. А. Кузнецов. 1-е изд-е: СПб.: Норинт, 1998. Публикуется в авторской редакции, 2009 г.</pre></div></div>
+<p class="calibre13">Кроме того по желанию можно добавлять:</p>
+<ol class="calibre17">
+<li class="calibre18">Краткое описание словаря, перепечатку аннотации к изданию-источнику.</li>
+<li class="calibre18">Имя (псевдоним) автора конвертации в формат DSL.</li>
+<li class="calibre18">Расширенную информацию из источника.</li>
+<li class="calibre18">Небольшой список рекомендуемых или дополнительных справочных статей в словаре.</li>
+<li class="calibre18">Историю изменений в электронных версиях словаря.</li>
+</ol>
+<p class="calibre2"><img src="ann.png" class="calibre3"/></p>
+<p class="calibre13">При подключении словаря к Lingvo, аннотация отображается в отдельном окне «О словаре», доступном из разных меню программы. К тексту аннотации в этом окне не применяется форматирование и в нём нельзя изменить размер шрифта. Поэтому не рекомендуется включать в её состав длинные предисловия и введения из источников. Лучше размещать таковые в файле основного текста в качестве дополнительных статей, а в аннотации ссылаться на их заголовки.</p>
+<p class="calibre13">Также как и в карточках, из текста аннотации автоматически удаляются множественные пробелы. В связи с этим, для создания отбивок и отступов в абзацах, рекомендуется использовать неразрывные или экранированные пробелы. <em class="calibre16">Подробнее об этом см. в главе «<a href="entry.html#body" class="pcalibre calibre11">Тело статьи</a>».</em></p>
+<p class="calibre13">Кроме того, в аннотациях предусмотрена к использованию директива предварительной обработки <span class="code1">#LANGUAGE</span>, в качестве значения которой указывается полное английское наименование языка по стандарту <a href="langs.html#iso" class="pcalibre calibre11">ISO-639-3</a>. Эта директива условно делит аннотацию на части. Одной частью считается фрагмент текста от одной строки с директивой до другой строки с директивой или до конца файла. Каждой части присваивается язык, указанный в значении её директивы.</p>
+<div class="codebox">
+<p class="codeboxhead">Употребление директив :: Запись в ANN</p>
+<div class="code"><pre class="calibre19">#LANGUAGE "Russian"
+LatinAmerican (Es-Ru) (к версии ABBYY Lingvo x5)
+
+Испанско-русский словарь. Латинская Америка. © «Русский язык-Медиа», 2004, Фирсова Н.М. 50 тыс. слов и словосочетаний.
+
+#LANGUAGE "English"
+LatinAmerican (Es-Ru) (for ABBYY Lingvo x5)
+
+The Spanish-Russian Dictionary of Latin America. © Russkiy Yazyk - Media, 2004, N.M. Firsova. 50,000 words and phrases.
+
+#LANGUAGE "Ukrainian"
+LatinAmerican (Es-Ru) (до версії ABBYY Lingvo x5)
+
+Іспансько-російський словник. Латинська Америка. © «Русский язык-Медиа», 2004, Фірсова Н.М. 50 тис. слів і словосполучень.
+</pre></div></div>
+
+<p class="calibre13">В зависимости от языка интерфейса, выбранного в настройках программы, в окне аннотации будет отображаться соответствующий языковая часть, а части других языков будут скрыты. Выбор языков для употребления в значениях директивы ограничен набором языков интерфейса конкретной версии Lingvo. Например, в Lingvo x6 доступны четыре языка: английский, русский, украинский и казахский. А в Lingvo x5 был ещё испанский.</p>
+<p class="calibre13">Описанная директива работает в Lingvo, но в других программах она может не поддерживаться, как например в GoldenDict.</p>
+<a name="bmp" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Иконка</h2>
+<p class="calibre13">Имя файла иконки должно в точности соответствовать имени файла основного текста, за исключением расширения. Например: <span class="code_names">rus-rus_ExplanatoryKuznetsov.bmp</span>.</p>
+<p class="calibre13">Сама иконка должна обладать следующими характеристиками:</p>
+<table class="list">
+<tr class="list1">
+<td class="list2">Формат файла изображения:</td>
+<td class="list2">Windows Bitmap (*.bmp)</td>
+</tr>
+<tr class="list1">
+<td class="list2">Размер изображения:</td>
+<td class="list2">14 x 21 пикселей (ширина на высоту)</td>
+</tr>
+<tr class="list1">
+<td class="list2">Глубина цвета  (битность) изображения:</td>
+<td class="list2">24 bit (Truecolor)</td>
+</tr>
+</table>
+<p class="calibre13">Чтобы добиться эффекта «прозрачности» фона на картинке, необходимо закрасить его серым цветом RGB(192, 192, 192) или #C0C0C0.</p>
+<p class="calibre13">При подключении словаря к Lingvo, иконка отображается на «полке со словарями» (<em class="calibre16">панели кнопок в основном окне Lingvo</em>) и в списках словарей (<em class="calibre16">где они имеются</em>). В GoldenDict употребление иконки более активно: в окне аннотации «О словаре», в окне заголовков, в диалогах настроек программы и др. местах.</p>
+<p class="calibre2"><img src="shelf.png" class="calibre3"/></p>
+<p class="calibre13">Иконка не является обязательной частью словаря, правила допускают её отсутствие. Если иконки нет, то словарная программа присвоит словарю свою, стандартную иконку по умолчанию. Однако, создание индивидуальных иконок настоятельно рекомендуется, поскольку в противном случае словари на полке будут выглядеть однотипно и в них будет легко запутаться.</p>
+<p class="calibre13">Примеры стандартных иконок для словарей: в ABBYY Lingvo <img src="dicicon_al.png" class="calibre3"/> и в GoldenDict <img src="dicicon_gd.png" class="calibre3"/>.</p>
+<a name="abrv" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Файл аббревиатур</h2>
+<p class="calibre13">Файл аббревиатур – это простой текстовый документ в кодировке ANSI или Unicode (UTF-16 LE)<a href="#comm1" class="pcalibre calibre11"><sup class="calibre21">[1]</sup></a>. Строки должны оканчиваться управляющим символом перевода строки LF, т.е. допустимы окончания строк, принятые в системах Windows (CRLF) и Unix (LF)<a href="#comm2" class="pcalibre calibre11"><sup class="calibre21">[2]</sup></a>, но недопустимы принятые в системе Mac (CR). При сохранении, стандартное расширение файла <span class="code_names">*.txt</span> необходимо поменять на <span class="code_names">*.dsl</span>. Имя файла аббревиатур должно в точности повторять имя главного файла словаря с прибавлением в конце суффикса <span class="code_names">_abrv</span>. Например: <span class="code_names">rus-rus_ExplanatoryKuznetsov_abrv.dsl</span>.</p>
+<p class="calibre13">Файл аббревиатур представляет собой электронный аналог таких разделов бумажных словарей, как «Условные сокращения» или «Список аббревиатур». Содержанием файла является небольшой, вспомогательный словарик аббревиатур и сокращений, используемых в основной части словаря. Вызов информации из этого словарика возможен только в основной части словаря, при наведении курсора мыши на слово, заключенное в тэг <span class="code1">[p]···[/p]</span>. Расшифровка сокращения или аббревиатуры при этом показывается во всплывающей подсказке. Другого способа отобразить содержимое файла (<em class="calibre16">например, в виде карточек</em>) не существует.</p>
+<p class="calibre13">Подобно файлу основного текста словаря, файл аббревиатур должен начинаться с трёх строчек – директив предварительной обработки. Однако применение этих директив в данном случае является в большой степени формальностью, поскольку имя, указанное в директиве <span class="code1">#NAME</span> нигде не отображается, а указание языков в следующих двух директивах ни на что не влияет. Таким образом, для всех файлов аббревиатур может быть использована универсальная «шапка» следующего вида:</p>
+<div class="codebox">
+<p class="codeboxhead">Пример универсальной «шапки» для файлов аббревиатур :: Запись в DSL</p>
+<div class="code"><pre class="calibre19">#NAME		"List of Abbreviations (Ru-Ru)"
+#INDEX_LANGUAGE		"Russian"
+#CONTENTS_LANGUAGE	"Russian"
+
+разг.
+	разговорное
+ср.
+	1) средний род; 2) сравни
+страд.
+	страдательный залог</pre></div></div>
+<br class="calibre1"/>
+<p class="calibre13">Файл аббревиатур не является обязательной частью словаря, правила допускают его отсутствие. Необходимость в его создании полностью зависит от использования в словаре тэга <span class="code1">[p]···[/p]</span> – если тэга нет, значит и вспомогательный список к нему не нужен.</p>
+<p class="calibre13">Предназначение содержимого файла для показа только во всплывающих подсказках влияет на правила его оформления. Эти особенности отображены в примере выше, поясним их:</p>
+<ol class="calibre17">
+<li class="calibre18">В статьях файла аббревиатур совсем не используются тэги. Любой тэг, применённый в статье, во всплывающей подсказке будет отображён <abbr title="т.е. «как есть», простым текстом" class="calibre22">литерально</abbr>. <em class="calibre16">В связи с этим можем сказать, что и расширение файла *.dsl в данном случае является формальностью, поскольку большинство признаков формата в нём отсутствует.</em></li>
+<li class="calibre18">Статьи должны быть краткими. К сожалению, Lingvo отображает всплывающие подсказки в одну строчку без переносов. Поэтому, если содержимое статьи будет длинным, оно попросту может не уместиться на экране. Способов перевода строки в этом случае в Lingvo также не предусмотрено. GoldenDict лишён этого недостатка – в нём всплывающие подсказки по умолчанию отображаются в виде аккуратных прямоугольных блоков с переносом текста внутри.</li>
+<li class="calibre18">Статьи должны быть однострочными. Во всплывающей подсказке будет отбражена только одна строка – первая после заголовка. Остальные строки, если они есть, будут проигнорированы. Поэтому, если у сокращения два значения, рекомендуется обозначать их номерами и разделять точкой с запятой, как это продемонстрировано на примере выше.</li>
+</ol>
+<p class="calibre13">Файл аббревиатур, входящий в комплект словаря DSL, является <strong class="calibre4">локальным</strong>. Кроме него в Lingvo существует ещё <strong class="calibre4">глобальный</strong> файл аббревиатур, который располагается в каталоге <span class="code_names">c:\Program Files\ABBYY Lingvo ??\</span>, где <span class="code_names">??</span> – номер версии Lingvo. Глобальный файл аббревиатур является общим для всех системных словарей Lingvo, но к нему программа обращается также и в том случае, если не находит локального. В GoldenDict глобальный файл аббревиатур не используется.</p><br class="calibre1"/>
+<p class="calibre13"><img src="line.png" class="calibre3"/></p>
+<p class="calibre13"><a name="comm1" class="pcalibre calibre11"></a><sup class="calibre21">[1]</sup> <i class="calibre16">Программа GoldenDict работает также с кодировкой UTF-8.</i></p>
+<p class="calibre13"><a name="comm2" class="pcalibre calibre11"></a><sup class="calibre21">[2]</sup> <i class="calibre16">При использовании окончаний строк, принятых в системах Unix (LF), размер словаря (текстового файла) уменьшается.</i></p>
+</div>
+<div id="footer" class="calibre14">
+<p class="calibre15">Справочник по DSL • Версия 0.9.3 beta • 22.09.2015</p>
+<p class="calibre15">Copyleft (ɔ) 2015 yozhic. Свободный контент. Все права открыты и неограничены. Никаких гарантий и ответственности.</p>
+</div>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+        <h2><a href="../index.html"> Table of contents</a></h2>
+        <div>
+            <ul>
+                <li>
+                    <a href="index.html">Титульный лист</a>
+                </li>
+                <li>
+                    <a href="preface.html">Предисловие</a>
+                    <ul>
+                        <li>
+                            <a href="preface.html#author">От составителя</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#terms">Особенности терминологии</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#legend">Условные обозначения</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#thanks">Благодарности</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dsl.html">Что такое DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dsl.html#lang">О языке DSL</a>
+                        </li>
+                        <li>
+                            <a href="dsl.html#format">О формате DSL</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="create.html">О создании словарей DSL</a>
+                    <ul>
+                        <li>
+                            <a href="create.html#easy">Простой словарь DSL</a>
+                        </li>
+                        <li>
+                            <a href="create.html#cool">Структурированный словарь DSL
+                                с форматированием</a>
+                        </li>
+                        <li>
+                            <a href="create.html#tools">Рекомендуемые инструменты</a>
+                        </li>
+                        <li>
+                            <a href="create.html#books">Рекомендуемая литература</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dict.html">Строение словаря DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dict.html#main">Общие сведения</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#names">Наименование файлов словаря</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#dsl">Файл основного текста</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#ann">Файл аннотации</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#bmp">Иконка</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#abrv">Файл аббревиатур</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="entry.html">Структура словарной статьи</a>
+                    <ul>
+                        <li>
+                            <a href="entry.html#article">Словарная статья</a>
+                        </li>
+                        <li>
+                            <a href="entry.html#headword">Заголовок статьи</a>
+                        </li>
+                        <li>
+                            <a href="entry.html#body">Тело статьи</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="tag_list.html">Тэги DSL</a>
+                    <ul>
+                        <li>
+                            <a href="tag_system.html">О тэгах DSL</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_system.html#main">Устройство тегов</a>
+                                </li>
+                                <li>
+                                    <a href="tag_system.html#meta_lit">Метасимволы и
+                                        литералы</a>
+                                </li>
+                                <li>
+                                    <a href="tag_system.html#comments">Общие замечания</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_list.html">Перечень тэгов и команд DSL</a>
+                        </li>
+                        <li>
+                            <a href="tag_format.html">Тэги форматирования текста</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_format.html#b">Тэг B</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#i">Тэг I</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#u">Тэг U</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#c">Тэг C</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#sup">Тэг SUP</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#sub">Тэг SUB</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#m">Тэг M</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#str">Тэг ударения</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#br">Тэг BR</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#circ">Команда ^</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_struct.html">Тэги словарной структуры</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_struct.html#p">Тэг P</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#t">Тэг T</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#ast">Тэг *</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#at">Команда @</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_handling.html">Тэги поисковой обработки</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_handling.html#ex">Тэг EX</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#com">Тэг COM</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trn">Тэг TRN</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trn1">Тэг TRN1</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trs">Тэг !TRS</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#lang">Тэг LANG</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_mm.html">Тэги мультимедиа</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_mm.html#s">Тэг S</a>
+                                    <ul>
+                                        <li>
+                                            <a href="tag_mm.html#images">Изображения</a>
+                                        </li>
+                                        <li>
+                                            <a href="tag_mm.html#sound">Звук</a>
+                                        </li>
+                                        <li>
+                                            <a href="tag_mm.html#movie">Видео</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="tag_mm.html#video">Тэг VIDEO</a>
+                                </li>
+                                <li>
+                                    <a href="tag_mm.html#preview">Тэг PREVIEW</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_links.html">Ссылки</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_links.html#main">Общие сведения</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#ref1">Тэг &lt;&lt; &gt;&gt;</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#ref2">Тэг REF</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#url">Тэг URL</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_service.html">Служебные тэги и команды</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_service.html#comm">Тэг {{ }}</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#alt">Команда ( )</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#unsort">Команда { }</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#tilde">Команда ~</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#backslash">Команда \</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#number">Команда #</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="directives.html">Директивы предварительной
+                                обработки</a>
+                            <ul>
+                                <li>
+                                    <a href="directives.html#main">Общее описание</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#name">Директива #NAME</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#index">Директива
+                                        #INDEX_LANGUAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#contents">Директива
+                                        #CONTENTS_LANGUAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#source">Директива
+                                        #SOURCE_CODE_PAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#include">Директива
+                                        #INCLUDE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#icon">Директива #ICON_FILE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#lang">Директива
+                                        #LANGUAGE</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dsl_comp.html">Компиляция и компилятор DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dsl_comp.html#main">Общие сведения</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#gui">Графический интерфейс
+                                пользователя</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#cmd">Командная строка</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#syntax">Отчёт об ошибках</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="colors.html">Цветовая палитра DSL</a>
+                    <ul>
+                        <li>
+                            <a href="colors.html#colors_hue">Сортировка по группам
+                                оттенков</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_gamma1">Сортировка по цветовой
+                                гамме (первый способ)</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_gamma2">Сортировка по цветовой
+                                гамме (второй способ)</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_abc">Сортировка по
+                                алфавиту</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="langs.html">Списки языков</a>
+                    <ul>
+                        <li>
+                            <a href="langs.html#supported">Языки, поддерживаемые
+                                Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#iso">Коды наименований языков</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#lcid">Коды локалей Microsoft</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#ansi">Кодовые страницы ANSI в
+                                Windows</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="additional.html">Сопутствующие сведения</a>
+                    <ul>
+                        <li>
+                            <a href="search.html">Поиск и индексирование в Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="var_dicts.html">Виды файлов словарей в Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="spaces.html">Об использовании нестандартных
+                                пробелов</a>
+                        </li>
+                        <li>
+                            <a href="lexicography.html">Немного о лексикографии</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="history.html">Из истории Lingvo</a>
+                    <ul>
+                        <li>
+                            <a href="history.html#table">Сводная таблица по истории
+                                развития синтаксиса языка DSL</a>
+                        </li>
+                        <li>
+                            <a href="lingvo4.html">Lingvo 4.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo5.html">Lingvo 5.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo6.html">Lingvo 6.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo6_5.html">Lingvo 6.5</a>
+                        </li>
+                        <li>
+                            <a href="lingvo7.html">Lingvo 7.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo8.html">Lingvo 8.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo9.html">Lingvo 9.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo10.html">Lingvo 10.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo11.html">Lingvo 11.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo12.html">Lingvo 12.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo14.html">Lingvo x3 (14.0)</a>
+                        </li>
+                        <li>
+                            <a href="lingvo15.html">Lingvo x5 (15.0)</a>
+                        </li>
+                        <li>
+                            <a href="lingvo16.html">Lingvo x6 (16.0)</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="create.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="entry.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

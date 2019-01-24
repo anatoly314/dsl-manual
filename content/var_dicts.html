@@ -1,0 +1,582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Виды словарей в Lingvo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="page_styles.css" rel="stylesheet" type="text/css"/>
+
+  
+
+
+<link href="calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../index.html">Справочник по DSL
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Unknown
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="search.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="spaces.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+<div id="header" class="calibre7">Справочник по DSL</div>
+<div id="main" class="calibre8">
+<h1 class="calibre9">Виды файлов словарей в Lingvo</h1>
+<p class="calibre13">За время существования программы Lingvo (с 1990 года) изменения происходили и в составе видов её словарей, и в различных версиях одного и того же вида словаря. Это отразилось на особенностях работы компилятора – одного из основных инструментов словаределателя. Поэтому, для лучшего понимания как работы компилятора, так и ситуации со словарями в целом, принято решение посвятить этой теме отдельный раздел.</p>
+<p class="calibre13">Словари в Lingvo делятся на системные и пользовательские. Один вид словаря может состоять как из одного, так и из нескольких файлов.</p>
+<p class="content"><img src="line.png" class="calibre10"/></p>
+<p class="content"><a href="#system" class="content1 pcalibre">Системные словари</a></p>
+<p class="content"><a href="#user" class="content1 pcalibre">Пользовательские словари</a></p>
+<p class="content"><img src="line.png" class="calibre10"/></p>
+<a name="system" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Системные словари</h2>
+<p class="calibre13">Системные словари входят в комплект поставки программы или приобретаются / скачиваются отдельно на сайте / сервере ABBYY.</p>
+<p class="calibre13">Системные словари делятся на локальные и сетевые. Файлы локальных словарей располагаются на компьютере пользователя, а доступ к сетевым осуществляется посредством интернет.</p><p class="calibre13">
+</p><p class="calibre13">Системные словари не подлежат редактированию. Некоторые из них можно декомпилировать, т.е. преобразовать в начальный, редактируемый вид. Однако, при этом необходимо иметь в виду, что официально программных средств для декомпиляции ABBYY не предоставляет, следовательно ответственность за подобные действия ложится непосредственно на пользователя.</p>
+<table class="list">
+<tr class="list1">
+<td class="list2"><span class="code_names">*.lsd</span></td>
+<td class="list2"><strong class="calibre4">L</strong>ingvo <strong class="calibre4">S</strong>ystem <strong class="calibre4">D</strong>ictionary</td>
+<td class="list2">Основной формат системных локальных словарей. Словари с этим расширением обычно входят в комплект поставки Lingvo, но могут также приобретаться отдельно.<div class="list3">Формат является результатом компиляции исходного формата DSL. Используется в Lingvo, начиная с версии 6.0.</div><div class="list3">Существуют различия между версиями LSD словарей. Версия LSD всегда соответствует версии Lingvo, в комплект которой он входит. На практике это приводит к тому, что для использования LSD одной версии в программе Lingvo другой версии, его необходимо переконвертировать. Узнать о номере версии LSD можно по 11-му байту в hex-представлении файла словаря.</div><div class="list3">Существуют способы декомпиляции LSD в исходный DSL, однако все они являются неофициальными.</div><div class="list3"><em class="calibre16">Существует также пользовательская версия этого формата. Об этом см. ниже, в главе «Пользовательские словари»</em>.</div><br class="calibre1"/></td>
+</tr>
+<tr class="list1">
+<td class="list2"><span class="code_names">*.lod</span></td>
+<td class="list2"><strong class="calibre4">L</strong>ingvo <strong class="calibre4">O</strong>nline <strong class="calibre4">D</strong>ictionary</td>
+<td class="list2">Файл доступа к online-версии словаря на сайте ABBYY (файл описания онлайн-словаря). Используется в Lingvo, начиная с версии x3 (14.0).<div class="list3">Словари с этим расширением являются сетевыми, обычно входят в комплект поставки Lingvo, но могут также скачиваться отдельно с сервера ABBYY.</div><div class="list3">Для работы словаря необходимо наличие соединения с интернет. Сам словарь содержит только список заголовков. Доступ к каждой конкретной статье осуществляется посредством интернет при обращении к каждому конкретному заголовку.</div><div class="list3">Файл словаря представляет собой простой xml-документ, содержащий служебную информацию и открывающийся любым текстовым редактором.</div><br class="calibre1"/></td>
+</tr>
+<tr class="list1">
+<td class="list2"><span class="code_names">*.ldp</span></td>
+<td class="list2"><strong class="calibre4">L</strong>ingvo <strong class="calibre4">D</strong>ictionary <strong class="calibre4">P</strong>ackage</td>
+<td class="list2">Упакованный архив, содержащий комплект локальных словарей <span class="code_names">*.lsd</span>. Используется в Lingvo, начиная с версии x3 (14.0).<div class="list3">LDP может содержать от одного до нескольких словарей. При этом один словарь может состоять из двух файлов: основного <span class="code_names">*.lsd</span> и файла аббревиатур <span class="code_names">*_abrv.lsd</span>.</div><div class="list3">Файлы с этим расширением приобретаются отдельно на сайте ABBYY. В комплект поставки Lingvo такие файлы не входят.&lt; /&gt;<div class="list3">По двойному клику на LDP, скачаному с сайта ABBYY, автоматически запускается распаковка, установка и подключение содержащихся в нём словарей LSD к программе Lingvo.</div><br class="calibre1"/></div></td>
+</tr>
+<tr class="list1">
+<td class="list2"><span class="code_names">*.lsa</span></td>
+<td class="list2"><strong class="calibre4">L</strong>ingvo <strong class="calibre4">S</strong>ound <strong class="calibre4">A</strong>rchive<br class="calibre1"/>(<em class="calibre16">предположительная расшифровка</em>)</td>
+<td class="list2">Специальные словари-контейнеры, состоящие из набора звуковых файлов – примеров произношения заголовочных слов. Используется в Lingvo, начиная с версии x3 (14.0).<div class="list3">Словари с этим расширением являются локальными, обычно входят в комплект поставки Lingvo, но могут также приобретаться отдельно.</div><div class="list3">Информация о словарях данного формата в официальной справке от ABBYY отсутствует.</div><div class="list3">Установлено, что звук внутри контейнеров LSA сжимается при помощи кодека Ogg Vorbis.</div><div class="list3">Встречались LSA, содержащие ошибки. Попытки отредактировать такие экземпляры приводили к их неработоспособности в Lingvo.</div><div class="list3">LSA можно декомпилировать при помощи программы <span class="code_names">Lingvo Sound Data Extractor</span>. Для совместимости с программой нужно изменить расширение файла с <span class="code_names">*.lsa</span> на <span class="code_names">*.dat</span>. Результатом декомпиляции является набор звуковых файлов с расширением <span class="code_names">*.wav</span>.</div><br class="calibre1"/></td>
+</tr>
+<tr class="list1">
+<td class="list2"><span class="code_names">*.dat</span></td>
+<td class="list2"><strong class="calibre4">Dat</strong>a</td>
+<td class="list2">Предшественник LSA. Этот формат словаря «озвученных» слов использовался в старых версиях Lingvo до 12.0 включительно.<div class="list3">DAT можно декомпилировать при помощи программы <span class="code_names">Lingvo Sound Data Extractor</span>. Результатом декомпиляции является набор звуковых файлов с расширением <span class="code_names">*.wav</span>.</div></td>
+</tr>
+</table>
+<a name="user" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Пользовательские словари</h2>
+<p class="calibre13">Пользовательские словари предназначены для редактирования. И, в зависимости от доступного способа редактирования, эти словари делятся на два вида:</p>
+<div class="ol_sk">1) Свободно редактируемые, т.е. при помощи любых сторонних текстовых редакторов.</div>
+<div class="ol_sk1">2) Редактируемые с ограничением, т.е. только при помощи программных средств, встроенных в программу Lingvo. Эти словари всегда состоят из пары файлов: в одном содержатся заголовки, а в другом – тела статей. По внутренней структуре они принадлежат к т.н. «простым» словарям: заголовок → перевод / толкование (как правило без дополнительных объяснений). <em class="calibre16">Подробнее о таких словарях см. в главе «<a href="create.html#easy" class="pcalibre calibre11">Простой словарь DSL</a>»</em>.</div><br class="calibre1"/>
+<table class="list">
+<tr class="list1">
+<td class="list2"><span class="code_names">*.dsl</span></td>
+<td class="list2"><strong class="calibre4">D</strong>ictionary <strong class="calibre4">S</strong>pecification <strong class="calibre4">L</strong>anguage</td>
+<td class="list2">Основной, свободно редактируемый, пользовательский формат. Предназначен для компиляции в формат LSD. Подробному описанию DSL посвящён настоящий справочник.<br class="calibre1"/><br class="calibre1"/></td>
+</tr>
+<tr class="list1">
+<td class="list2"><span class="code_names">*.lud</span></td>
+<td class="list2"><strong class="calibre4">L</strong>ingvo <strong class="calibre4">U</strong>ser <strong class="calibre4">D</strong>ictionary</td>
+<td class="list2">Формат с ограниченным редактированием. Используется в Lingvo, начиная с версии 6.0. Состоит из двух обязательных частей (файлов).<div class="list3">Часть с данным расширением содержит заголовки. Парной к ней частью с телами статей является файл с расширением <span class="code_names">*.adx</span>.</div><div class="list3">При подключении к Lingvo, LUD словари полностью индексируются.</div><div class="list3">Начиная с версии Lingvo 9.0 есть возможность конвертации LUD словарей в формат DSL.
+</div><br class="calibre1"/></td>
+</tr>
+<tr class="list1">
+<td class="list2"><span class="code_names">*.adx</span></td>
+<td class="list2">(<em class="calibre16">расшифровка неизвестна</em>)</td>
+<td class="list2">Формат с ограниченным редактированием. Используется в Lingvo, начиная с версии 6.0. Состоит из двух обязательных частей (файлов).<div class="list3">Часть с данным расширением содержит тела статей. Парной к ней частью с заголовками является файл с расширением <span class="code_names">*.lud</span>.</div><br class="calibre1"/></td>
+</tr>
+<tr class="list1">
+<td class="list2"><span class="code_names">*.adc</span></td>
+<td class="list2">(<em class="calibre16">расшифровка неизвестна</em>)</td>
+<td class="list2">Предшественник LUD. Использовался в Lingvo до версии 5.0 включительно. Состоит из двух обязательных частей (файлов).<div class="list3">Часть с данным расширением содержит заголовки. Парной к ней частью с телами статей является файл с расширением <span class="code_names">*.adt</span>.</div><br class="calibre1"/></td>
+</tr>
+<tr class="list1">
+<td class="list2"><span class="code_names">*.adt</span></td>
+<td class="list2">(<em class="calibre16">расшифровка неизвестна</em>)</td>
+<td class="list2">Предшественник ADX. Использовался в Lingvo до версии 5.0 включительно. Состоит из двух обязательных частей (файлов).<div class="list3">Часть с данным расширением содержит тела статей. Парной к ней частью с заголовками является файл с расширением <span class="code_names">*.adc</span>.</div><br class="calibre1"/></td>
+</tr>
+<tr class="list1">
+<td class="list2"><span class="code_names">*.ann</span></td>
+<td class="list2"><strong class="calibre4">Ann</strong>otation</td>
+<td class="list2">Файл ANN представляет собой аннотацию к словарю. Аннотация является факультативной (необязательной) частью любого вида пользовательского словаря, т.е. её можно подключать как к DSL, так и к LUD или ADC.<div class="list3"><em class="calibre16">Подробнее об ANN см. в главе «<a href="dict.html#ann" class="pcalibre calibre11">Файл аннотации</a>»</em>.</div><br class="calibre1"/></td>
+</tr>
+<tr class="list1">
+<td class="list2"><span class="code_names">*.lsd</span></td>
+<td class="list2"><strong class="calibre4">L</strong>ingvo <strong class="calibre4">S</strong>ystem <strong class="calibre4">D</strong>ictionary</td>
+<td class="list2">Пользовательская версия формата LSD. Обладает аналогичными свойствами с системными словарями, но при этом Lingvo распознаёт их и отличает от системных. Специальную пометку о «системности» в подобный LSD добавляет DSL Compiler при компиляции пользовательских DSL.<div class="list3"></div><br class="calibre1"/></td>
+</tr>
+</table>
+</div>
+<div id="footer" class="calibre14">
+<p class="calibre15">Справочник по DSL • Версия 0.9.3 beta • 22.09.2015</p>
+<p class="calibre15">Copyleft (ɔ) 2015 yozhic. Свободный контент. Все права открыты и неограничены. Никаких гарантий и ответственности.</p>
+</div>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+        <h2><a href="../index.html"> Table of contents</a></h2>
+        <div>
+            <ul>
+                <li>
+                    <a href="index.html">Титульный лист</a>
+                </li>
+                <li>
+                    <a href="preface.html">Предисловие</a>
+                    <ul>
+                        <li>
+                            <a href="preface.html#author">От составителя</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#terms">Особенности терминологии</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#legend">Условные обозначения</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#thanks">Благодарности</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dsl.html">Что такое DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dsl.html#lang">О языке DSL</a>
+                        </li>
+                        <li>
+                            <a href="dsl.html#format">О формате DSL</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="create.html">О создании словарей DSL</a>
+                    <ul>
+                        <li>
+                            <a href="create.html#easy">Простой словарь DSL</a>
+                        </li>
+                        <li>
+                            <a href="create.html#cool">Структурированный словарь DSL
+                                с форматированием</a>
+                        </li>
+                        <li>
+                            <a href="create.html#tools">Рекомендуемые инструменты</a>
+                        </li>
+                        <li>
+                            <a href="create.html#books">Рекомендуемая литература</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dict.html">Строение словаря DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dict.html#main">Общие сведения</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#names">Наименование файлов словаря</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#dsl">Файл основного текста</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#ann">Файл аннотации</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#bmp">Иконка</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#abrv">Файл аббревиатур</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="entry.html">Структура словарной статьи</a>
+                    <ul>
+                        <li>
+                            <a href="entry.html#article">Словарная статья</a>
+                        </li>
+                        <li>
+                            <a href="entry.html#headword">Заголовок статьи</a>
+                        </li>
+                        <li>
+                            <a href="entry.html#body">Тело статьи</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="tag_list.html">Тэги DSL</a>
+                    <ul>
+                        <li>
+                            <a href="tag_system.html">О тэгах DSL</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_system.html#main">Устройство тегов</a>
+                                </li>
+                                <li>
+                                    <a href="tag_system.html#meta_lit">Метасимволы и
+                                        литералы</a>
+                                </li>
+                                <li>
+                                    <a href="tag_system.html#comments">Общие замечания</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_list.html">Перечень тэгов и команд DSL</a>
+                        </li>
+                        <li>
+                            <a href="tag_format.html">Тэги форматирования текста</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_format.html#b">Тэг B</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#i">Тэг I</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#u">Тэг U</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#c">Тэг C</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#sup">Тэг SUP</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#sub">Тэг SUB</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#m">Тэг M</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#str">Тэг ударения</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#br">Тэг BR</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#circ">Команда ^</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_struct.html">Тэги словарной структуры</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_struct.html#p">Тэг P</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#t">Тэг T</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#ast">Тэг *</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#at">Команда @</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_handling.html">Тэги поисковой обработки</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_handling.html#ex">Тэг EX</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#com">Тэг COM</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trn">Тэг TRN</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trn1">Тэг TRN1</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trs">Тэг !TRS</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#lang">Тэг LANG</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_mm.html">Тэги мультимедиа</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_mm.html#s">Тэг S</a>
+                                    <ul>
+                                        <li>
+                                            <a href="tag_mm.html#images">Изображения</a>
+                                        </li>
+                                        <li>
+                                            <a href="tag_mm.html#sound">Звук</a>
+                                        </li>
+                                        <li>
+                                            <a href="tag_mm.html#movie">Видео</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="tag_mm.html#video">Тэг VIDEO</a>
+                                </li>
+                                <li>
+                                    <a href="tag_mm.html#preview">Тэг PREVIEW</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_links.html">Ссылки</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_links.html#main">Общие сведения</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#ref1">Тэг &lt;&lt; &gt;&gt;</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#ref2">Тэг REF</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#url">Тэг URL</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_service.html">Служебные тэги и команды</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_service.html#comm">Тэг {{ }}</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#alt">Команда ( )</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#unsort">Команда { }</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#tilde">Команда ~</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#backslash">Команда \</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#number">Команда #</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="directives.html">Директивы предварительной
+                                обработки</a>
+                            <ul>
+                                <li>
+                                    <a href="directives.html#main">Общее описание</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#name">Директива #NAME</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#index">Директива
+                                        #INDEX_LANGUAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#contents">Директива
+                                        #CONTENTS_LANGUAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#source">Директива
+                                        #SOURCE_CODE_PAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#include">Директива
+                                        #INCLUDE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#icon">Директива #ICON_FILE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#lang">Директива
+                                        #LANGUAGE</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dsl_comp.html">Компиляция и компилятор DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dsl_comp.html#main">Общие сведения</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#gui">Графический интерфейс
+                                пользователя</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#cmd">Командная строка</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#syntax">Отчёт об ошибках</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="colors.html">Цветовая палитра DSL</a>
+                    <ul>
+                        <li>
+                            <a href="colors.html#colors_hue">Сортировка по группам
+                                оттенков</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_gamma1">Сортировка по цветовой
+                                гамме (первый способ)</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_gamma2">Сортировка по цветовой
+                                гамме (второй способ)</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_abc">Сортировка по
+                                алфавиту</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="langs.html">Списки языков</a>
+                    <ul>
+                        <li>
+                            <a href="langs.html#supported">Языки, поддерживаемые
+                                Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#iso">Коды наименований языков</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#lcid">Коды локалей Microsoft</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#ansi">Кодовые страницы ANSI в
+                                Windows</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="additional.html">Сопутствующие сведения</a>
+                    <ul>
+                        <li>
+                            <a href="search.html">Поиск и индексирование в Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="var_dicts.html">Виды файлов словарей в Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="spaces.html">Об использовании нестандартных
+                                пробелов</a>
+                        </li>
+                        <li>
+                            <a href="lexicography.html">Немного о лексикографии</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="history.html">Из истории Lingvo</a>
+                    <ul>
+                        <li>
+                            <a href="history.html#table">Сводная таблица по истории
+                                развития синтаксиса языка DSL</a>
+                        </li>
+                        <li>
+                            <a href="lingvo4.html">Lingvo 4.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo5.html">Lingvo 5.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo6.html">Lingvo 6.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo6_5.html">Lingvo 6.5</a>
+                        </li>
+                        <li>
+                            <a href="lingvo7.html">Lingvo 7.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo8.html">Lingvo 8.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo9.html">Lingvo 9.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo10.html">Lingvo 10.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo11.html">Lingvo 11.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo12.html">Lingvo 12.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo14.html">Lingvo x3 (14.0)</a>
+                        </li>
+                        <li>
+                            <a href="lingvo15.html">Lingvo x5 (15.0)</a>
+                        </li>
+                        <li>
+                            <a href="lingvo16.html">Lingvo x6 (16.0)</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="search.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="spaces.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

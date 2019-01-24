@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Служебные тэги и команды</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="page_styles.css" rel="stylesheet" type="text/css"/>
+
+  
+
+
+<link href="calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../index.html">Справочник по DSL
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Unknown
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="tag_links.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="directives.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+<div id="header" class="calibre7">Справочник по DSL</div>
+<div id="main" class="calibre8">
+<h1 class="calibre9">Служебные тэги и команды</h1>
+<p class="content"><img src="line.png" class="calibre10"/></p>
+<p class="content"><a href="#comm" class="content1 pcalibre">Тэг <span class="code2">{{···}}</span></a></p>
+<p class="content"><a href="#alt" class="content1 pcalibre">Команда <span class="code2">(···)</span></a></p>
+<p class="content"><a href="#unsort" class="content1 pcalibre">Команда <span class="code2">{···}</span></a></p>
+<p class="content"><a href="#tilde" class="content1 pcalibre">Команда <span class="code2">~</span></a></p>
+<p class="content"><a href="#backslash" class="content1 pcalibre">Команда <span class="code2">\</span></a></p>
+<p class="content"><a href="#number" class="content1 pcalibre">Команда <span class="code2">#</span></a></p>
+<p class="content"><img src="line.png" class="calibre10"/></p>
+<a name="comm" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Тэг <span class="code3">{{···}}</span></h2>
+<p class="calibre13"><strong class="calibre4">Назначение:</strong> Разметка служебных комментариев.</p>
+<p class="calibre13"><strong class="calibre4">Использование:</strong> В любом месте DSL.</p>
+<p class="calibre13"><strong class="calibre4">Особенности:</strong> Зона действия данного тэга может распространяться на несколько строк. Если среди этих строк окажутся заголовки (например, когда открывающая пара скобок располагается в одной карточке, а закрывающая – в другой), то они будут проигнорированы при компиляции.</p>
+<p class="calibre13">В зоне действия комментариев не работают любые конструкции языка DSL. Одиночные фигурные скобки воспринимаются как литералы.</p>
+<p class="calibre13">В зоне комментариев не действует даже символ экранирования. Так, например, защитную реакцию компилятора не вызовет запись <span class="code1">{{comment\}}</span>, но вызовет запись <span class="code_error">{{comment}\}</span>.</p>
+<p class="calibre13">Если зоны действия какого-либо тэга и комментария пересекутся, то приоритет отдаётся последней. Так, например, при записи <span class="code_error">&lt;&lt;word {{ word&gt;&gt; comment}}[/m]</span>, компилятор сообщит о недопустимом использовании «[» внутри ссылки. Следовательно, несмотря на то, что тэг ссылки находится левее и в порядке очереди должен быть обработан первым, его правая пара поглощается тегом комментария, у которого больший приоритет.</p>
+<p class="calibre13">Служебные комментарии отображаются только в исходном файле DSL. При компиляции они игнорируются, т.е. не записываются в конечный словарь LSD.</p>
+<div class="codebox">
+<p class="codeboxhead">Служебные комментарии :: Запись в DSL</p>
+<div class="code"><pre class="calibre19">{{ Simple English-Russian dictionary (use LS.COM screen driver to read 
+russian text below) }}
+
+order
+	порядок
+
+temperature               {{ headword }}
+	температура       {{ entry }}
+
+global information structure       {{ phrase as a headword }}
+	глобальная информационная структура
+	</pre></div></div>
+
+<p class="calibre13"><strong class="calibre4">История:</strong> Тэг, по-видимому, употребляется в Lingvo начиная с самых первых версий. Первое упоминание о нём встречается в демонстрационном, пользовательском словарике к Lingvo версии 4.0.</p>
+<a name="alt" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Команда <span class="code3">(···)</span></h2>
+<p class="calibre13"><strong class="calibre4">Назначение:</strong> Обработка альтернативной части заголовка.</p>
+<p class="calibre13"><strong class="calibre4">Использование:</strong> Только в заголовках. В теле статей круглые скобки воспринимаются <abbr title="«как есть», как простые символы" class="calibre22">литерально</abbr> и дополнительными функциями не обладают.</p>
+<p class="calibre13"><strong class="calibre4">Общее описание:</strong> В печатных словарях при помощи круглых скобок принято обозначать факультативную (необязательную) часть заголовка или варианты морфологических/грамматических форм слова/словосочетания. DSL следует этому применению и программно реализует его следующим способом. Круглые скобки в DSL создают несколько вариантов одного заголовка. Так, например, запись <span class="code1">(пре)вращать(ся)</span> преобразуется в четыре отдельных заголовка: <em class="calibre16">вращать</em>, <em class="calibre16">вращаться</em>, <em class="calibre16">превращать</em>, <em class="calibre16">превращаться</em>. Все эти варианты будут показаны в списке заголовков главного окна без скобок, а при обращении к одному из них, откроется словарная карточка, в заглавии которой отобразится исходное написание из DSL со скобками. <em class="calibre16">Наглядные примеры см. в главе «<a href="entry.html#headword" class="pcalibre calibre11">Заголовок статьи</a>»</em>.</p>
+<p class="calibre13"><strong class="calibre4">Замечание:</strong> Чтобы предотвратить специальную обработку круглых скобок в заголовках, их нужно экранировать: <span class="code1">\(···\)</span>. При такой записи заголовок не будет преобразовываться, но <abbr title="«как есть», как простые символы" class="calibre22">литерально</abbr> отобразится со скобками как в словарной карточке, так и в общем списке заголовков.</p>
+<p class="calibre13"><strong class="calibre4">История:</strong> Тэг, по-видимому, употребляется в Lingvo начиная с самых первых версий. Первое упоминание о нём встречается в демонстрационном, пользовательском словарике к Lingvo версии 4.0.</p>
+<a name="unsort" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Команда <span class="code3">{···}</span></h2>
+<p class="calibre13"><strong class="calibre4">Назначение:</strong> Обработка несортируемой части заголовка.</p>
+<p class="calibre13"><strong class="calibre4">Использование:</strong> Только в заголовках. В теле статей одинарные фигурные скобки воспринимаются <abbr title="«как есть», как простые символы" class="calibre22">литерально</abbr> и дополнительными функциями не обладают.</p>
+<p class="calibre13"><strong class="calibre4">Общее описание:</strong> Часть заголовка, заключённая в одинарные фигурные скобки:</p>
+<div class="ol_sk">1) не отображается в списке заголовков главного окна;</div>
+<div class="ol_sk1">2) игнорируется при сортировке списка заголовков главного окна;</div>
+<div class="ol_sk1">3) не учитывается при поиске перевода слов;</div>
+<div class="ol_sk1">4) отображается в заглавии словарной карточки, если только это не тэг DSL.</div>
+<p class="calibre13">Фигурные скобки используются в заголовках в случае, если необходимо скрыть часть заголовка при отображении в списке заголовков главного окна или применить дополнительное форматирование к отображению заголовка в словарной карточке. <em class="calibre16">Дополнительные сведения и наглядные примеры см. в главе «<a href="entry.html#headword" class="pcalibre calibre11">Заголовок статьи</a>»</em>.</p>
+<p class="calibre13"><strong class="calibre4">Замечание:</strong> Чтобы предотвратить специальную обработку фигурных скобок в заголовках, их нужно экранировать: <span class="code1">\{···\}</span>. При такой записи заголовок <abbr title="«как есть», как простые символы" class="calibre22">литерально</abbr> отобразится без сокращений со скобками как в словарной карточке, так и в общем списке заголовков.</p>
+<p class="calibre13"><strong class="calibre4">История:</strong> Тэг, по-видимому, употребляется в Lingvo начиная с самых первых версий. Первое упоминание о нём встречается в демонстрационном, пользовательском словарике к Lingvo версии 4.0.</p>
+<a name="tilde" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Команда <span class="code3">~</span></h2>
+<p class="calibre13"><strong class="calibre4">Назначение:</strong> Указание места вставки копии заголовочного слова, т.н. «отзеркаливание» заголовков.</p>
+<p class="calibre13"><strong class="calibre4">Использование:</strong> Только в теле словарных статей.</p>
+<p class="calibre13"><strong class="calibre4">Общее описание:</strong> При обработке DSL, все знаки тильды в теле статей заменяются на копию заголовочного слова.</p>
+<div class="codebox">
+<p class="codeboxhead">Использование тильды :: Запись в DSL</p>
+<div class="code"><pre class="calibre19">дом
+	[m1]Здание, строение, предназначенное для жилья.[/m]
+	[m2][*]Деревянный ~. Каменный ~. Жилой ~.[/*][/m]
+</pre></div></div>
+<br class="calibre1"/>
+<div class="entrybox">
+<p class="entryboxhead">Использование тильды :: Вид в словарной карточке</p>
+<div class="entry"><div class="entrytitle"><span class="entrytitle1">Пример (Ru-Ru)</span></div>
+<div class="dsl_headword">дом</div><div class="dsl_m1">Здание, строение, предназначенное для жилья.</div><div class="dsl_m2"><span class="dsl_ast">Деревянный дом. Каменный дом. Жилой дом.</span></div></div></div>
+<p class="calibre13"><strong class="calibre4">Замечания:</strong> Чтобы предотвратить специальную обработку тильды и <abbr title="«как есть», как простые символы" class="calibre22">литерально</abbr> отобразить её в словарной карточке, нужно её экранировать: <span class="code1">\~</span>.</p>
+<p class="calibre13">Если перед тильдой поставить «перевёртыш» (символ «крышки») <span class="code1">^~</span>, регистр первой буквы в отзеркаленном заголовке изменится на противоположный. <em class="calibre16">Подробнее с примерами см. в главе «<a href="tag_format.html#circ" class="pcalibre calibre11">Команда ^</a>».</em></p>
+<p class="calibre13"><strong class="calibre4">История:</strong> Тэг, по-видимому, употребляется в Lingvo начиная с самых первых версий. Первое упоминание о нём встречается в демонстрационном, пользовательском словарике к Lingvo версии 4.0.</p>
+<a name="backslash" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Команда <span class="code3">\</span></h2>
+<p class="calibre13"><strong class="calibre4">Назначение:</strong> Экранирование метасимволов.</p>
+<p class="calibre13"><strong class="calibre4">Использование:</strong> В теле словарных статей и в заголовках.</p>
+<p class="calibre13"><strong class="calibre4">Общее описание:</strong> Применение обратной косой черты отменяет дополнительные функции у <abbr title="Символы со специальным значением" class="calibre22">метасимволов</abbr>, преобразуя их в <abbr title="Простые символы" class="calibre22">литералы</abbr>. <em class="calibre16">Подробности см. в главе «<a href="tag_system.html#meta_lit" class="pcalibre calibre11">Метасимволы и литералы</a>».</em></p>
+<p class="calibre13"><strong class="calibre4">Замечание:</strong> Для того, чтобы <abbr title="«как есть», как простые символы" class="calibre22">литерально</abbr> отобразить саму обратную косую черту, нужно её удвоить: <span class="code1">\\</span>.</p>
+<a name="number" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Команда <span class="code3">#</span></h2>
+<p class="calibre13"><strong class="calibre4">Назначение:</strong> Указатель директивы предварительной обработки (команды препроцессора).</p>
+<p class="calibre13"><strong class="calibre4">Использование:</strong> В первых строках файлов основного текста, аббревиатур или аннотаций словаря DSL.</p>
+<p class="calibre13"><strong class="calibre4">Синтаксис:</strong> Команда должна располагаться только в начале строки (на первой позиции в строке). Наличие перед командой пробела, табуляции или любого другого символа приведёт к ошибке при компиляции.</p>
+<p class="calibre13">Команда может быть употреблена только в сочетании с <a href="directives.html" class="pcalibre calibre11">определённым набором ключевых слов</a>. Употребление команды с любыми другими словами вызовет ошибку компилятора «Неизвестная директива препроцессора».</p>
+<p class="calibre13"><strong class="calibre4">Общее описание:</strong> <em class="calibre16">См. в разделе «<a href="directives.html" class="pcalibre calibre11">Директивы предварительной обработки</a>»</em>.</p>
+<p class="calibre13"><strong class="calibre4">Замечание:</strong> Чтобы предотвратить специальную обработку символа «решётки» и <abbr title="«как есть», как простые символы" class="calibre22">литерально</abbr> отобразить его в словарной карточке, нужно его экранировать: <span class="code1">\#</span>.</p>
+</div>
+<div id="footer" class="calibre14">
+<p class="calibre15">Справочник по DSL • Версия 0.9.3 beta • 22.09.2015</p>
+<p class="calibre15">Copyleft (ɔ) 2015 yozhic. Свободный контент. Все права открыты и неограничены. Никаких гарантий и ответственности.</p>
+</div>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+        <h2><a href="../index.html"> Table of contents</a></h2>
+        <div>
+            <ul>
+                <li>
+                    <a href="index.html">Титульный лист</a>
+                </li>
+                <li>
+                    <a href="preface.html">Предисловие</a>
+                    <ul>
+                        <li>
+                            <a href="preface.html#author">От составителя</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#terms">Особенности терминологии</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#legend">Условные обозначения</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#thanks">Благодарности</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dsl.html">Что такое DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dsl.html#lang">О языке DSL</a>
+                        </li>
+                        <li>
+                            <a href="dsl.html#format">О формате DSL</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="create.html">О создании словарей DSL</a>
+                    <ul>
+                        <li>
+                            <a href="create.html#easy">Простой словарь DSL</a>
+                        </li>
+                        <li>
+                            <a href="create.html#cool">Структурированный словарь DSL
+                                с форматированием</a>
+                        </li>
+                        <li>
+                            <a href="create.html#tools">Рекомендуемые инструменты</a>
+                        </li>
+                        <li>
+                            <a href="create.html#books">Рекомендуемая литература</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dict.html">Строение словаря DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dict.html#main">Общие сведения</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#names">Наименование файлов словаря</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#dsl">Файл основного текста</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#ann">Файл аннотации</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#bmp">Иконка</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#abrv">Файл аббревиатур</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="entry.html">Структура словарной статьи</a>
+                    <ul>
+                        <li>
+                            <a href="entry.html#article">Словарная статья</a>
+                        </li>
+                        <li>
+                            <a href="entry.html#headword">Заголовок статьи</a>
+                        </li>
+                        <li>
+                            <a href="entry.html#body">Тело статьи</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="tag_list.html">Тэги DSL</a>
+                    <ul>
+                        <li>
+                            <a href="tag_system.html">О тэгах DSL</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_system.html#main">Устройство тегов</a>
+                                </li>
+                                <li>
+                                    <a href="tag_system.html#meta_lit">Метасимволы и
+                                        литералы</a>
+                                </li>
+                                <li>
+                                    <a href="tag_system.html#comments">Общие замечания</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_list.html">Перечень тэгов и команд DSL</a>
+                        </li>
+                        <li>
+                            <a href="tag_format.html">Тэги форматирования текста</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_format.html#b">Тэг B</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#i">Тэг I</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#u">Тэг U</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#c">Тэг C</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#sup">Тэг SUP</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#sub">Тэг SUB</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#m">Тэг M</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#str">Тэг ударения</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#br">Тэг BR</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#circ">Команда ^</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_struct.html">Тэги словарной структуры</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_struct.html#p">Тэг P</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#t">Тэг T</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#ast">Тэг *</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#at">Команда @</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_handling.html">Тэги поисковой обработки</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_handling.html#ex">Тэг EX</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#com">Тэг COM</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trn">Тэг TRN</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trn1">Тэг TRN1</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trs">Тэг !TRS</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#lang">Тэг LANG</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_mm.html">Тэги мультимедиа</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_mm.html#s">Тэг S</a>
+                                    <ul>
+                                        <li>
+                                            <a href="tag_mm.html#images">Изображения</a>
+                                        </li>
+                                        <li>
+                                            <a href="tag_mm.html#sound">Звук</a>
+                                        </li>
+                                        <li>
+                                            <a href="tag_mm.html#movie">Видео</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="tag_mm.html#video">Тэг VIDEO</a>
+                                </li>
+                                <li>
+                                    <a href="tag_mm.html#preview">Тэг PREVIEW</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_links.html">Ссылки</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_links.html#main">Общие сведения</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#ref1">Тэг &lt;&lt; &gt;&gt;</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#ref2">Тэг REF</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#url">Тэг URL</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_service.html">Служебные тэги и команды</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_service.html#comm">Тэг {{ }}</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#alt">Команда ( )</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#unsort">Команда { }</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#tilde">Команда ~</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#backslash">Команда \</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#number">Команда #</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="directives.html">Директивы предварительной
+                                обработки</a>
+                            <ul>
+                                <li>
+                                    <a href="directives.html#main">Общее описание</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#name">Директива #NAME</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#index">Директива
+                                        #INDEX_LANGUAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#contents">Директива
+                                        #CONTENTS_LANGUAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#source">Директива
+                                        #SOURCE_CODE_PAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#include">Директива
+                                        #INCLUDE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#icon">Директива #ICON_FILE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#lang">Директива
+                                        #LANGUAGE</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dsl_comp.html">Компиляция и компилятор DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dsl_comp.html#main">Общие сведения</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#gui">Графический интерфейс
+                                пользователя</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#cmd">Командная строка</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#syntax">Отчёт об ошибках</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="colors.html">Цветовая палитра DSL</a>
+                    <ul>
+                        <li>
+                            <a href="colors.html#colors_hue">Сортировка по группам
+                                оттенков</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_gamma1">Сортировка по цветовой
+                                гамме (первый способ)</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_gamma2">Сортировка по цветовой
+                                гамме (второй способ)</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_abc">Сортировка по
+                                алфавиту</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="langs.html">Списки языков</a>
+                    <ul>
+                        <li>
+                            <a href="langs.html#supported">Языки, поддерживаемые
+                                Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#iso">Коды наименований языков</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#lcid">Коды локалей Microsoft</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#ansi">Кодовые страницы ANSI в
+                                Windows</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="additional.html">Сопутствующие сведения</a>
+                    <ul>
+                        <li>
+                            <a href="search.html">Поиск и индексирование в Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="var_dicts.html">Виды файлов словарей в Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="spaces.html">Об использовании нестандартных
+                                пробелов</a>
+                        </li>
+                        <li>
+                            <a href="lexicography.html">Немного о лексикографии</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="history.html">Из истории Lingvo</a>
+                    <ul>
+                        <li>
+                            <a href="history.html#table">Сводная таблица по истории
+                                развития синтаксиса языка DSL</a>
+                        </li>
+                        <li>
+                            <a href="lingvo4.html">Lingvo 4.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo5.html">Lingvo 5.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo6.html">Lingvo 6.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo6_5.html">Lingvo 6.5</a>
+                        </li>
+                        <li>
+                            <a href="lingvo7.html">Lingvo 7.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo8.html">Lingvo 8.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo9.html">Lingvo 9.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo10.html">Lingvo 10.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo11.html">Lingvo 11.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo12.html">Lingvo 12.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo14.html">Lingvo x3 (14.0)</a>
+                        </li>
+                        <li>
+                            <a href="lingvo15.html">Lingvo x5 (15.0)</a>
+                        </li>
+                        <li>
+                            <a href="lingvo16.html">Lingvo x6 (16.0)</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="tag_links.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="directives.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

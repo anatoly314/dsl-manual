@@ -1,0 +1,589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Lingvo 8.0</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="page_styles.css" rel="stylesheet" type="text/css"/>
+
+  
+
+
+<link href="calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../index.html">Справочник по DSL
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Unknown
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="lingvo7.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="lingvo9.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+<div id="header" class="calibre7">Справочник по DSL</div>
+<div id="main" class="calibre8">
+<h1 class="calibre9">Lingvo 8.0</h1>
+<h2 class="calibre328">Замечания</h2>
+<p class="calibre13">Версия программы выпущена в 2002 году.</p>
+<p class="calibre13">Впервые расширен спектр языковых направлений: помимо английского и русского вводятся в обиход немецкий, французский и итальянский языки.</p>
+<p class="calibre13">Введены в использование новые, действующие по сей день, директивы предварительной обработки. При компиляции DSL, созданных для предыдущих версий, справочное руководство предписывает добавлять в начало файла «шапку» из трёх обязательных директив <span class="code1">#NAME</span>, <span class="code1">#INDEX_LANGUAGE</span> и <span class="code1">#CONTENTS_LANGUAGE</span>. Там же упоминается директива <span class="code1">#SOURCE_CODE_PAGE</span>. Перестают действовать две директивы, употреблявшиеся в версиях с 6.0 по 7.0.</p>
+<p class="calibre13">Введен в использование новый тэг <span class="code1">lang</span> с атрибутами <span class="code1">id</span> и <span class="code1">name</span>. В качестве идентификаторов для атрибута <span class="code1">id</span> используются порядковые номера с 1 по 26.</p>
+<p class="calibre13">Тэг <span class="code1">[c]</span> пополнился новой возможностью употребления значений, в качестве которых используются ключевые слова цветов по спецификации HTML. Теперь непосредственно в DSL можно указывать цвет выделяемого текста.</p>
+<p class="calibre13">Однако, базовая форма тэга <span class="code1">[c]</span> продолжает сохранять своё значение. Цвет для неё указывается в диалоге настроек и пометы продолжают выделяться тремя тэгами <span class="code1">[c][i][p]</span>.</p>
+<p class="calibre13">Тэг <span class="code1">[s]</span> пополнился возможностью отображения видео в формате *.avi.</p>
+<p class="calibre13">Вводятся в употребление новые тэги:</p>
+<ul class="calibre31">
+<li class="calibre18">ссылка на статью в другом словаре <span class="code1">[ref]</span>, со значением и без;</li>
+<li class="calibre18">надстрочный текст <span class="code1">[sup]</span>;</li>
+<li class="calibre18">подстрочный текст <span class="code1">[sub]</span>.</li>
+</ul>
+<p class="calibre13">Впервые в официальном справочном руководстве сообщается о возможности прикрепления к пользовательским словарям аннотаций и иконок. Приводятся их технические характеристики.</p>
+<p class="calibre13">Впервые упоминается о недопустимости «вложения зон индексации и команд форматирования текста одного типа».</p>
+<p class="calibre13">Пользовательский словарь аббревиатур более не нужно переименовывать в abbrev.tip, а можно располагать его в программном каталоге с именем abbrev.lsd. По прежнему предусматривается только один словарь аббревиатур для всех пользовательских словарей.</p>
+<h2 class="calibre12">Внешний вид</h2>
+<p class="calibre13">Вид основного окна программы.</p>
+<p class="calibre2"><img src="lingvo8_main.png" class="calibre3"/></p>
+<p class="calibre13">Вид словарной карточки.</p>
+<p class="calibre2"><img src="lingvo8_entry.png" class="calibre3"/></p>
+<p class="calibre13">Вкладка «Формат» в диалоге настроек программы.</p>
+<p class="calibre2"><img src="lingvo8_options_format.png" class="calibre3"/></p>
+<p class="calibre13">Вид окна компилятора пользовательских словарей.</p>
+<p class="calibre2"><img src="lingvo8_comp.png" class="calibre3"/></p>
+<h2 class="calibre12">Состав словарей</h2>
+<h3 class="calibre20">Англо-русские и русско-английские словари</h3>
+<table width="90%" class="calibre36">
+<tr class="calibre37"> <th class="calibre38">№</th><th class="calibre38">Наименование</th><th class="calibre38">Автор, издание</th><th class="calibre38">Объём</th></tr>
+<tr class="calibre37"> <td class="calibre39">1.</td><td class="calibre39">LingvoUniversal (En-Ru)<br class="calibre1"/>Англо-русский словарь общей лексики.<br class="calibre1"/>The Universal English-Russian Dictionary.</td><td class="calibre39">4-е изд., исправленное и дополненное.<br class="calibre1"/>© ABBYY Software House, 2002.</td><td class="calibre39">100 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">2.</td><td class="calibre39">LingvoUniversal (Ru-En)<br class="calibre1"/>Русско-английский словарь общей лексики.<br class="calibre1"/>The Universal Russian-English Dictionary.</td><td class="calibre39">5-е изд., исправленное и дополненное.<br class="calibre1"/>© ABBYY Software House, 2001.</td><td class="calibre39">85 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">3.</td><td class="calibre39">LingvoEconomics (En-Ru)<br class="calibre1"/>Англо-русский экономический словарь.<br class="calibre1"/>The English-Russian Dictionary of Economics.</td><td class="calibre39">5-е изд., переработанное и дополненное.<br class="calibre1"/>© ABBYY Software House, 2001.</td><td class="calibre39">50 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">4.</td><td class="calibre39">LingvoEconomics (Ru-En)<br class="calibre1"/>Русско-английский индекс к Англо-русскому экономическому словарю.<br class="calibre1"/>The Russian-English Index for the English-Russian Dictionary of Economics.</td><td class="calibre39">© ABBYY Software House, 2001.</td><td class="calibre39">35 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">5.</td><td class="calibre39">LingvoComputer (En-Ru)<br class="calibre1"/>Англо-русский словарь по вычислительной технике и программированию.<br class="calibre1"/>The English-Russian Dictionary of Computer Science.</td><td class="calibre39">4-е изд., исправленное и дополненное.<br class="calibre1"/>© ABBYY Software House, Масловский Е.К., 2002.</td><td class="calibre39">52 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">6.</td><td class="calibre39">LingvoComputer (Ru-En)<br class="calibre1"/>Русско-английский индекс к Англо-русскому словарю по вычислительной технике и программированию.<br class="calibre1"/>The Russian-English Index for the English-Russian Dictionary of Computer Science.</td><td class="calibre39">© ABBYY Software House, Масловский Е.К., 2002.</td><td class="calibre39">36 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">7.</td><td class="calibre39">LingvoScience (En-Ru)<br class="calibre1"/>Англо-русский научно-технический словарь.<br class="calibre1"/>The English-Russian Scientific Dictionary.</td><td class="calibre39">3-е изд., переработанное.<br class="calibre1"/>© ABBYY Software House, 2001.</td><td class="calibre39">150 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">8.</td><td class="calibre39">LingvoScience (Ru-En)<br class="calibre1"/>Русско-английский индекс к Англо-русскому научно-техническому словарю.<br class="calibre1"/>The Russian-English Index for the English-Russian Scientific Dictionary.</td><td class="calibre39"><br class="calibre1"/>© ABBYY Software House, 2001.</td><td class="calibre39">145 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">9.</td><td class="calibre39">LingvoSound (En-Ru)<br class="calibre1"/>Краткий англо-русский озвученный словарь.<br class="calibre1"/>The Concise English-Russian Sound Dictionary.</td><td class="calibre39">3-е изд. © ABBYY Software House, 2001.</td><td class="calibre39">5 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">10.</td><td class="calibre39">Polytechnic (En-Ru)<br class="calibre1"/>Большой англо-русский политехнический словарь.<br class="calibre1"/>The Comprehensive English-Russian Scientific and Technical Dictionary.</td><td class="calibre39">2-е изд., стереотипное.<br class="calibre1"/>© РУССО, 1997.</td><td class="calibre39">200 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">11.</td><td class="calibre39">Polytechnic (Ru-En)<br class="calibre1"/>Русско-английский индекс к Англо-русскому политехническому словарю.<br class="calibre1"/>The Russian-English Index for the Comprehensive English-Russian Scientific and Technical Dictionary.<br class="calibre1"/>Индекс к Polytechnic (En-Ru).</td><td class="calibre39">© РУССО, 1997.</td><td class="calibre39">125 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">12.</td><td class="calibre39">OilAndGas (En-Ru)<br class="calibre1"/>Большой англо-русский словарь по нефти и газу.<br class="calibre1"/>The English-Russian Dictionary of Oil and Gas.</td><td class="calibre39">© ВНИИГАЗ, РАО «Газпром», 1998.</td><td class="calibre39">52 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">13.</td><td class="calibre39">OilAndGas (Ru-En)<br class="calibre1"/>Русско-английский индекс к Большому англо-русскому словарю по нефти и газу.<br class="calibre1"/>The Russian-English Index for the English-Russian Dictionary of Oil and Gas.</td><td class="calibre39">© ВНИИГАЗ, РАО «Газпром», 1998.</td><td class="calibre39">35 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">14.</td><td class="calibre39">Medical (En-Ru)<br class="calibre1"/>Англо-русский индекс к Большому русско-английскому медицинскому словарю.<br class="calibre1"/>The English-Russian Index for the Comprehensive Russian-English Medical Dictionary.</td><td class="calibre39">© «РУССО», 2000, Бенюмович М.С., Ривкин В.П. и др.</td><td class="calibre39"> </td></tr>
+<tr class="calibre37"> <td class="calibre39">15.</td><td class="calibre39">Medical (Ru-En)<br class="calibre1"/>Большой русско-английский медицинский словарь.<br class="calibre1"/>The Comprehensive Russian-English Medical Dictionary.</td><td class="calibre39">© «РУССО», 2000, Бенюмович М.С., Ривкин В.П. и др.</td><td class="calibre39">70 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">16.</td><td class="calibre39">Law (En-Ru)<br class="calibre1"/>Англо-русский юридический словарь.<br class="calibre1"/>The English-Russian Law Dictionary.</td><td class="calibre39">© «РУССО», 1998, Андрианов С.Н., Берсон А.С., Никифоров А.С.</td><td class="calibre39">50 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">17.</td><td class="calibre39">Law (Ru-En)<br class="calibre1"/>Русско-английский индекс к Англо-русскому юридическому словарю.<br class="calibre1"/>The Russian-English Index for the English-Russian Law Dictionary.</td><td class="calibre39">© «РУССО», 1998, Андрианов С.Н., Берсон А.С., Никифоров А.С.</td><td class="calibre39">20 тыс. статей.</td></tr>
+<tr class="calibre37"> <td class="calibre39">18.</td><td class="calibre39">LingvoGrammatical (En-Ru)<br class="calibre1"/>Англо-русский грамматический словарь.<br class="calibre1"/>The English-Russian Grammatical Dictionary.</td><td class="calibre39">© ABBYY Software House, 2002.</td><td class="calibre39">Около 500 грамматических статей.</td></tr>
+</table>
+<h3 class="calibre20">Русские словари</h3><br class="calibre1"/>
+<table width="90%" class="calibre36">
+<tr class="calibre37"> <th class="calibre38">№</th><th class="calibre38">Наименование</th><th class="calibre38">Автор, издание</th><th class="calibre38">Объём</th></tr>
+<tr class="calibre37"> <td class="calibre39">1.</td><td class="calibre39">LingvoThesaurus (Ru-Ru)<br class="calibre1"/>Тезаурус русской деловой лексики.<br class="calibre1"/>The Thesaurus of Russian Business Words.</td><td class="calibre39">3-е изд. © ABBYY Software House, 2001.</td><td class="calibre39">16 тыс. статей.</td></tr>
+</table>
+<h3 class="calibre20">Немецко-русские и русско-немецкие словари</h3><br class="calibre1"/>
+<table width="90%" class="calibre36">
+<tr class="calibre37"><th class="calibre38">№</th> <th class="calibre38">Наименование</th> <th class="calibre38">Автор, издание</th> <th class="calibre38">Объём</th></tr>
+<tr class="calibre37"><td class="calibre39">1.</td> <td class="calibre39">Universal (De-Ru)<br class="calibre1"/>Современный немецко-русский словарь общей лексики.<br class="calibre1"/>Modernes Deutsch-Russisches Wörterbuch.</td> <td class="calibre39">5-ое изд., стереотипное. © Рымашевская Э.Л., 1999.</td> <td class="calibre39">60 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">2.</td> <td class="calibre39">Universal (Ru-De)<br class="calibre1"/>Современный русско-немецкий словарь общей лексики.<br class="calibre1"/>Modernes Russisch-Deutsches Wörterbuch.</td> <td class="calibre39">5-ое изд., стереотипное. © Рымашевская Э.Л., 1999.</td> <td class="calibre39">40 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">3.</td> <td class="calibre39">Polytechnic (De-Ru)<br class="calibre1"/>Немецко-русский политехнический словарь.<br class="calibre1"/>Deutsch-Russisches politechnisches Wörterbuch.</td> <td class="calibre39">© «РУССО», 1995, Бардышев Г.М., Барон Л.И., Брызгалин Н.Ф. и др.</td> <td class="calibre39">110 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">4.</td> <td class="calibre39">Polytechnic (Ru-De)<br class="calibre1"/>Русско-немецкий индекс к Немецко-русскому политехническому словарю.<br class="calibre1"/>Russisch-Deutsch Index für Deutsch-Russisches politechnisches Worterbuch.</td> <td class="calibre39">© «РУССО», 1995, Бардышев Г.М., Барон Л.И., Брызгалин Н.Ф. и др.</td> <td class="calibre39">95 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">5.</td> <td class="calibre39">Law (De-Ru)<br class="calibre1"/>Немецко-русский юридический словарь.<br class="calibre1"/>Deutsch-Russisches juristisches Wörterbuch.</td> <td class="calibre39">© «РУССО», 1995, с Дополнением /Гришаев П.И., Донская Л.И., Марфинская М.И. и др.</td> <td class="calibre39">46 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">6.</td> <td class="calibre39">Law (Ru-De)<br class="calibre1"/>Русско-немецкий индекс к Немецко-русскому юридическому словарю.<br class="calibre1"/>Russisch-Deutsch Index für Deutsch-Russisches juristisches Wörterbuch.</td> <td class="calibre39">© «РУССО», 1995, с Дополнением /Гришаев П.И., Донская Л.И., Марфинская М.И. и др.</td> <td class="calibre39">20 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">7.</td> <td class="calibre39">Medical (De-Ru)<br class="calibre1"/>Немецко-русский медицинский словарь.<br class="calibre1"/>Deutsch-Russisches Wörterbuch der Medizin.</td> <td class="calibre39">© «РУССО», 1995, Болотина А.Ю., Ганюшина Е.Г., Добровольский В.И. и др.</td> <td class="calibre39">55 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">8.</td> <td class="calibre39">Medical (Ru-De)<br class="calibre1"/>Русско-немецкий индекс к Немецко-русскому медицинскому словарю.<br class="calibre1"/>Russisch-Deutsch Index für Deutsch-Russisches Wörterbuch der Medizin.</td> <td class="calibre39">© «РУССО», 1995, Болотина А.Ю., Ганюшина Е.Г., Добровольский В.И. и др.</td> <td class="calibre39">40 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">9.</td> <td class="calibre39">Chemistry (De-Ru)<br class="calibre1"/>Немецко-русский словарь по химии и химической технологии.<br class="calibre1"/>Deutsch-Russisches Wörterbuch der Chemie und chemischen Technologie.</td> <td class="calibre39">© «РУССО», 2000, Жукова Т.Б., Мельникова М.М., Потапов И.И. и др.</td> <td class="calibre39">56 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">10.</td> <td class="calibre39">Chemistry (Ru-De)<br class="calibre1"/>Русско-немецкий индекс к немецко-русскому словарю по химии и химической технологии.<br class="calibre1"/>Russisch-Deutsches Index für Deutsch-Russisches Wörterbuch der Chemie und chemischen Technologie.</td> <td class="calibre39">© «РУССО», 2000, Жукова Т.Б., Мельникова М.М., Потапов И.И. и др.</td> <td class="calibre39">40 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">11.</td> <td class="calibre39">Economics (De-Ru)<br class="calibre1"/>Немецко-русский экономический словарь.<br class="calibre1"/>Deutsch-Russisches ökonomisches Wörterbuch.</td> <td class="calibre39">© «РУССО», 2001, Куколев Ю.И.</td> <td class="calibre39">50 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">12.</td> <td class="calibre39">Economics (Ru-De)<br class="calibre1"/>Русско-немецкий индекс к немецко-русскому экономическому словарю.<br class="calibre1"/>Russisch-Deutsches Index für Deutsch-Russisches ökonomisches Wörterbuch.</td> <td class="calibre39">© «РУССО», 2001, Куколев Ю.И.</td> <td class="calibre39">30 тыс. статей.</td></tr>
+</table>
+<h3 class="calibre20">Французско-русские и русско-французские словари</h3><br class="calibre1"/>
+<table width="90%" class="calibre36">
+<tr class="calibre37"><th class="calibre38">№</th> <th class="calibre38">Наименование</th> <th class="calibre38">Автор, издание</th> <th class="calibre38">Объём</th></tr>
+<tr class="calibre37"><td class="calibre39">1.</td> <td class="calibre39">Universal (Fr-Ru)<br class="calibre1"/>Французско-русский словарь по общей лексике.<br class="calibre1"/>Dictionnaire Français-Russe.</td> <td class="calibre39">© Раевская О.В., 2001.</td> <td class="calibre39">20 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">2.</td> <td class="calibre39">Universal (Ru-Fr)<br class="calibre1"/>Русско-французский словарь по общей лексике.<br class="calibre1"/>Dictionnaire Russe-Français.</td> <td class="calibre39">© Раевская О.В., 2000. </td> <td class="calibre39">15 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">3.</td> <td class="calibre39">Technical (Fr-Ru)<br class="calibre1"/>Французско-русский технический словарь.<br class="calibre1"/>Dictionnaire technique Français-Russe.</td> <td class="calibre39">© «РУССО», 1995, Болотин А.А., Воропаев Н.Д., Горбунов А.В. И др. </td> <td class="calibre39">80 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">4.</td> <td class="calibre39">Technical (Ru-Fr)<br class="calibre1"/>Русско-французский индекс к Французско-русскому техническому словарю.<br class="calibre1"/>L'index Russe-Français du Dictionnaire technique Français-Russe.</td> <td class="calibre39">© «РУССО», 1995, Болотин А.А., Воропаев Н.Д., Горбунов А.В. и др. </td> <td class="calibre39">55 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">5.</td> <td class="calibre39">Law (Fr-Ru)<br class="calibre1"/>Французско-русский юридический словарь.<br class="calibre1"/>Dictionnaire de Droit Français-Russe.</td> <td class="calibre39"> © «РУССО», 1995, Мачковский Г.И.</td> <td class="calibre39">35 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">6.</td> <td class="calibre39">Law (Ru-Fr)<br class="calibre1"/>Русско-французский индекс к Французско-русскому юридическому словарю.<br class="calibre1"/>L'index Russe-Français du Dictionnaire de Droit Français-Russe.</td> <td class="calibre39">© «РУССО», 1995, Мачковский Г.И. </td> <td class="calibre39">20 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">7.</td> <td class="calibre39">Chemistry (Fr-Ru)<br class="calibre1"/>Французско-русский словарь по химии и химической технологии.<br class="calibre1"/>Dictionnaire Français-Russe de chimie et de technologie chimique.</td> <td class="calibre39"> © «РУССО», 1999, Альтах О.Л., Беспалов А.Л., Литвинцев И.Ю., Устенко А.А. </td> <td class="calibre39">65 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">8.</td> <td class="calibre39">Chemistry (Ru-Fr)<br class="calibre1"/>Русско-французский индекс к Французско-русскому словарю по химии и химической технологии.<br class="calibre1"/>L'index Russe-Français du Dictionnaire Français-Russe de chimie et de technologie chimique.</td> <td class="calibre39">© «РУССО», 1999, Альтах О.Л., Беспалов А.Л., Литвинцев И.Ю., Устенко А.А. </td> <td class="calibre39">55 тыс. статей.</td></tr>
+</table>
+<h3 class="calibre20">Итальянско-русские и русско-итальянские словари</h3><br class="calibre1"/>
+<table width="90%" class="calibre36">
+<tr class="calibre37"><th class="calibre38">№</th> <th class="calibre38">Наименование</th> <th class="calibre38">Автор, издание</th> <th class="calibre38">Объём</th></tr>
+<tr class="calibre37"><td class="calibre39">1.</td> <td class="calibre39">Polytechnic (It-Ru)<br class="calibre1"/>Итальянско-русский политехнический словарь.<br class="calibre1"/>Dizionario Politecnico Italiano-Russo.<br class="calibre1"/>Индекс к Polytechnic (Ru-It).</td> <td class="calibre39">© «РУССО», 1997, Авраменко Б.И., Сокольский Ю.А.</td> <td class="calibre39">90 тыс. статей.</td></tr>
+<tr class="calibre37"><td class="calibre39">2.</td> <td class="calibre39">Polytechnic (Ru-It)<br class="calibre1"/>Русско-итальянский индекс к Итальянско-русскому политехническому словарю.<br class="calibre1"/>Indice Russo-Italiano del Dizionario Politecnico Italiano-Russo.</td> <td class="calibre39">© «РУССО», 1997, Авраменко Б.И., Сокольский Ю.А.</td> <td class="calibre39">110 тыс. статей.</td></tr>
+</table>
+</div>
+<div id="footer" class="calibre14">
+<p class="calibre15">Справочник по DSL • Версия 0.9.3 beta • 22.09.2015</p>
+<p class="calibre15">Copyleft (ɔ) 2015 yozhic. Свободный контент. Все права открыты и неограничены. Никаких гарантий и ответственности.</p>
+</div>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+        <h2><a href="../index.html"> Table of contents</a></h2>
+        <div>
+            <ul>
+                <li>
+                    <a href="index.html">Титульный лист</a>
+                </li>
+                <li>
+                    <a href="preface.html">Предисловие</a>
+                    <ul>
+                        <li>
+                            <a href="preface.html#author">От составителя</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#terms">Особенности терминологии</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#legend">Условные обозначения</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#thanks">Благодарности</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dsl.html">Что такое DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dsl.html#lang">О языке DSL</a>
+                        </li>
+                        <li>
+                            <a href="dsl.html#format">О формате DSL</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="create.html">О создании словарей DSL</a>
+                    <ul>
+                        <li>
+                            <a href="create.html#easy">Простой словарь DSL</a>
+                        </li>
+                        <li>
+                            <a href="create.html#cool">Структурированный словарь DSL
+                                с форматированием</a>
+                        </li>
+                        <li>
+                            <a href="create.html#tools">Рекомендуемые инструменты</a>
+                        </li>
+                        <li>
+                            <a href="create.html#books">Рекомендуемая литература</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dict.html">Строение словаря DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dict.html#main">Общие сведения</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#names">Наименование файлов словаря</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#dsl">Файл основного текста</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#ann">Файл аннотации</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#bmp">Иконка</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#abrv">Файл аббревиатур</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="entry.html">Структура словарной статьи</a>
+                    <ul>
+                        <li>
+                            <a href="entry.html#article">Словарная статья</a>
+                        </li>
+                        <li>
+                            <a href="entry.html#headword">Заголовок статьи</a>
+                        </li>
+                        <li>
+                            <a href="entry.html#body">Тело статьи</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="tag_list.html">Тэги DSL</a>
+                    <ul>
+                        <li>
+                            <a href="tag_system.html">О тэгах DSL</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_system.html#main">Устройство тегов</a>
+                                </li>
+                                <li>
+                                    <a href="tag_system.html#meta_lit">Метасимволы и
+                                        литералы</a>
+                                </li>
+                                <li>
+                                    <a href="tag_system.html#comments">Общие замечания</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_list.html">Перечень тэгов и команд DSL</a>
+                        </li>
+                        <li>
+                            <a href="tag_format.html">Тэги форматирования текста</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_format.html#b">Тэг B</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#i">Тэг I</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#u">Тэг U</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#c">Тэг C</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#sup">Тэг SUP</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#sub">Тэг SUB</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#m">Тэг M</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#str">Тэг ударения</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#br">Тэг BR</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#circ">Команда ^</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_struct.html">Тэги словарной структуры</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_struct.html#p">Тэг P</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#t">Тэг T</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#ast">Тэг *</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#at">Команда @</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_handling.html">Тэги поисковой обработки</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_handling.html#ex">Тэг EX</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#com">Тэг COM</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trn">Тэг TRN</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trn1">Тэг TRN1</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trs">Тэг !TRS</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#lang">Тэг LANG</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_mm.html">Тэги мультимедиа</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_mm.html#s">Тэг S</a>
+                                    <ul>
+                                        <li>
+                                            <a href="tag_mm.html#images">Изображения</a>
+                                        </li>
+                                        <li>
+                                            <a href="tag_mm.html#sound">Звук</a>
+                                        </li>
+                                        <li>
+                                            <a href="tag_mm.html#movie">Видео</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="tag_mm.html#video">Тэг VIDEO</a>
+                                </li>
+                                <li>
+                                    <a href="tag_mm.html#preview">Тэг PREVIEW</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_links.html">Ссылки</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_links.html#main">Общие сведения</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#ref1">Тэг &lt;&lt; &gt;&gt;</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#ref2">Тэг REF</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#url">Тэг URL</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_service.html">Служебные тэги и команды</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_service.html#comm">Тэг {{ }}</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#alt">Команда ( )</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#unsort">Команда { }</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#tilde">Команда ~</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#backslash">Команда \</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#number">Команда #</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="directives.html">Директивы предварительной
+                                обработки</a>
+                            <ul>
+                                <li>
+                                    <a href="directives.html#main">Общее описание</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#name">Директива #NAME</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#index">Директива
+                                        #INDEX_LANGUAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#contents">Директива
+                                        #CONTENTS_LANGUAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#source">Директива
+                                        #SOURCE_CODE_PAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#include">Директива
+                                        #INCLUDE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#icon">Директива #ICON_FILE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#lang">Директива
+                                        #LANGUAGE</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dsl_comp.html">Компиляция и компилятор DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dsl_comp.html#main">Общие сведения</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#gui">Графический интерфейс
+                                пользователя</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#cmd">Командная строка</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#syntax">Отчёт об ошибках</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="colors.html">Цветовая палитра DSL</a>
+                    <ul>
+                        <li>
+                            <a href="colors.html#colors_hue">Сортировка по группам
+                                оттенков</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_gamma1">Сортировка по цветовой
+                                гамме (первый способ)</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_gamma2">Сортировка по цветовой
+                                гамме (второй способ)</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_abc">Сортировка по
+                                алфавиту</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="langs.html">Списки языков</a>
+                    <ul>
+                        <li>
+                            <a href="langs.html#supported">Языки, поддерживаемые
+                                Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#iso">Коды наименований языков</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#lcid">Коды локалей Microsoft</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#ansi">Кодовые страницы ANSI в
+                                Windows</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="additional.html">Сопутствующие сведения</a>
+                    <ul>
+                        <li>
+                            <a href="search.html">Поиск и индексирование в Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="var_dicts.html">Виды файлов словарей в Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="spaces.html">Об использовании нестандартных
+                                пробелов</a>
+                        </li>
+                        <li>
+                            <a href="lexicography.html">Немного о лексикографии</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="history.html">Из истории Lingvo</a>
+                    <ul>
+                        <li>
+                            <a href="history.html#table">Сводная таблица по истории
+                                развития синтаксиса языка DSL</a>
+                        </li>
+                        <li>
+                            <a href="lingvo4.html">Lingvo 4.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo5.html">Lingvo 5.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo6.html">Lingvo 6.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo6_5.html">Lingvo 6.5</a>
+                        </li>
+                        <li>
+                            <a href="lingvo7.html">Lingvo 7.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo8.html">Lingvo 8.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo9.html">Lingvo 9.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo10.html">Lingvo 10.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo11.html">Lingvo 11.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo12.html">Lingvo 12.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo14.html">Lingvo x3 (14.0)</a>
+                        </li>
+                        <li>
+                            <a href="lingvo15.html">Lingvo x5 (15.0)</a>
+                        </li>
+                        <li>
+                            <a href="lingvo16.html">Lingvo x6 (16.0)</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="lingvo7.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="lingvo9.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

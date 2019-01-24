@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Тэги поисковой обработки</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="page_styles.css" rel="stylesheet" type="text/css"/>
+
+  
+
+
+<link href="calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../index.html">Справочник по DSL
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Unknown
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="tag_struct.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="tag_mm.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+<div id="header" class="calibre7">Справочник по DSL</div>
+<div id="main" class="calibre8">
+<h1 class="calibre9">Тэги поисковой обработки</h1>
+<p class="calibre13">К данной группе причисляются тэги, оказывающие влияние на организацию и осуществление поиска по словарям в программе ABBYY Lingvo. К таковым относятся:</p>
+<p class="content"><img src="line.png" class="calibre10"/></p>
+<p class="content"><a href="#ex" class="content1 pcalibre">Тэг <span class="code2">[ex]···[/ex]</span></a></p>
+<p class="content"><a href="#com" class="content1 pcalibre">Тэг <span class="code2">[com]···[/com]</span></a></p>
+<p class="content"><a href="#trn" class="content1 pcalibre">Тэг <span class="code2">[trn]···[/trn]</span></a></p>
+<p class="content"><a href="#trn1" class="content1 pcalibre">Тэг <span class="code2">[trn1]···[/trn1]</span></a></p>
+<p class="content"><a href="#trs" class="content1 pcalibre">Тэг <span class="code2">[!trs]···[/!trs]</span></a></p>
+<p class="content"><a href="#lang" class="content1 pcalibre">Тэг <span class="code2">[lang]···[/lang]</span></a></p>
+<p class="content"><img src="line.png" class="calibre10"/></p>
+<a name="ex" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Тэг <span class="code3">[ex]···[/ex]</span></h2>
+<p class="calibre13"><strong class="calibre4">Назначение:</strong> Разметка зоны примера (<em class="calibre16">одной из зон индексации</em>).</p>
+<p class="calibre13"><strong class="calibre4">Использование:</strong> Только в теле словарных статей. Использование тэга в заголовках не запрещено правилами, но особого смысла не имеет, поскольку тэг предназначен для разметки зон индексации, а заголовок уже изначально является зоной индексации.</p>
+<p class="calibre13"><strong class="calibre4">Общая информация:</strong> Примерами называются показательные случаи употребления заголовочного слова в письменной и устной речи.</p>
+<p class="calibre13">Данный тэг непосредственно участвует в создании поискового индекса. В процессе индексирования текст, находящийся в зоне действия тэга, включается в состав индекса. Индекс является основой для осуществления поиска по тексту всех словарей в Lingvo. При отображении результатов поиска содержимое тэга причисляется к категории «Примеры». <em class="calibre16">Подробнее об этом см. в главе «<a href="additional.html#search" class="pcalibre calibre11">Поиск и индексирование в Lingvo</a>».</em></p>
+<p class="calibre13"><strong class="calibre4">Отображение в карточках:</strong> На сегодняшний день текстовое содержимое данного тэга в Lingvo отображается чёрным цветом и дополнительно никак не выделяется.</p>
+<p class="calibre13">В диалоге настроек Lingvo именем «примеры» подписана настройка с серым (<span class="dsl_ast">gray</span>) цветом по умолчанию.</p>
+<p class="calibre2"><img src="option_ex.png" class="calibre3"/></p>
+<p class="calibre13">Однако по факту влияет эта настройка не на зону примеров, а на зону вторичного отображения <span class="code1">[*]···[/*]</span>. До конца не ясно в чём именно здесь заключается ошибка разработчиков ABBYY: или цвет, предназначенный для примеров, ошибочно применяется к зоне вторичного отображения; или зона вторичного отображения ошибочно названа «примерами» в диалоге настроек. Рискнём предположить, что скорее всего это второе. Поскольку тэг <span class="code1">[ex]</span> принадлежит к группе поисковой обработки и все остальные тэги в этой группе цветом не выделяются. Кроме того, в <a href="history.html" class="pcalibre calibre11">старых версиях Lingvo</a> (от 5.0 до 8.0) эта настройка носила наименование «Optional Text» / «Факультативная часть».</p>
+<p class="calibre13"><strong class="calibre4">Особенности:</strong> Следует учитывать, что при создании индекса, необходимого для работы поиска по словарям, в его состав включается только текст, находящийся в зоне действия данного тэга и родственных ему тэгов <span class="code1">[trn]</span> и <span class="code1">[com]</span>. Текст, не попавший в зону действия упомянутых тэгов, не попадёт в индекс и, соответственно, при поиске найден не будет.</p>
+<p class="calibre13">Для того, чтобы исключить из индекса часть содержимого данного тэга, необходимо заключить её в тэг <span class="code1">[!trs]</span>.</p>
+<p class="calibre13">В зоне действия данного тэга разрешается размещать любые другие тэги.</p>
+<p class="calibre13">Тэги форматирования (начертания и цвета) оказывают влияние на отображение содержимого данного тэга, находясь как внутри его области, так и снаружи её.</p>
+<div class="codebox">
+<p class="codeboxhead">Употребление примеров :: Запись в DSL</p>
+<div class="code"><pre class="calibre19">загрузить
+	[m1]1) [i]что (чем)[/i] Наполнить грузом, запасами, товарами.[/m]
+	[m2][ex][c gray]Загрузить машину кирпичом.[/c][/ex][/m]
+	[m2][ex][c gray]Загрузить судно по самый борт.[/c][/ex][/m]
+	[m2][ex][c gray]Загрузить подвал картошкой.[/c][/ex][/m]
+	[m2][ex][c gray]Загрузить желудок ([i]заполнить, набить, обычно не слишком полезным и калорийным[/i]).[/c][/ex][/m]
+	[m1]2) [i]кого (что)[/i] Обеспечить работой, занять работой, делами в нужном количестве.[/m]
+	[m2][ex][c gray]Загрузить завод.[/c][/ex][/m]
+	[m2][ex][c gray]Продавцы загружены лишь на пятьдесят процентов.[/c][/ex][/m]</pre></div></div>
+
+<div class="entrybox">
+<p class="entryboxhead">Употребление примеров :: Вид в словарной карточке</p>
+<div class="entry"><div class="entrytitle"><span class="entrytitle1">Пример (Ru-Ru)</span></div><span class="dsl_headword1">загрузить</span>
+<div class="dsl_m1">1) <em class="calibre16">что (чем)</em> Наполнить грузом, запасами, товарами.</div>
+<div class="dsl_m2"><span class="dsl_ast">Загрузить машину кирпичом.</span><br class="calibre1"/><span class="dsl_ast">Загрузить судно по самый борт.</span><br class="calibre1"/><span class="dsl_ast">Загрузить подвал картошкой.</span><br class="calibre1"/><span class="dsl_ast">Загрузить желудок (<em class="calibre16">заполнить, набить, обычно не слишком полезным и калорийным</em>).</span></div>
+<div class="dsl_m1">2) <em class="calibre16">кого (что)</em> Обеспечить работой, занять работой, делами в нужном количестве.</div>
+<div class="dsl_m2"><span class="dsl_ast">Загрузить завод.</span><br class="calibre1"/><span class="dsl_ast">Продавцы загружены лишь на пятьдесят процентов.</span></div></div></div>
+<p class="calibre13"><strong class="calibre4">История:</strong> Тэг введён в употребление в Lingvo версии 6.0.</p>
+<a name="com" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Тэг <span class="code3">[com]···[/com]</span></h2>
+<p class="calibre13"><strong class="calibre4">Назначение:</strong> Разметка зоны комментария (<em class="calibre16">одной из зон индексации</em>).</p>
+<p class="calibre13"><strong class="calibre4">Использование:</strong> Только в теле словарных статей. Использование тэга в заголовках не запрещено правилами, но особого смысла не имеет, поскольку тэг предназначен для разметки зон индексации, а заголовок уже изначально является зоной индексации.</p>
+<p class="calibre13"><strong class="calibre4">Общая информация:</strong> Комментарием является дополнительная информация к переводу или толкованию.</p>
+<p class="calibre13">Данный тэг непосредственно участвует в создании поискового индекса. В процессе индексирования текст, находящийся в зоне действия тэга, включается в состав индекса. Индекс является основой для осуществления поиска по тексту всех словарей в Lingvo. При отображении результатов поиска содержимое тэга причисляется к категории «Комментарии». <em class="calibre16">Подробнее об этом см. в главе «<a href="additional.html#search" class="pcalibre calibre11">Поиск и индексирование в Lingvo</a>».</em></p>
+<p class="calibre13"><strong class="calibre4">Отображение в карточках:</strong> На сегодняшний день текстовое содержимое данного тэга в Lingvo отображается чёрным цветом и дополнительно никак не выделяется.</p>
+<div class="codebox">
+<p class="codeboxhead">Использование комментария и примера :: Запись в DSL</p>
+<div class="code"><pre class="calibre19">загрузить
+	[m1]1) [com][i]что (чем)[/i][/com] [trn]Наполнить грузом, запасами, товарами.[/trn][/m]</pre></div></div>
+<br class="calibre1"/>
+<p class="calibre13"><strong class="calibre4">Особенности:</strong> Следует учитывать, что при создании индекса, необходимого для работы поиска по словарям, в его состав включается только текст, находящийся в зоне действия данного тэга и родственных ему тэгов <span class="code1">[ex]</span> и <span class="code1">[trn]</span>. Текст, не попавший в зону действия упомянутых тэгов, не попадёт в индекс и, соответственно, при поиске найден не будет.</p>
+<p class="calibre13">Для того, чтобы исключить из индекса часть содержимого данного тэга, необходимо заключить её в тэг <span class="code1">[!trs]</span>.</p>
+<p class="calibre13">В зоне действия данного тэга разрешается размещать любые другие тэги.</p>
+<p class="calibre13">Тэги форматирования (начертания и цвета) оказывают влияние на отображение содержимого данного тэга, находясь как внутри его области, так и снаружи её.</p>
+<p class="calibre13">При компиляции словаря Lingvo автоматически добавляет пробел после закрывающего дескриптора <span class="code1">[/com]</span>. Этот факт рекомендуется учитывать при составлении словарей, чтобы избежать появления нечаянных лишних пробелов. Например, выносить дескрипторы за скобки, т.е. вариант <span class="code1">[com](пример)[/com]</span> предпочесть варианту <span class="code_error">([com]пример[/com])</span>.</p>
+<p class="calibre13">Текст, находящийся в зоне действия данного тэга (в зоне комментариев) не учитывается Lingvo при осуществлении «Автоматического поиска»<sup class="calibre21"><a href="#comm1" class="pcalibre calibre11">[1]</a></sup>.</p>
+<p class="calibre13"><strong class="calibre4">История:</strong> Тэг введён в употребление в Lingvo версии 6.0.</p>
+<a name="trn" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Тэг <span class="code3">[trn]···[/trn]</span></h2>
+<p class="calibre13"><strong class="calibre4">Назначение:</strong> Разметка зоны перевода (<em class="calibre16">одной из зон индексации</em>).</p>
+<p class="calibre13"><strong class="calibre4">Использование:</strong> Только в теле словарных статей. Использование тэга в заголовках не запрещено правилами, но особого смысла не имеет, поскольку тэг предназначен для разметки зон индексации, а заголовок уже изначально является зоной индексации.</p>
+<p class="calibre13"><strong class="calibre4">Общая информация:</strong> Переводом, в понимании разработчиков языка DSL, называется текст, являющийся непосредственным переводом или толкованием заголовочного слова (т.е. не примером и не комментарием).</p>
+<p class="calibre13">Данный тэг непосредственно участвует в создании поискового индекса. В процессе индексирования текст, находящийся в зоне действия тэга, включается в состав индекса. Индекс является основой для осуществления поиска по тексту всех словарей в Lingvo. При отображении результатов поиска содержимое тэга причисляется к категории «Переводы». <em class="calibre16">Подробнее об этом см. в главе «<a href="additional.html#search" class="pcalibre calibre11">Поиск и индексирование в Lingvo</a>».</em></p>
+<p class="calibre13"><strong class="calibre4">Отображение в карточках:</strong> На сегодняшний день текстовое содержимое данного тэга в Lingvo отображается чёрным цветом и дополнительно никак не выделяется.</p>
+<div class="codebox">
+<p class="codeboxhead">Использование примера и комментария :: Запись в DSL</p>
+<div class="code"><pre class="calibre19">загрузить
+	[m1]1) [com][i]что (чем)[/i][/com] [trn]Наполнить грузом, запасами, товарами.[/trn][/m]</pre></div></div>
+<br class="calibre1"/>
+<p class="calibre13"><strong class="calibre4">Особенности:</strong> Следует учитывать, что при создании индекса, необходимого для работы поиска по словарям, в его состав включается только текст, находящийся в зоне действия данного тэга и родственных ему тэгов <span class="code1">[ex]</span> и <span class="code1">[com]</span>. Текст, не попавший в зону действия упомянутых тэгов, не попадёт в индекс и, соответственно, при поиске найден не будет.</p>
+<p class="calibre13">Для того, чтобы исключить из индекса часть содержимого данного тэга, необходимо заключить её в тэг <span class="code1">[!trs]</span>.</p>
+<p class="calibre13">В зоне действия данного тэга разрешается размещать любые другие тэги.</p>
+<p class="calibre13"><strong class="calibre4">Замечания:</strong> Если создаваемый словарь хорошо структурирован и имеет большой размер, то использование тэга <span class="code1">[trn]</span> имеет смысл. В остальных случаях его лучше не использовать.</p>
+<p class="calibre13">Вместо расстановки тэга <span class="code1">[trn]</span>, в некоторых случаях эргономичней вначале расставить тэг исключения из индекса <span class="code1">[!trs]</span>, а затем при компиляции включить опцию «Автоматически добавлять разметку, необходимую для поиска по содержимому карточек словаря».</p>
+<p class="calibre13"><strong class="calibre4">История:</strong> Тэг введён в употребление в Lingvo версии 6.0.</p>
+<a name="trn1" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Тэг <span class="code3">[trn1]···[/trn1]</span></h2>
+<div class="ninja"><span class="ninja1">Недокументированный тэг</span></div>
+<p class="calibre13"><strong class="calibre4">Общая информация:</strong> Этот тэг появился в DSL сравнительно недавно: начиная с последних обновлений Lingvo x5 (в версии 15.0.847.0 он уже употребляется). По свойствам он почти полностью совпадает с тэгом <span class="code1">[trn]</span>, за исключением одной особенности. Тэг <span class="code1">[trn1]</span> не предназначен для использования «вручную», расставляется он только автоматически во время компиляции DSL словаря, при условии включенной опции компилятора «Автоматически добавлять разметку, необходимую для поиска по содержимому карточек словаря». При этом открывающий дескриптор данного тэга помещается в начало каждой статьи, а закрывающий – в конец каждой статьи, направляя таким образом всю словарную статью на обработку при создании поискового индекса. <em class="calibre16">Подробнее об этом см. в главе «<a href="additional.html#search" class="pcalibre calibre11">Поиск и индексирование в Lingvo</a>».</em></p>
+<p class="calibre13"><strong class="calibre4">Особенности:</strong> Употребление данного тэга в тексте словаря при редактировании «вручную» запрещено. Если компилятор обнаружит данный тэг, то он сообщит об ошибке и исключит текущую статью из скомпилированного словаря.</p>
+<p class="calibre13"><strong class="calibre4">Замечания:</strong> В некоторых случаях, при редактировании словаря разумно будет сначала заключить некоторые фрагменты текста в тэг <span class="code1">[!trs]</span>, а затем при компилировании расставить данный тэг автоматически, включив опцию компилятора «Автоматически добавлять разметку...».</p>
+<a name="trs" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Тэг <span class="code3">[!trs]···[/!trs]</span></h2>
+<p class="calibre13"><strong class="calibre4">Назначение:</strong> Разметка зоны исключения из индексации.</p>
+<p class="calibre13"><strong class="calibre4">Использование:</strong> Только внутри одной из зон индексации, т.е.: 1) в заголовках; 2) в теле словарных статей только в зонах действия тэгов <span class="code1">[trn]</span>, <span class="code1">[ex]</span> и <span class="code1">[com]</span>.</p>
+<p class="calibre13"><strong class="calibre4">Отображение в карточках:</strong> Текстовое содержимое данного тэга в Lingvo отображается чёрным цветом и дополнительно никак не выделяется.</p>
+<p class="calibre13"><strong class="calibre4">Общая информация:</strong> Данный тэг непосредственно участвует в построении поискового индекса. Индекс составляется из содержимого зон индексации, каковыми на сегодняшний день являются: заголовки, переводы <span class="code1">[trn]</span>, примеры <span class="code1">[ex]</span> и комментарии <span class="code1">[com]</span>. При помощи тэга <span class="code1">[!trs]</span> можно исключить из индекса фрагменты упомянутых зон. Фрагменты текста, исключённые из индекса, будут игнорироваться при поиске по тексту всех словарей в Lingvo.</p>
+<div class="codebox">
+<p class="codeboxhead">Исключение из зоны индексации :: Запись в DSL</p>
+<div class="code"><pre class="calibre19">довершить
+	[m1][trn][!trs](несов. довершать)[/!trs] довести до конца, окончить[/trn][/m]
+	[m2][*][ex][!trs]\[Бибиков \]не успел довершить начатого им: измученный трудами, беспокойством и досадами...[/ex][/*][/m]
+	[m2][*][com]Пушкин, История Пугачева, [!trs]стр. 45[/!trs][/com][/m]</pre></div></div>
+<br class="calibre1"/>
+<p class="calibre13"><strong class="calibre4">Особенности:</strong> Употребления тэга за пределами одной из зон индексации запрещено правилами синтаксиса DSL. Если компилятор обнаружит подобное употребление, то он сообщит об ошибке и исключит текущую статью из скомпилированного словаря.</p>
+<p class="calibre13"><strong class="calibre4">Замечания:</strong> В некоторых случаях, вместо расстановки тэга <span class="code1">[trn]</span>, эргономичней вначале расставить тэг исключения из индекса <span class="code1">[!trs]</span>, а затем при компиляции включить опцию компилятора «Автоматически добавлять разметку...».</p>
+<p class="calibre13"><strong class="calibre4">История:</strong> Тэг введён в употребление в Lingvo версии 6.0.</p>
+<a name="lang" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Тэг <span class="code3">[lang]···[/lang]</span></h2>
+<p class="calibre13"><strong class="calibre4">Назначение:</strong> Указание языка, отличного от языка, заявленного в директиве <span class="code1">#CONTENTS_LANGUAGE</span>.</p>
+<p class="calibre13"><strong class="calibre4">Использование:</strong> Только в теле словарных статей. Использование тэга в заголовках правилами синтаксиса не запрещено, но смысла не имеет, поскольку не производит ожидаемого эффекта.</p>
+<p class="calibre13"><strong class="calibre4">Общее описание:</strong> Согласно правилам синтаксиса DSL, при помощи директивы <span class="code1">#CONTENTS_LANGUAGE</span> в словаре необходимо указывать язык словарных статей, т.е. язык на который осуществляется перевод в данном словаре. Программа Lingvo, прочитав наименование языка, указанного в директиве, причисляет все слова в словарных статьях именно этому языку. Обозначенная таким образом языковая принадлежность влияет на поведение программы при выполнении некоторых задач. Однако зачастую, в статьях используются слова не только языка перевода, но и языка заголовков, и любых других языков. Наиболее частый пример – примеры употребления заголовочного слова в устной и письменной речи, где показательная фраза всегда приводится на двух языках: заголовков и перевода. Использование тэга <span class="code1">[lang]</span> в подобных случаях сообщает Lingvo, какому именно языку принадлежит данная фраза или слово.</p>
+<p class="calibre13"><strong class="calibre4">Отображение в карточках:</strong> Текстовое содержимое данного тэга в Lingvo отображается чёрным цветом и дополнительно никак не выделяется.</p>
+<p class="calibre13"><strong class="calibre4">Синтаксис:</strong> Тэг употребляется только в форме с атрибутами: <span class="code1">[lang <em class="calibre16">атрибут</em>="<em class="calibre16">значение</em>"]···[/lang]</span>. Существует две разновидности атрибутов.</p>
+<ul class="calibre31">
+<li class="calibre18">Атрибут <span class="code1">name</span>. Форма: <span class="code1">[lang name="<em class="calibre16">значение</em>"]···[/lang]</span>. В качестве значений используются английские наименования языков, принятые для обозначения языков в системе Windows. Полный список наименований см. в главе «<a href="langs.html#supported" class="pcalibre calibre11">Языки, поддерживаемые в Lingvo</a>» раздела «<a href="langs.html" class="pcalibre calibre11">Списки языков</a>». Наименования языков в атрибутах чувствительны к регистру. Например, правильными будут записи <span class="code1">name="Russian"</span> и <span class="code1">name="SpanishModernSort"</span>, тогда как варианты <span class="code_error">name="RUSSIAN"</span> и <span class="code_error">name="spanishmodernsort"</span> возбудят ошибку компилятора.</li>
+<li class="calibre18">Атрибут <span class="code1">id</span>. Форма: <span class="code1">[lang id=<em class="calibre16">значение</em>]···[/lang]</span>. В качестве значений используются локальные идентификаторы (LCID) языка, принятые в системе Windows. Полный список идентификаторов см. в главе «<a href="langs.html#supported" class="pcalibre calibre11">Языки, поддерживаемые в Lingvo</a>» раздела «<a href="langs.html" class="pcalibre calibre11">Списки языков</a>».
+  <br class="calibre1"/><br class="calibre1"/><i class="calibre16">В ранних версиях Lingvo, начиная с 8.0, употреблялись другие идентификаторы, представляющие собой порядковые номера с 1 по 30, присвоенные языкам, по-видимому, без чётко определённой системы. В справочном руководстве к версии 11 впервые упоминаются идентификаторы LCID. DSL компиляторы версий x3 и x5 (<span class="debug">другие пока не проверялись</span>) поддерживают оба варианта идентификаторов.</i></li>
+</ul>
+<div class="codebox">
+<p class="codeboxhead">Употребление языковой разметки :: Запись в DSL</p>
+<div class="code"><pre class="calibre19">	[m2][*][ex][lang name="Russian"]поиск полезных ископаемых[/lang] — prospecting[/ex][/*][/m]
+	[m2][*][ex][lang id=1049]поиск информации[/lang] — information retrieval[/ex][/*][/m]</pre></div></div>
+<br class="calibre1"/>
+<p class="calibre13"><strong class="calibre4">Особенности:</strong> Если в статье использован текст, язык которого отличается от языка перевода (заявленного в директиве <span class="code1">#CONTENTS_LANGUAGE</span>), и этот текст не отмаркирован при помощи тэга <span class="code1">[lang]</span>, то последствия будут следующими.</p>
+<ul class="calibre31">
+<li class="calibre18">Перевод выделенного в карточке слова через буфер обмена или по нажатию клавиши <span class="key">Enter</span> будет выдавать результаты «Автоматического поиска»<sup class="calibre21"><a href="#comm1" class="pcalibre calibre11">[1]</a></sup> вместо результатов «Поиска в словарях».</li>
+<li class="calibre18">Пункт меню «Показать формы слова»<sup class="calibre21"><a href="#comm2" class="pcalibre calibre11">[2]</a></sup>: показ грамматических форм слова станет невозможным.</li>
+<li class="calibre18">Пункт меню «Перевести»<sup class="calibre21"><a href="#comm2" class="pcalibre calibre11">[2]</a></sup>: перевод будет выдавать результаты «Автоматического поиска»<sup class="calibre21"><a href="#comm1" class="pcalibre calibre11">[1]</a></sup> вместо результатов «Поиска в словарях».</li>
+<li class="calibre18">Пункт меню «Перевести на все языки»<sup class="calibre21"><a href="#comm2" class="pcalibre calibre11">[2]</a></sup>: перевод на все языки будет выдавать результаты «Автоматического поиска»<sup class="calibre21"><a href="#comm1" class="pcalibre calibre11">[1]</a></sup> вместо результатов «Поиска в словарях».</li>
+<li class="calibre18">Пункт меню «Искать в словарях»<sup class="calibre21"><a href="#comm2" class="pcalibre calibre11">[2]</a></sup>: поиск в словарях будет осуществлен в индексе языка статьи (а не фактического языка слова).</li>
+<li class="calibre18">Пункт меню «Копировать в строку ввода»<sup class="calibre21"><a href="#comm2" class="pcalibre calibre11">[2]</a></sup>: копирование слова из карточки в строку ввода вызовет переключение словаря на язык статьи (а не на фактический язык слова).</li>
+<li class="calibre18">Пункт меню «Искать в "Википедии"»<sup class="calibre21"><a href="#comm2" class="pcalibre calibre11">[2]</a></sup>: поиск откроет Википедию на языке статьи (а не на фактическом языке слова).</li>
+</ul>
+<p class="calibre13">Отсутствие языковой разметки не влияет на глобальный «Поиск в словарях».</p>
+<p class="calibre13">При компиляции словаря Lingvo автоматически добавляет пробел перед закрывающим дескриптором <span class="code1">[/lang]</span>. Этот факт рекомендуется учитывать при составлении словарей, чтобы избежать появления нечаянных лишних пробелов.</p>
+<p class="calibre13"><strong class="calibre4">Замечание</strong>: Об особенностях реализации поддержки некоторых языков в Lingvo смотри главы «<a href="lingvo14.html" class="pcalibre calibre11">Lingvo x3 (14.0)</a>» и «<a href="lingvo15.html" class="pcalibre calibre11">Lingvo x5 (15.0)</a>» в разделе «<a href="history.html" class="pcalibre calibre11">Из истории Lingvo</a>».</p>
+<p class="calibre13"><strong class="calibre4">История:</strong> Тэг введён в употребление в Lingvo версии 8.0. Связано это было, по-видимому, с началом поддержки Lingvo других языков, помимо английского и русского.</p><br class="calibre1"/>
+<p class="calibre13"><img src="line.png" class="calibre3"/></p>
+<p class="calibre13"><a name="comm1" class="pcalibre calibre11"></a><sup class="calibre21">[1]</sup> <em class="calibre16">«Автоматическим» в Lingvo называется поиск по тексту статей, который запускается, если при переводе слова или словосочетания для него не нашлось отдельной статьи. «Автоматический поиск» отличается от «Поиска в словарях» тем, что он, вкратце, более упрощённый и его настройки нельзя изменить. Побробнее см. словарь-справочник «Mostitsky DSL Help (Ru-Ru)», статья «Поиск в Lingvo».</em></p>
+<p class="calibre13"><a name="comm2" class="pcalibre calibre11"></a><sup class="calibre21">[2]</sup> <em class="calibre16">Имеется в виду контекстное меню, доступное в словарной карточке по щелчку <abbr title="Правая Кнопка Мыши" class="calibre22">ПКМ</abbr>.</em></p>
+</div>
+<div id="footer" class="calibre14">
+<p class="calibre15">Справочник по DSL • Версия 0.9.3 beta • 22.09.2015</p>
+<p class="calibre15">Copyleft (ɔ) 2015 yozhic. Свободный контент. Все права открыты и неограничены. Никаких гарантий и ответственности.</p>
+</div>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+        <h2><a href="../index.html"> Table of contents</a></h2>
+        <div>
+            <ul>
+                <li>
+                    <a href="index.html">Титульный лист</a>
+                </li>
+                <li>
+                    <a href="preface.html">Предисловие</a>
+                    <ul>
+                        <li>
+                            <a href="preface.html#author">От составителя</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#terms">Особенности терминологии</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#legend">Условные обозначения</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#thanks">Благодарности</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dsl.html">Что такое DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dsl.html#lang">О языке DSL</a>
+                        </li>
+                        <li>
+                            <a href="dsl.html#format">О формате DSL</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="create.html">О создании словарей DSL</a>
+                    <ul>
+                        <li>
+                            <a href="create.html#easy">Простой словарь DSL</a>
+                        </li>
+                        <li>
+                            <a href="create.html#cool">Структурированный словарь DSL
+                                с форматированием</a>
+                        </li>
+                        <li>
+                            <a href="create.html#tools">Рекомендуемые инструменты</a>
+                        </li>
+                        <li>
+                            <a href="create.html#books">Рекомендуемая литература</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dict.html">Строение словаря DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dict.html#main">Общие сведения</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#names">Наименование файлов словаря</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#dsl">Файл основного текста</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#ann">Файл аннотации</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#bmp">Иконка</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#abrv">Файл аббревиатур</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="entry.html">Структура словарной статьи</a>
+                    <ul>
+                        <li>
+                            <a href="entry.html#article">Словарная статья</a>
+                        </li>
+                        <li>
+                            <a href="entry.html#headword">Заголовок статьи</a>
+                        </li>
+                        <li>
+                            <a href="entry.html#body">Тело статьи</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="tag_list.html">Тэги DSL</a>
+                    <ul>
+                        <li>
+                            <a href="tag_system.html">О тэгах DSL</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_system.html#main">Устройство тегов</a>
+                                </li>
+                                <li>
+                                    <a href="tag_system.html#meta_lit">Метасимволы и
+                                        литералы</a>
+                                </li>
+                                <li>
+                                    <a href="tag_system.html#comments">Общие замечания</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_list.html">Перечень тэгов и команд DSL</a>
+                        </li>
+                        <li>
+                            <a href="tag_format.html">Тэги форматирования текста</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_format.html#b">Тэг B</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#i">Тэг I</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#u">Тэг U</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#c">Тэг C</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#sup">Тэг SUP</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#sub">Тэг SUB</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#m">Тэг M</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#str">Тэг ударения</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#br">Тэг BR</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#circ">Команда ^</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_struct.html">Тэги словарной структуры</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_struct.html#p">Тэг P</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#t">Тэг T</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#ast">Тэг *</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#at">Команда @</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_handling.html">Тэги поисковой обработки</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_handling.html#ex">Тэг EX</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#com">Тэг COM</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trn">Тэг TRN</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trn1">Тэг TRN1</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trs">Тэг !TRS</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#lang">Тэг LANG</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_mm.html">Тэги мультимедиа</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_mm.html#s">Тэг S</a>
+                                    <ul>
+                                        <li>
+                                            <a href="tag_mm.html#images">Изображения</a>
+                                        </li>
+                                        <li>
+                                            <a href="tag_mm.html#sound">Звук</a>
+                                        </li>
+                                        <li>
+                                            <a href="tag_mm.html#movie">Видео</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="tag_mm.html#video">Тэг VIDEO</a>
+                                </li>
+                                <li>
+                                    <a href="tag_mm.html#preview">Тэг PREVIEW</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_links.html">Ссылки</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_links.html#main">Общие сведения</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#ref1">Тэг &lt;&lt; &gt;&gt;</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#ref2">Тэг REF</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#url">Тэг URL</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_service.html">Служебные тэги и команды</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_service.html#comm">Тэг {{ }}</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#alt">Команда ( )</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#unsort">Команда { }</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#tilde">Команда ~</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#backslash">Команда \</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#number">Команда #</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="directives.html">Директивы предварительной
+                                обработки</a>
+                            <ul>
+                                <li>
+                                    <a href="directives.html#main">Общее описание</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#name">Директива #NAME</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#index">Директива
+                                        #INDEX_LANGUAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#contents">Директива
+                                        #CONTENTS_LANGUAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#source">Директива
+                                        #SOURCE_CODE_PAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#include">Директива
+                                        #INCLUDE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#icon">Директива #ICON_FILE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#lang">Директива
+                                        #LANGUAGE</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dsl_comp.html">Компиляция и компилятор DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dsl_comp.html#main">Общие сведения</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#gui">Графический интерфейс
+                                пользователя</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#cmd">Командная строка</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#syntax">Отчёт об ошибках</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="colors.html">Цветовая палитра DSL</a>
+                    <ul>
+                        <li>
+                            <a href="colors.html#colors_hue">Сортировка по группам
+                                оттенков</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_gamma1">Сортировка по цветовой
+                                гамме (первый способ)</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_gamma2">Сортировка по цветовой
+                                гамме (второй способ)</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_abc">Сортировка по
+                                алфавиту</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="langs.html">Списки языков</a>
+                    <ul>
+                        <li>
+                            <a href="langs.html#supported">Языки, поддерживаемые
+                                Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#iso">Коды наименований языков</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#lcid">Коды локалей Microsoft</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#ansi">Кодовые страницы ANSI в
+                                Windows</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="additional.html">Сопутствующие сведения</a>
+                    <ul>
+                        <li>
+                            <a href="search.html">Поиск и индексирование в Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="var_dicts.html">Виды файлов словарей в Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="spaces.html">Об использовании нестандартных
+                                пробелов</a>
+                        </li>
+                        <li>
+                            <a href="lexicography.html">Немного о лексикографии</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="history.html">Из истории Lingvo</a>
+                    <ul>
+                        <li>
+                            <a href="history.html#table">Сводная таблица по истории
+                                развития синтаксиса языка DSL</a>
+                        </li>
+                        <li>
+                            <a href="lingvo4.html">Lingvo 4.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo5.html">Lingvo 5.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo6.html">Lingvo 6.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo6_5.html">Lingvo 6.5</a>
+                        </li>
+                        <li>
+                            <a href="lingvo7.html">Lingvo 7.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo8.html">Lingvo 8.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo9.html">Lingvo 9.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo10.html">Lingvo 10.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo11.html">Lingvo 11.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo12.html">Lingvo 12.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo14.html">Lingvo x3 (14.0)</a>
+                        </li>
+                        <li>
+                            <a href="lingvo15.html">Lingvo x5 (15.0)</a>
+                        </li>
+                        <li>
+                            <a href="lingvo16.html">Lingvo x6 (16.0)</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="tag_struct.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="tag_mm.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

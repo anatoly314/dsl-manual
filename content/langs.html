@@ -1,0 +1,1208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Списки языков</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="page_styles.css" rel="stylesheet" type="text/css"/>
+
+  
+
+
+<link href="calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../index.html">Справочник по DSL
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Unknown
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="colors.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="additional.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+<div id="header" class="calibre7">Справочник по DSL</div>
+<div id="main" class="calibre8">
+<h1 class="calibre9">Списки языков</h1>
+<p class="content"><img src="line.png" class="calibre10"/></p>
+<p class="content"><a href="#supported" class="content1 pcalibre">Языки, поддерживаемые Lingvo</a></p>
+<p class="content"><a href="#iso" class="content1 pcalibre">Коды наименований языков</a></p>
+<p class="content"><a href="#lcid" class="content1 pcalibre">Коды локалей Microsoft</a></p>
+<p class="content"><a href="#ansi" class="content1 pcalibre">Кодовые страницы ANSI в Windows</a></p>
+<p class="content"><img src="line.png" class="calibre10"/></p>
+<a name="supported" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Языки, поддерживаемые Lingvo</h2>
+<p class="calibre13">Таблица составлена на основании таблицы из статьи «Поддерживаемые языки» словаря-справочника по командам языка DSL «Mostitsky DSL Help (Ru-Ru)» версии 3.0 (составитель Игорь Мостицкий). <i class="calibre16">К исходным данным добавлена колонка 3-буквенных сокращений по стандарту ISO 639-2, частично изменены заголовки колонок, добавлена недостающая строка с румынским языком.</i></p>
+<p class="calibre13">В колонке <strong class="calibre4">Old ID</strong> приведены устаревшие идентификаторы, применяемые в атрибуте <span class="code1">id</span> тэга <span class="code1">lang</span> версий Lingvo начиная с 8.0. В официальной справке к версии 11 впервые упоминается возможность использования локальных языковых идентификаторов <strong class="calibre4">LCID</strong>, принятых в системе Windows (<i class="calibre16">приведены в следующей колонке</i>). DSL компиляторы версий x3 и x5 (<span class="debug">другие пока не проверялись</span>) поддерживают оба варианта идентификаторов.</p>
+<table class="calibre36">
+<col width="190" class="calibre30"/><col width="190" class="calibre30"/><col width="80" class="calibre30"/><col width="80" class="calibre30"/><col width="50" class="calibre30"/><col width="100" class="calibre30">
+</col><tr class="calibre37"><th class="calibre38">Язык</th> <th class="calibre38">Английское наименование<br class="calibre1"/><span class="calibre314">для атрибута name<br class="calibre1"/>и указания в директивах</span></th> <th class="calibre38">ISO 639-1</th> <th class="calibre38">ISO 639-2</th> <th class="calibre38">Old ID</th> <th class="calibre38">LCID<br class="calibre1"/><span class="calibre314">для атрибута id</span></th> <th class="calibre38">Особенности</th></tr>
+<tr class="calibre37"><td class="calibre39">Азербайджанский</td> <td class="calibre39">AzeriLatin</td> <td class="calibre39">Az</td> <td class="calibre39">aze</td> <td class="calibre39"/> <td class="calibre39">1068</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr>. <em class="calibre16">Поддерживается в x5 по обоим атрибутам. В x6 не поддерживается.</em></td></tr>
+<tr class="calibre37"><td class="calibre39">Английский</td> <td class="calibre39">English</td> <td class="calibre39">En</td> <td class="calibre39">eng</td> <td class="calibre39">1</td> <td class="calibre39">1033</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr>, <abbr title="Возможен просмотр списка форм слов" class="calibre22">Формы слов</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Арабский</td> <td class="calibre39">Arabic</td> <td class="calibre39">Ar</td> <td class="calibre39">ara</td> <td class="calibre39"/> <td class="calibre39">1025</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Армянский</td> <td class="calibre39">Armenian</td> <td class="calibre39">Am<br class="calibre1"/>Hy</td> <td class="calibre39">arm<br class="calibre1"/>hye</td> <td class="calibre39"/> <td class="calibre39">1067</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Армянский<br class="calibre1"/><em class="calibre16">(западный)</em></td> <td class="calibre39">ArmenianWestern</td> <td class="calibre39">Am<br class="calibre1"/>Hy</td> <td class="calibre39">arm<br class="calibre1"/>hye</td> <td class="calibre39"/> <td class="calibre39">32811</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Африкаанс</td> <td class="calibre39">Afrikaans</td> <td class="calibre39">Af</td> <td class="calibre39">afr</td> <td class="calibre39">15</td> <td class="calibre39">1078</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Баскский</td> <td class="calibre39">Basque</td> <td class="calibre39">Eu</td> <td class="calibre39">baq<br class="calibre1"/>eus</td> <td class="calibre39">9</td> <td class="calibre39">1069</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Башкирский</td> <td class="calibre39">Bashkir</td> <td class="calibre39">Ba</td> <td class="calibre39">bak</td> <td class="calibre39"><abbr title="Нет данных" class="calibre22">н/д</abbr></td> <td class="calibre39">1133</td> <td class="calibre39"><abbr title="Поддерживается Lingvo неофициально" class="calibre22">Неофициальный</abbr>. <em class="calibre16">Начиная с x5 поддерживается по атрибуту <span class="code1">name</span>. По атрибуту <span class="code1">id</span> не поддерживается.</em></td></tr>
+<tr class="calibre37"><td class="calibre39">Белорусский</td> <td class="calibre39">Belarusian</td> <td class="calibre39">Be</td> <td class="calibre39">bel</td> <td class="calibre39">21</td> <td class="calibre39">1059</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Болгарский</td> <td class="calibre39">Bulgarian</td> <td class="calibre39">Bg</td> <td class="calibre39">bul</td> <td class="calibre39">22</td> <td class="calibre39">1026</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Венгерский</td> <td class="calibre39">Hungarian</td> <td class="calibre39">Hu</td> <td class="calibre39">hun</td> <td class="calibre39">19</td> <td class="calibre39">1038</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Голландский<br class="calibre1"/><em class="calibre16">(Нидерландский)</em></td> <td class="calibre39">Dutch</td> <td class="calibre39">Nl</td> <td class="calibre39">dat<br class="calibre1"/>nld</td> <td class="calibre39">10</td> <td class="calibre39">1043</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Греческий</td> <td class="calibre39">Greek</td> <td class="calibre39">El</td> <td class="calibre39">ell<br class="calibre1"/>gre</td> <td class="calibre39"><abbr title="Нет данных" class="calibre22">н/д</abbr></td> <td class="calibre39">1032</td> <td class="calibre39"><abbr title="Поддерживается Lingvo неофициально" class="calibre22">Неофициальный</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Грузинский</td> <td class="calibre39">Georgian</td> <td class="calibre39">Ka</td> <td class="calibre39">geo<br class="calibre1"/>kat</td> <td class="calibre39"/> <td class="calibre39">1079</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Датский</td> <td class="calibre39">Danish</td> <td class="calibre39">Da</td> <td class="calibre39">dan</td> <td class="calibre39">13</td> <td class="calibre39">1030</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Индонезийский</td> <td class="calibre39">Indonesian</td> <td class="calibre39">Id</td> <td class="calibre39">ind</td> <td class="calibre39">16</td> <td class="calibre39">1057</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Исландский</td> <td class="calibre39">Icelandic</td> <td class="calibre39">Is</td> <td class="calibre39">ise<br class="calibre1"/>isl</td> <td class="calibre39"/> <td class="calibre39">1039</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Испанский<br class="calibre1"/><em class="calibre16">(международная сортировка)</em></td> <td class="calibre39">SpanishModernSort</td> <td class="calibre39">Es</td> <td class="calibre39">esl<br class="calibre1"/>spa</td> <td class="calibre39">6</td> <td class="calibre39">3082</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr>, <abbr title="Возможен просмотр списка форм слов" class="calibre22">Формы слов</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Испанский<br class="calibre1"/><em class="calibre16">(традиционная сортировка)</em></td> <td class="calibre39">SpanishTraditionalSort</td> <td class="calibre39">Es</td> <td class="calibre39">esl<br class="calibre1"/>spa</td> <td class="calibre39">7</td> <td class="calibre39">1034</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr>, <abbr title="Возможен просмотр списка форм слов" class="calibre22">Формы слов</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Итальянский</td> <td class="calibre39">Italian</td> <td class="calibre39">It</td> <td class="calibre39">ita</td> <td class="calibre39">5</td> <td class="calibre39">1040</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr>, <abbr title="Возможен просмотр списка форм слов" class="calibre22">Формы слов</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Казахский</td> <td class="calibre39">Kazakh</td> <td class="calibre39">Kk</td> <td class="calibre39">kaz</td> <td class="calibre39"><abbr title="Нет данных" class="calibre22">н/д</abbr></td> <td class="calibre39">1087</td> <td class="calibre39"><abbr title="Поддерживается Lingvo неофициально" class="calibre22">Неофициальный</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Киргизский</td> <td class="calibre39">Kirgiz</td> <td class="calibre39">Ky</td> <td class="calibre39">kir</td> <td class="calibre39"/> <td class="calibre39">1595</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr>. <em class="calibre16">Поддерживается в x5 по обоим атрибутам. В x6 не поддерживается.</em></td></tr>
+<tr class="calibre37"><td class="calibre39">Китайский</td> <td class="calibre39">Chinese</td> <td class="calibre39">Ch</td> <td class="calibre39">chi<br class="calibre1"/>zho</td> <td class="calibre39">29</td> <td class="calibre39">1028</td> <td class="calibre39">Тайвань</td></tr>
+<tr class="calibre37"><td class="calibre39">Китайский<br class="calibre1"/><em class="calibre16">(традиционное начертание)</em></td> <td class="calibre39">ChinesePRC</td> <td class="calibre39">Ch</td> <td class="calibre39">chi<br class="calibre1"/>zho</td> <td class="calibre39">28</td> <td class="calibre39">2052</td> <td class="calibre39">КНР</td></tr>
+<tr class="calibre37"><td class="calibre39">Латинский</td> <td class="calibre39">Latin</td> <td class="calibre39">La</td> <td class="calibre39">lat</td> <td class="calibre39">30</td> <td class="calibre39">1142</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr>, <abbr title="Возможен просмотр списка форм слов" class="calibre22">Формы слов</abbr>. <em class="calibre16">В версиях x3 по 15.0.511.0 поддерживается <span class="code1">id=1540</span>, а <span class="code1">id=1142</span> вызывает ошибку. Начиная с 15.0.826.5 по актуальную x6 поддерживается <span class="code1">id=1142</span>, а <span class="code1">id=1540</span> вызывает ошибку.</em></td></tr>
+<tr class="calibre37"><td class="calibre39">Латышский</td> <td class="calibre39">Latvian</td> <td class="calibre39">Lv</td> <td class="calibre39">lav</td> <td class="calibre39"><abbr title="Нет данных" class="calibre22">н/д</abbr></td> <td class="calibre39">1062</td> <td class="calibre39"><abbr title="Поддерживается Lingvo неофициально" class="calibre22">Неофициальный</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Литовский</td> <td class="calibre39">Lithuanian</td> <td class="calibre39">Lt</td> <td class="calibre39">lit</td> <td class="calibre39"><abbr title="Нет данных" class="calibre22">н/д</abbr></td> <td class="calibre39">1063</td> <td class="calibre39"><abbr title="Поддерживается Lingvo неофициально" class="calibre22">Неофициальный</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Малайский</td> <td class="calibre39">Malay</td> <td class="calibre39">Ms</td> <td class="calibre39">may<br class="calibre1"/>msa</td> <td class="calibre39"/> <td class="calibre39">1086</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Немецкий<br class="calibre1"/><em class="calibre16">(старая орфография)</em></td> <td class="calibre39">German</td> <td class="calibre39">De</td> <td class="calibre39">deu<br class="calibre1"/>ger</td> <td class="calibre39">3</td> <td class="calibre39">1031</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr>, <abbr title="Возможен просмотр списка форм слов" class="calibre22">Формы слов</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Немецкий<br class="calibre1"/><em class="calibre16">(новая орфография)</em></td> <td class="calibre39">GermanNewSpelling</td> <td class="calibre39">De</td> <td class="calibre39">deu<br class="calibre1"/>ger</td> <td class="calibre39">26</td> <td class="calibre39">32775</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr>, <abbr title="Возможен просмотр списка форм слов" class="calibre22">Формы слов</abbr>. <em class="calibre16">Не поддерживается Lingvo версий x5, x6. Вместо него следует использовать <span class="code1">German</span>.</em></td></tr>
+<tr class="calibre37"><td class="calibre39">Норвежский<br class="calibre1"/><em class="calibre16">(букмол)</em></td> <td class="calibre39">NorwegianBokmal</td> <td class="calibre39">Nb (No)</td> <td class="calibre39">nor</td> <td class="calibre39">14</td> <td class="calibre39">1044</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Норвежский<br class="calibre1"/><em class="calibre16">(нюнорск)</em></td> <td class="calibre39">NorwegianNynorsk</td> <td class="calibre39">Nn (No)</td> <td class="calibre39">nor</td> <td class="calibre39">25</td> <td class="calibre39">2068</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Польский</td> <td class="calibre39">Polish</td> <td class="calibre39">Pl</td> <td class="calibre39">pol</td> <td class="calibre39">20</td> <td class="calibre39">1045</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Португальский</td> <td class="calibre39">PortugueseStandard</td> <td class="calibre39">Pt</td> <td class="calibre39">por</td> <td class="calibre39">8</td> <td class="calibre39">2070</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Румынский</td> <td class="calibre39">Romanian</td> <td class="calibre39">Ro</td> <td class="calibre39">ron</td> <td class="calibre39"> </td> <td class="calibre39">1048</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Русский</td> <td class="calibre39">Russian</td> <td class="calibre39">Ru</td> <td class="calibre39">rus</td> <td class="calibre39">2</td> <td class="calibre39">1049</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr>, <abbr title="Возможен просмотр списка форм слов" class="calibre22">Формы слов</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Сербский<br class="calibre1"/><em class="calibre16">(кириллица)</em></td> <td class="calibre39">SerbianCyrillic</td> <td class="calibre39">(Sr)</td> <td class="calibre39">srp</td> <td class="calibre39">23</td> <td class="calibre39">3098</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Словацкий</td> <td class="calibre39">Slovak</td> <td class="calibre39">Sk</td> <td class="calibre39">slk<br class="calibre1"/>slo</td> <td class="calibre39"><abbr title="Нет данных" class="calibre22">н/д</abbr></td> <td class="calibre39">1051</td> <td class="calibre39"><abbr title="Поддерживается Lingvo неофициально" class="calibre22">Неофициальный</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Словенский</td> <td class="calibre39">Slovenian</td> <td class="calibre39">Sl</td> <td class="calibre39">slv</td> <td class="calibre39"/> <td class="calibre39">1060</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Суахили</td> <td class="calibre39">Swahili</td> <td class="calibre39">Sw</td> <td class="calibre39">swa</td> <td class="calibre39">17</td> <td class="calibre39">1089</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Таджикский</td> <td class="calibre39">Tajik</td> <td class="calibre39">Tg</td> <td class="calibre39">tgk</td> <td class="calibre39"/> <td class="calibre39">1064</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr>. <em class="calibre16">Поддерживается в x5 по обоим атрибутам. В x6 не поддерживается.</em></td></tr>
+<tr class="calibre37"><td class="calibre39">Татарский</td> <td class="calibre39">Tatar</td> <td class="calibre39">Tt</td> <td class="calibre39">tat</td> <td class="calibre39"><abbr title="Нет данных" class="calibre22">н/д</abbr></td> <td class="calibre39">1092</td> <td class="calibre39"><abbr title="Поддерживается Lingvo неофициально" class="calibre22">Неофициальный</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Турецкий</td> <td class="calibre39">Turkish</td> <td class="calibre39">Tr</td> <td class="calibre39">tur</td> <td class="calibre39">27</td> <td class="calibre39">1055</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr>, <abbr title="Возможен просмотр списка форм слов" class="calibre22">Формы слов</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Туркменский</td> <td class="calibre39">Turkmen</td> <td class="calibre39">Tk</td> <td class="calibre39">tuk</td> <td class="calibre39"/> <td class="calibre39">1090</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr>. <em class="calibre16">Поддерживается в x5 по обоим атрибутам. В x6 не поддерживается.</em></td></tr>
+<tr class="calibre37"><td class="calibre39">Узбекский</td> <td class="calibre39">UzbekLatin</td> <td class="calibre39">Uz</td> <td class="calibre39">uzb</td> <td class="calibre39"/> <td class="calibre39">1091</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr>. <em class="calibre16">Поддерживается в x5 по обоим атрибутам. В x6 не поддерживается.</em></td></tr>
+<tr class="calibre37"><td class="calibre39">Украинский</td> <td class="calibre39">Ukrainian</td> <td class="calibre39">Uk</td> <td class="calibre39">ukr</td> <td class="calibre39">24</td> <td class="calibre39">1058</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr>, <abbr title="Возможен просмотр списка форм слов" class="calibre22">Формы слов</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Финский</td> <td class="calibre39">Finnish</td> <td class="calibre39">Fi</td> <td class="calibre39">fin</td> <td class="calibre39">11</td> <td class="calibre39">1035</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Французский</td> <td class="calibre39">French</td> <td class="calibre39">Fr</td> <td class="calibre39">fra<br class="calibre1"/>fre</td> <td class="calibre39">4</td> <td class="calibre39">1036</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr>, <abbr title="Возможен просмотр списка форм слов" class="calibre22">Формы слов</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Чешский</td> <td class="calibre39">Czech</td> <td class="calibre39">Cs</td> <td class="calibre39">ces<br class="calibre1"/>cze</td> <td class="calibre39">18</td> <td class="calibre39">1029</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Шведский</td> <td class="calibre39">Swedish</td> <td class="calibre39">Sv</td> <td class="calibre39">swe<br class="calibre1"/>sve</td> <td class="calibre39">12</td> <td class="calibre39">1053</td> <td class="calibre39"><abbr title="Морфологическая поддержка языка" class="calibre22">Морфология</abbr></td></tr>
+<tr class="calibre37"><td class="calibre39">Эстонский</td> <td class="calibre39">Estonian</td> <td class="calibre39">Et</td> <td class="calibre39">est</td> <td class="calibre39"/> <td class="calibre39">1061</td> <td class="calibre39"><abbr title="Сведения о поддержке языка в справке отсутствуют" class="calibre22">Нет в справке</abbr></td></tr>
+</table>
+<a name="iso" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Коды наименований языков</h2>
+<p class="calibre13">Таблица составлена на основе «Таблицы с кодами языков по ГОСТ 7.75-97» (<em class="calibre16">вошла полностью без изменений</em>) и частично дополнена информацией из набора международных стандартов ISO 639-2. Некоторые строки продублированы с перестановкой слов в первой колонке для более удобного использования.</p>
+<p class="calibre13">По материалам:</p>
+<ol class="calibre17">
+<li class="calibre18"><a href="https://ru.wikipedia.org/w/index.php?title=%D0%9A%D0%BE%D0%B4%D1%8B_%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2&amp;stable=0&amp;redirect=no" class="pcalibre calibre11">Коды языков</a>, Русская Википедиа.</li>
+<li class="calibre18"><a href="http://www.loc.gov/standards/" class="pcalibre calibre11">ISO 639-2</a>, набор стандартов Международной организации по стандартизации, связанный со стандартизацией названий языков и языковых групп.</li>
+</ol>
+<table class="calibre36">
+<col width="auto" class="calibre30"/><col width="10%" class="calibre30"/><col width="10%" class="calibre30"/><col width="10%" class="calibre30">
+</col><tr class="calibre37"><th class="calibre38">Язык</th> <th class="calibre38">ISO 639-1</th> <th class="calibre38">ISO 639-2</th> <th class="calibre38">ISO 639-3</th> <th class="calibre38">Английское наименование</th></tr>
+<tr class="calibre37"><td class="calibre39">Абазинский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">abq</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Абхазский</td> <td class="calibre39">ab</td> <td class="calibre39">abk</td> <td class="calibre39">abk</td> <td class="calibre39">Abkhazian</td></tr>
+<tr class="calibre37"><td class="calibre39">Авадхи</td> <td class="calibre39">—</td> <td class="calibre39">awa</td> <td class="calibre39">awa</td> <td class="calibre39">Awadhi</td></tr>
+<tr class="calibre37"><td class="calibre39">Аварский</td> <td class="calibre39">av</td> <td class="calibre39">ava</td> <td class="calibre39">ava</td> <td class="calibre39">Avaric</td></tr>
+<tr class="calibre37"><td class="calibre39">Авестийский</td> <td class="calibre39">ae</td> <td class="calibre39">ave</td> <td class="calibre39">ave</td> <td class="calibre39">Avestan</td></tr>
+<tr class="calibre37"><td class="calibre39">Австралийские языки</td> <td class="calibre39">—</td> <td class="calibre39">aus</td> <td class="calibre39">—</td> <td class="calibre39">Australian languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Адангме</td> <td class="calibre39">—</td> <td class="calibre39">ada</td> <td class="calibre39">ada</td> <td class="calibre39">Adangme</td></tr>
+<tr class="calibre37"><td class="calibre39">Адыгейский</td> <td class="calibre39">—</td> <td class="calibre39">ady</td> <td class="calibre39">ady</td> <td class="calibre39">Adyghe; Adygei</td></tr>
+<tr class="calibre37"><td class="calibre39">Азербайджанский</td> <td class="calibre39">az</td> <td class="calibre39">aze</td> <td class="calibre39">aze</td> <td class="calibre39">Azerbaijani</td></tr>
+<tr class="calibre37"><td class="calibre39">Аймара</td> <td class="calibre39">ay</td> <td class="calibre39">aym</td> <td class="calibre39">aym</td> <td class="calibre39">Aymara</td></tr>
+<tr class="calibre37"><td class="calibre39">Айну</td> <td class="calibre39">—</td> <td class="calibre39">ain</td> <td class="calibre39">ain</td> <td class="calibre39">Ainu</td></tr>
+<tr class="calibre37"><td class="calibre39">Акан</td> <td class="calibre39">ak</td> <td class="calibre39">aka</td> <td class="calibre39">aka</td> <td class="calibre39">Akan</td></tr>
+<tr class="calibre37"><td class="calibre39">Аккадский</td> <td class="calibre39">—</td> <td class="calibre39">akk</td> <td class="calibre39">akk</td> <td class="calibre39">Akkadian</td></tr>
+<tr class="calibre37"><td class="calibre39">Албанский</td> <td class="calibre39">sq</td> <td class="calibre39">alb (<abbr title="Bibliographic" class="calibre22">B</abbr>)<br class="calibre1"/>sqi (<abbr title="Terminology" class="calibre22">T</abbr>)</td> <td class="calibre39">sqi</td> <td class="calibre39">Albanian</td></tr>
+<tr class="calibre37"><td class="calibre39">Алгонкинские языки</td> <td class="calibre39">—</td> <td class="calibre39">alg</td> <td class="calibre39">—</td> <td class="calibre39">Algonquian languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Алеутский</td> <td class="calibre39">—</td> <td class="calibre39">ale</td> <td class="calibre39">ale</td> <td class="calibre39">Aleut</td></tr>
+<tr class="calibre37"><td class="calibre39">Алтайский</td> <td class="calibre39">—</td> <td class="calibre39">alt</td> <td class="calibre39">alt</td> <td class="calibre39">Southern Altai</td></tr>
+<tr class="calibre37"><td class="calibre39">Алтайские языки</td> <td class="calibre39">—</td> <td class="calibre39">tut</td> <td class="calibre39">—</td> <td class="calibre39">Altaic languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Амхарский</td> <td class="calibre39">am</td> <td class="calibre39">amh</td> <td class="calibre39">amh</td> <td class="calibre39">Amharic</td></tr>
+<tr class="calibre37"><td class="calibre39">Английский</td> <td class="calibre39">en</td> <td class="calibre39">eng</td> <td class="calibre39">eng</td> <td class="calibre39">English</td></tr>
+<tr class="calibre37"><td class="calibre39">Апачи языки</td> <td class="calibre39">—</td> <td class="calibre39">apa</td> <td class="calibre39">—</td> <td class="calibre39">Apache languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Арабский</td> <td class="calibre39">ar</td> <td class="calibre39">ara</td> <td class="calibre39">ara</td> <td class="calibre39">Arabic</td></tr>
+<tr class="calibre37"><td class="calibre39">Аравакский</td> <td class="calibre39">—</td> <td class="calibre39">arw</td> <td class="calibre39">arw</td> <td class="calibre39">Arawak</td></tr>
+<tr class="calibre37"><td class="calibre39">Арамейский</td> <td class="calibre39">—</td> <td class="calibre39">arc</td> <td class="calibre39">arc</td> <td class="calibre39">Official Aramaic (700-300 BCE); Imperial Aramaic (700-300 BCE)</td></tr>
+<tr class="calibre37"><td class="calibre39">Арапахо</td> <td class="calibre39">—</td> <td class="calibre39">arp</td> <td class="calibre39">arp</td> <td class="calibre39">Arapaho</td></tr>
+<tr class="calibre37"><td class="calibre39">Арауканский</td> <td class="calibre39">—</td> <td class="calibre39">arn</td> <td class="calibre39">arn</td> <td class="calibre39">Mapudungun; Mapuche</td></tr>
+<tr class="calibre37"><td class="calibre39">Арахау</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">ahu</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Армянский</td> <td class="calibre39">hy/ am</td> <td class="calibre39">arm (<abbr title="Bibliographic" class="calibre22">B</abbr>)<br class="calibre1"/>hye (<abbr title="Terminology" class="calibre22">T</abbr>)</td> <td class="calibre39">hye/axm/xcl/am</td> <td class="calibre39">Armenian</td></tr>
+<tr class="calibre37"><td class="calibre39">Ассамский</td> <td class="calibre39">as</td> <td class="calibre39">asm</td> <td class="calibre39">asm</td> <td class="calibre39">Assamese</td></tr>
+<tr class="calibre37"><td class="calibre39">Ассирийский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">aii</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Атапачские</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">ath</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Афарский</td> <td class="calibre39">aa</td> <td class="calibre39">aar</td> <td class="calibre39">aar</td> <td class="calibre39">Afar</td></tr>
+<tr class="calibre37"><td class="calibre39">Африкаанс</td> <td class="calibre39">af</td> <td class="calibre39">afr</td> <td class="calibre39">afr</td> <td class="calibre39">Afrikaans</td></tr>
+<tr class="calibre37"><td class="calibre39">Африхили</td> <td class="calibre39">—</td> <td class="calibre39">afh</td> <td class="calibre39">afh</td> <td class="calibre39">Afrihili</td></tr>
+<tr class="calibre37"><td class="calibre39">Афро-Азиатские языки</td> <td class="calibre39">—</td> <td class="calibre39">afa</td> <td class="calibre39">—</td> <td class="calibre39">Afro-Asiatic languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Ахвахский</td> <td class="calibre39">ak</td> <td class="calibre39">—</td> <td class="calibre39">akv</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Ацтекский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">nah</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Ачехский</td> <td class="calibre39">—</td> <td class="calibre39">ace</td> <td class="calibre39">ace</td> <td class="calibre39">Achinese</td></tr>
+<tr class="calibre37"><td class="calibre39">Ачоли</td> <td class="calibre39">—</td> <td class="calibre39">ach</td> <td class="calibre39">ach</td> <td class="calibre39">Acoli</td></tr>
+<tr class="calibre37"><td class="calibre39">Балийский</td> <td class="calibre39">—</td> <td class="calibre39">ban</td> <td class="calibre39">ban</td> <td class="calibre39">Balinese</td></tr>
+<tr class="calibre37"><td class="calibre39">Бамбара</td> <td class="calibre39">bm</td> <td class="calibre39">bam</td> <td class="calibre39">bam</td> <td class="calibre39">Bambara</td></tr>
+<tr class="calibre37"><td class="calibre39">Банда</td> <td class="calibre39">—</td> <td class="calibre39">bad</td> <td class="calibre39">bad</td> <td class="calibre39">Banda languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Баса</td> <td class="calibre39">—</td> <td class="calibre39">bas</td> <td class="calibre39">bas</td> <td class="calibre39">Basa</td></tr>
+<tr class="calibre37"><td class="calibre39">Баскский</td> <td class="calibre39">eu</td> <td class="calibre39">baq (<abbr title="Bibliographic" class="calibre22">B</abbr>)<br class="calibre1"/>eus (<abbr title="Terminology" class="calibre22">T</abbr>)</td> <td class="calibre39">eus</td> <td class="calibre39">Basque</td></tr>
+<tr class="calibre37"><td class="calibre39">Башкирский</td> <td class="calibre39">ba</td> <td class="calibre39">bak</td> <td class="calibre39">bak</td> <td class="calibre39">Bashkir</td></tr>
+<tr class="calibre37"><td class="calibre39">Беджа</td> <td class="calibre39">—</td> <td class="calibre39">bej</td> <td class="calibre39">bej</td> <td class="calibre39">Beja; Bedawiyet</td></tr>
+<tr class="calibre37"><td class="calibre39">Белорусский</td> <td class="calibre39">be</td> <td class="calibre39">bel</td> <td class="calibre39">bel</td> <td class="calibre39">Belarusian</td></tr>
+<tr class="calibre37"><td class="calibre39">Белуджский</td> <td class="calibre39">—</td> <td class="calibre39">bal</td> <td class="calibre39">bal</td> <td class="calibre39">Baluchi</td></tr>
+<tr class="calibre37"><td class="calibre39">Бемба</td> <td class="calibre39">—</td> <td class="calibre39">bem</td> <td class="calibre39">bem</td> <td class="calibre39">Bemba</td></tr>
+<tr class="calibre37"><td class="calibre39">Бенгальский</td> <td class="calibre39">bn</td> <td class="calibre39">ben</td> <td class="calibre39">ben</td> <td class="calibre39">Bengali</td></tr>
+<tr class="calibre37"><td class="calibre39">Бикольский</td> <td class="calibre39">—</td> <td class="calibre39">bik<br class="calibre1"/>bcl</td> <td class="calibre39">bik</td> <td class="calibre39">Bikol</td></tr>
+<tr class="calibre37"><td class="calibre39">Бини</td> <td class="calibre39">—</td> <td class="calibre39">bin</td> <td class="calibre39">bin</td> <td class="calibre39">Bini; Edo</td></tr>
+<tr class="calibre37"><td class="calibre39">Бирманский</td> <td class="calibre39">my</td> <td class="calibre39">bur (<abbr title="Bibliographic" class="calibre22">B</abbr>)<br class="calibre1"/>mya (<abbr title="Terminology" class="calibre22">T</abbr>)</td> <td class="calibre39">mya</td> <td class="calibre39">Burmese</td></tr>
+<tr class="calibre37"><td class="calibre39">Бислама</td> <td class="calibre39">bi</td> <td class="calibre39">bis</td> <td class="calibre39">bis</td> <td class="calibre39">Bislama</td></tr>
+<tr class="calibre37"><td class="calibre39">Болгарский</td> <td class="calibre39">bg</td> <td class="calibre39">bul</td> <td class="calibre39">bul</td> <td class="calibre39">Bulgarian</td></tr>
+<tr class="calibre37"><td class="calibre39">Боснийский</td> <td class="calibre39">bs</td> <td class="calibre39">bos</td> <td class="calibre39">bos</td> <td class="calibre39">Bosnian</td></tr>
+<tr class="calibre37"><td class="calibre39">Брауи</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">brh</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Бретонский</td> <td class="calibre39">br</td> <td class="calibre39">bre</td> <td class="calibre39">bre</td> <td class="calibre39">Breton</td></tr>
+<tr class="calibre37"><td class="calibre39">Бугийский</td> <td class="calibre39">—</td> <td class="calibre39">bug</td> <td class="calibre39">bug</td> <td class="calibre39">Buginese</td></tr>
+<tr class="calibre37"><td class="calibre39">Бурятский</td> <td class="calibre39">—</td> <td class="calibre39">bua</td> <td class="calibre39">bua</td> <td class="calibre39">Buriat</td></tr>
+<tr class="calibre37"><td class="calibre39">Бходжпури</td> <td class="calibre39">—</td> <td class="calibre39">bho</td> <td class="calibre39">bho</td> <td class="calibre39">Bhojpuri</td></tr>
+<tr class="calibre37"><td class="calibre39">Ваи</td> <td class="calibre39">—</td> <td class="calibre39">vai</td> <td class="calibre39">vai</td> <td class="calibre39">Vai</td></tr>
+<tr class="calibre37"><td class="calibre39">Валлийский</td> <td class="calibre39">cy</td> <td class="calibre39">cym (<abbr title="Terminology" class="calibre22">T</abbr>)<br class="calibre1"/>wel (<abbr title="Bibliographic" class="calibre22">B</abbr>)</td> <td class="calibre39">cym</td> <td class="calibre39">Welsh</td></tr>
+<tr class="calibre37"><td class="calibre39">Варай</td> <td class="calibre39">—</td> <td class="calibre39">war</td> <td class="calibre39">war</td> <td class="calibre39">Waray</td></tr>
+<tr class="calibre37"><td class="calibre39">Вашо</td> <td class="calibre39">—</td> <td class="calibre39">was</td> <td class="calibre39">was</td> <td class="calibre39">Washo</td></tr>
+<tr class="calibre37"><td class="calibre39">Венгерский</td> <td class="calibre39">hu</td> <td class="calibre39">hun</td> <td class="calibre39">hun</td> <td class="calibre39">Hungarian</td></tr>
+<tr class="calibre37"><td class="calibre39">Венда</td> <td class="calibre39">ve</td> <td class="calibre39">ven</td> <td class="calibre39">ven</td> <td class="calibre39">Venda</td></tr>
+<tr class="calibre37"><td class="calibre39">Вепсский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">vep</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Воламо</td> <td class="calibre39">—</td> <td class="calibre39">wal</td> <td class="calibre39">wal</td> <td class="calibre39">Wolaitta; Wolaytta</td></tr>
+<tr class="calibre37"><td class="calibre39">Волапюк</td> <td class="calibre39">vo</td> <td class="calibre39">vol</td> <td class="calibre39">vol</td> <td class="calibre39">Volapük</td></tr>
+<tr class="calibre37"><td class="calibre39">Волоф</td> <td class="calibre39">wo</td> <td class="calibre39">wol</td> <td class="calibre39">wol</td> <td class="calibre39">Wolof</td></tr>
+<tr class="calibre37"><td class="calibre39">Вьетнамский</td> <td class="calibre39">vi</td> <td class="calibre39">vie</td> <td class="calibre39">vie</td> <td class="calibre39">Vietnamese</td></tr>
+<tr class="calibre37"><td class="calibre39">Га</td> <td class="calibre39">—</td> <td class="calibre39">gaa</td> <td class="calibre39">gaa</td> <td class="calibre39">Ga</td></tr>
+<tr class="calibre37"><td class="calibre39">Гавайский</td> <td class="calibre39">—</td> <td class="calibre39">haw</td> <td class="calibre39">haw</td> <td class="calibre39">Hawaiian</td></tr>
+<tr class="calibre37"><td class="calibre39">Гагаузский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">gag</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Гайо</td> <td class="calibre39">—</td> <td class="calibre39">gay</td> <td class="calibre39">gay</td> <td class="calibre39">Gayo</td></tr>
+<tr class="calibre37"><td class="calibre39">Галисийский</td> <td class="calibre39">gl</td> <td class="calibre39">glg</td> <td class="calibre39">glg</td> <td class="calibre39">Galician</td></tr>
+<tr class="calibre37"><td class="calibre39">Ганда</td> <td class="calibre39">lg</td> <td class="calibre39">lug</td> <td class="calibre39">lug</td> <td class="calibre39">Ganda</td></tr>
+<tr class="calibre37"><td class="calibre39">Гереро</td> <td class="calibre39">hz</td> <td class="calibre39">her</td> <td class="calibre39">her</td> <td class="calibre39">Herero</td></tr>
+<tr class="calibre37"><td class="calibre39">Германские языки</td> <td class="calibre39">—</td> <td class="calibre39">gem</td> <td class="calibre39">—</td> <td class="calibre39">Germanic languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Геэз</td> <td class="calibre39">—</td> <td class="calibre39">gez</td> <td class="calibre39">gez</td> <td class="calibre39">Geez</td></tr>
+<tr class="calibre37"><td class="calibre39">Гилбертский</td> <td class="calibre39">—</td> <td class="calibre39">gil</td> <td class="calibre39">gil</td> <td class="calibre39">Gilbertese</td></tr>
+<tr class="calibre37"><td class="calibre39">Гонди</td> <td class="calibre39">—</td> <td class="calibre39">gon</td> <td class="calibre39">gon</td> <td class="calibre39">Gondi</td></tr>
+<tr class="calibre37"><td class="calibre39">Готский</td> <td class="calibre39">—</td> <td class="calibre39">gor</td> <td class="calibre39">got</td> <td class="calibre39">Gorontalo</td></tr>
+<tr class="calibre37"><td class="calibre39">Гребо</td> <td class="calibre39">—</td> <td class="calibre39">grb</td> <td class="calibre39">grb</td> <td class="calibre39">Grebo</td></tr>
+<tr class="calibre37"><td class="calibre39">Гренландский</td> <td class="calibre39">kl</td> <td class="calibre39">kal</td> <td class="calibre39">kal</td> <td class="calibre39">Kalaallisut; Greenlandic</td></tr>
+<tr class="calibre37"><td class="calibre39">Греческий<br class="calibre1"/>(древний)</td> <td class="calibre39">—</td> <td class="calibre39">grc</td> <td class="calibre39">grc</td> <td class="calibre39">Greek, Ancient (to 1453)</td></tr>
+<tr class="calibre37"><td class="calibre39">Греческий<br class="calibre1"/>(новогреческий)</td> <td class="calibre39">el</td> <td class="calibre39">ell (<abbr title="Terminology" class="calibre22">T</abbr>)<br class="calibre1"/>gre (<abbr title="Bibliographic" class="calibre22">B</abbr>)</td> <td class="calibre39">ell</td> <td class="calibre39">Greek, Modern (1453-)</td></tr>
+<tr class="calibre37"><td class="calibre39">Грузинский</td> <td class="calibre39">ka</td> <td class="calibre39">geo (<abbr title="Bibliographic" class="calibre22">B</abbr>)<br class="calibre1"/>kat (<abbr title="Terminology" class="calibre22">T</abbr>)</td> <td class="calibre39">kat</td> <td class="calibre39">Georgian</td></tr>
+<tr class="calibre37"><td class="calibre39">Гуарани</td> <td class="calibre39">gn</td> <td class="calibre39">grn</td> <td class="calibre39">grn</td> <td class="calibre39">Guarani</td></tr>
+<tr class="calibre37"><td class="calibre39">Гуджарати</td> <td class="calibre39">gu</td> <td class="calibre39">guj</td> <td class="calibre39">guj</td> <td class="calibre39">Gujarati</td></tr>
+<tr class="calibre37"><td class="calibre39">Гэльский</td> <td class="calibre39">gd</td> <td class="calibre39">gla</td> <td class="calibre39">gla</td> <td class="calibre39">Gaelic; Scottish Gaelic</td></tr>
+<tr class="calibre37"><td class="calibre39">Дакота</td> <td class="calibre39">—</td> <td class="calibre39">dak</td> <td class="calibre39">dak</td> <td class="calibre39">Dakota</td></tr>
+<tr class="calibre37"><td class="calibre39">Дактилологический<br class="calibre1"/>(язык жестов)</td> <td class="calibre39">—</td> <td class="calibre39">sgn</td> <td class="calibre39">—</td> <td class="calibre39">Sign Languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Даргинский</td> <td class="calibre39">dr</td> <td class="calibre39">dar</td> <td class="calibre39">dar</td> <td class="calibre39">Dargwa</td></tr>
+<tr class="calibre37"><td class="calibre39">Датский</td> <td class="calibre39">da</td> <td class="calibre39">dan</td> <td class="calibre39">dan</td> <td class="calibre39">Danish</td></tr>
+<tr class="calibre37"><td class="calibre39">Делавэрский</td> <td class="calibre39">—</td> <td class="calibre39">del</td> <td class="calibre39">del</td> <td class="calibre39">Delaware</td></tr>
+<tr class="calibre37"><td class="calibre39">Дзонг-кэ</td> <td class="calibre39">dz</td> <td class="calibre39">dzo</td> <td class="calibre39">dzo</td> <td class="calibre39">Dzongkha</td></tr>
+<tr class="calibre37"><td class="calibre39">Дивехи<br class="calibre1"/>(Мальдивский)</td> <td class="calibre39">dv</td> <td class="calibre39">div</td> <td class="calibre39">div</td> <td class="calibre39">Divehi; Dhivehi; Maldivian</td></tr>
+<tr class="calibre37"><td class="calibre39">Динка</td> <td class="calibre39">—</td> <td class="calibre39">din</td> <td class="calibre39">din</td> <td class="calibre39">Dinka</td></tr>
+<tr class="calibre37"><td class="calibre39">Диула<br class="calibre1"/>(Дьюла)</td> <td class="calibre39">—</td> <td class="calibre39">dyu</td> <td class="calibre39">dyu</td> <td class="calibre39">Dyula</td></tr>
+<tr class="calibre37"><td class="calibre39">Догри</td> <td class="calibre39">—</td> <td class="calibre39">doi</td> <td class="calibre39">doi</td> <td class="calibre39">Dogri</td></tr>
+<tr class="calibre37"><td class="calibre39">Древнегреческий</td> <td class="calibre39">—</td> <td class="calibre39">grc</td> <td class="calibre39">grc</td> <td class="calibre39">Greek, Ancient (to 1453)</td></tr>
+<tr class="calibre37"><td class="calibre39">Древнеегипетский</td> <td class="calibre39">—</td> <td class="calibre39">egy</td> <td class="calibre39">egy</td> <td class="calibre39">Egyptian (Ancient)</td></tr>
+<tr class="calibre37"><td class="calibre39">Древнерусский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">orv</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Древнесаксонский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">osx</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Дуала</td> <td class="calibre39">—</td> <td class="calibre39">dua</td> <td class="calibre39">dua</td> <td class="calibre39">Duala</td></tr>
+<tr class="calibre37"><td class="calibre39">Дунганский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">dng</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Еврейско-арабский</td> <td class="calibre39">—</td> <td class="calibre39">jrb</td> <td class="calibre39">jrb</td> <td class="calibre39">Judeo-Arabic</td></tr>
+<tr class="calibre37"><td class="calibre39">Еврейско-персидский</td> <td class="calibre39">—</td> <td class="calibre39">jpr</td> <td class="calibre39">jpr</td> <td class="calibre39">Judeo-Persian</td></tr>
+<tr class="calibre37"><td class="calibre39">Египетский<br class="calibre1"/>(древний)</td> <td class="calibre39">—</td> <td class="calibre39">egy</td> <td class="calibre39">egy</td> <td class="calibre39">Egyptian (Ancient)</td></tr>
+<tr class="calibre37"><td class="calibre39">Жестов язык<br class="calibre1"/>(дактилологический)</td> <td class="calibre39">—</td> <td class="calibre39">sgn</td> <td class="calibre39">—</td> <td class="calibre39">Sign Languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Зенагский</td> <td class="calibre39">—</td> <td class="calibre39">zen</td> <td class="calibre39">zen</td> <td class="calibre39">Zenaga</td></tr>
+<tr class="calibre37"><td class="calibre39">Зулу</td> <td class="calibre39">zu</td> <td class="calibre39">zul</td> <td class="calibre39">zul</td> <td class="calibre39">Zulu</td></tr>
+<tr class="calibre37"><td class="calibre39">Зуньи</td> <td class="calibre39">—</td> <td class="calibre39">zun</td> <td class="calibre39">zun</td> <td class="calibre39">Zuni</td></tr>
+<tr class="calibre37"><td class="calibre39">Ибанский</td> <td class="calibre39">—</td> <td class="calibre39">iba</td> <td class="calibre39">iba</td> <td class="calibre39">Iban</td></tr>
+<tr class="calibre37"><td class="calibre39">Иврит</td> <td class="calibre39">he</td> <td class="calibre39">heb</td> <td class="calibre39">heb</td> <td class="calibre39">Hebrew</td></tr>
+<tr class="calibre37"><td class="calibre39">Игбо</td> <td class="calibre39">ig</td> <td class="calibre39">ibo</td> <td class="calibre39">ibo</td> <td class="calibre39">Igbo</td></tr>
+<tr class="calibre37"><td class="calibre39">Идиш</td> <td class="calibre39">yi</td> <td class="calibre39">yid</td> <td class="calibre39">yid</td> <td class="calibre39">Yiddish</td></tr>
+<tr class="calibre37"><td class="calibre39">Илоко</td> <td class="calibre39">—</td> <td class="calibre39">ilo</td> <td class="calibre39">ilo</td> <td class="calibre39">Iloko</td></tr>
+<tr class="calibre37"><td class="calibre39">Ингушский</td> <td class="calibre39">—</td> <td class="calibre39">inh</td> <td class="calibre39">inh</td> <td class="calibre39">Ingush</td></tr>
+<tr class="calibre37"><td class="calibre39">Индо-Европейские языки</td> <td class="calibre39">—</td> <td class="calibre39">ine</td> <td class="calibre39">—</td> <td class="calibre39">Indo-European languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Индонезийский</td> <td class="calibre39">id</td> <td class="calibre39">ind</td> <td class="calibre39">ind</td> <td class="calibre39">Indonesian</td></tr>
+<tr class="calibre37"><td class="calibre39">Интерлингва</td> <td class="calibre39">ia</td> <td class="calibre39">ina</td> <td class="calibre39">ina</td> <td class="calibre39">Interlingua (International Auxiliary Language Association)</td></tr>
+<tr class="calibre37"><td class="calibre39">Интерлингве</td> <td class="calibre39">ie</td> <td class="calibre39">ile</td> <td class="calibre39">ile</td> <td class="calibre39">Interlingue; Occidental</td></tr>
+<tr class="calibre37"><td class="calibre39">Инуктитут</td> <td class="calibre39">iu</td> <td class="calibre39">iku</td> <td class="calibre39">iku</td> <td class="calibre39">Inuktitut</td></tr>
+<tr class="calibre37"><td class="calibre39">Инупиак</td> <td class="calibre39">ik</td> <td class="calibre39">ipk</td> <td class="calibre39">ipk</td> <td class="calibre39">Inupiaq</td></tr>
+<tr class="calibre37"><td class="calibre39">Иранские</td> <td class="calibre39">—</td> <td class="calibre39">ira</td> <td class="calibre39">—</td> <td class="calibre39">Iranian languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Ирландский</td> <td class="calibre39">ga</td> <td class="calibre39">gle</td> <td class="calibre39">gle</td> <td class="calibre39">Irish</td></tr>
+<tr class="calibre37"><td class="calibre39">Искусственные языки</td> <td class="calibre39">—</td> <td class="calibre39">art</td> <td class="calibre39">—</td> <td class="calibre39">Artificial languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Исландский</td> <td class="calibre39">is</td> <td class="calibre39">ice (<abbr title="Bibliographic" class="calibre22">B</abbr>)<br class="calibre1"/>isl (<abbr title="Terminology" class="calibre22">T</abbr>)</td> <td class="calibre39">isl</td> <td class="calibre39">Icelandic</td></tr>
+<tr class="calibre37"><td class="calibre39">Испанский</td> <td class="calibre39">es</td> <td class="calibre39">esl<br class="calibre1"/>spa</td> <td class="calibre39">spa</td> <td class="calibre39">Spanish; Castilian</td></tr>
+<tr class="calibre37"><td class="calibre39">Итальянский</td> <td class="calibre39">it</td> <td class="calibre39">ita</td> <td class="calibre39">ita</td> <td class="calibre39">Italian</td></tr>
+<tr class="calibre37"><td class="calibre39">Ительменский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">itl</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Йоруба</td> <td class="calibre39">yo</td> <td class="calibre39">yor</td> <td class="calibre39">yor</td> <td class="calibre39">Yoruba</td></tr>
+<tr class="calibre37"><td class="calibre39">Кабардино-черкесский</td> <td class="calibre39">—</td> <td class="calibre39">kbd</td> <td class="calibre39">kbd</td> <td class="calibre39">Kabardian</td></tr>
+<tr class="calibre37"><td class="calibre39">Кабильский</td> <td class="calibre39">—</td> <td class="calibre39">kab</td> <td class="calibre39">kab</td> <td class="calibre39">Kabyle</td></tr>
+<tr class="calibre37"><td class="calibre39">Кави</td> <td class="calibre39">—</td> <td class="calibre39">kaw</td> <td class="calibre39">kaw</td> <td class="calibre39">Kawi</td></tr>
+<tr class="calibre37"><td class="calibre39">Кавказские языки</td> <td class="calibre39">—</td> <td class="calibre39">cau</td> <td class="calibre39">—</td> <td class="calibre39">Caucasian languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Каддо</td> <td class="calibre39">—</td> <td class="calibre39">cad</td> <td class="calibre39">cad</td> <td class="calibre39">Caddo</td></tr>
+<tr class="calibre37"><td class="calibre39">Казахский</td> <td class="calibre39">kk</td> <td class="calibre39">kaz</td> <td class="calibre39">kaz</td> <td class="calibre39">Kazakh</td></tr>
+<tr class="calibre37"><td class="calibre39">Калмыцкий</td> <td class="calibre39">—</td> <td class="calibre39">xal</td> <td class="calibre39">xal</td> <td class="calibre39">Kalmyk; Oirat</td></tr>
+<tr class="calibre37"><td class="calibre39">Камба</td> <td class="calibre39">—</td> <td class="calibre39">kam</td> <td class="calibre39">kam</td> <td class="calibre39">Kamba</td></tr>
+<tr class="calibre37"><td class="calibre39">Каннада</td> <td class="calibre39">kn</td> <td class="calibre39">kan</td> <td class="calibre39">kan</td> <td class="calibre39">Kannada</td></tr>
+<tr class="calibre37"><td class="calibre39">Канури</td> <td class="calibre39">kr</td> <td class="calibre39">kau</td> <td class="calibre39">kau</td> <td class="calibre39">Kanuri</td></tr>
+<tr class="calibre37"><td class="calibre39">Караимский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">kdr</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Каракалпакский</td> <td class="calibre39">—</td> <td class="calibre39">kaa</td> <td class="calibre39">kaa</td> <td class="calibre39">Kara-Kalpak</td></tr>
+<tr class="calibre37"><td class="calibre39">Карачаево-балкарский</td> <td class="calibre39">—</td> <td class="calibre39">krc</td> <td class="calibre39">krc</td> <td class="calibre39">Karachay-Balkar</td></tr>
+<tr class="calibre37"><td class="calibre39">Карельский</td> <td class="calibre39">—</td> <td class="calibre39">krl</td> <td class="calibre39">krl</td> <td class="calibre39">Karelian</td></tr>
+<tr class="calibre37"><td class="calibre39">Кариб</td> <td class="calibre39">—</td> <td class="calibre39">car</td> <td class="calibre39">car</td> <td class="calibre39">Galibi Carib</td></tr>
+<tr class="calibre37"><td class="calibre39">Каталанский</td> <td class="calibre39">ca</td> <td class="calibre39">cat</td> <td class="calibre39">cat</td> <td class="calibre39">Catalan; Valencian</td></tr>
+<tr class="calibre37"><td class="calibre39">Качинский</td> <td class="calibre39">—</td> <td class="calibre39">kac</td> <td class="calibre39">kac</td> <td class="calibre39">Kachin; Jingpho</td></tr>
+<tr class="calibre37"><td class="calibre39">Кашмири</td> <td class="calibre39">ks</td> <td class="calibre39">kas</td> <td class="calibre39">kas</td> <td class="calibre39">Kashmiri</td></tr>
+<tr class="calibre37"><td class="calibre39">Кельтские языки</td> <td class="calibre39">—</td> <td class="calibre39">cel</td> <td class="calibre39">—</td> <td class="calibre39">Celtic languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Кечуа</td> <td class="calibre39">qu</td> <td class="calibre39">que</td> <td class="calibre39">que</td> <td class="calibre39">Quechua</td></tr>
+<tr class="calibre37"><td class="calibre39">Кикуйю</td> <td class="calibre39">ki</td> <td class="calibre39">kik</td> <td class="calibre39">kik</td> <td class="calibre39">Kikuyu; Gikuyu</td></tr>
+<tr class="calibre37"><td class="calibre39">Киньяма</td> <td class="calibre39">kj</td> <td class="calibre39">kua</td> <td class="calibre39">kua</td> <td class="calibre39">Kuanyama; Kwanyama</td></tr>
+<tr class="calibre37"><td class="calibre39">Киргизский</td> <td class="calibre39">ky</td> <td class="calibre39">kir</td> <td class="calibre39">kir</td> <td class="calibre39">Kirghiz; Kyrgyz</td></tr>
+<tr class="calibre37"><td class="calibre39">Китайский</td> <td class="calibre39">zh</td> <td class="calibre39">chi (<abbr title="Bibliographic" class="calibre22">B</abbr>)<br class="calibre1"/>zho (<abbr title="Terminology" class="calibre22">T</abbr>)</td> <td class="calibre39">zho</td> <td class="calibre39">Chinese</td></tr>
+<tr class="calibre37"><td class="calibre39">Коми</td> <td class="calibre39">kv</td> <td class="calibre39">kom</td> <td class="calibre39">kom</td> <td class="calibre39">Komi</td></tr>
+<tr class="calibre37"><td class="calibre39">Коми-пермяцкий</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">koi</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Конго</td> <td class="calibre39">kg</td> <td class="calibre39">kon</td> <td class="calibre39">kon</td> <td class="calibre39">Kongo</td></tr>
+<tr class="calibre37"><td class="calibre39">Конкани</td> <td class="calibre39">—</td> <td class="calibre39">kok</td> <td class="calibre39">kok</td> <td class="calibre39">Konkani</td></tr>
+<tr class="calibre37"><td class="calibre39">Коптский</td> <td class="calibre39">—</td> <td class="calibre39">cop</td> <td class="calibre39">cop</td> <td class="calibre39">Coptic</td></tr>
+<tr class="calibre37"><td class="calibre39">Корейский</td> <td class="calibre39">ko</td> <td class="calibre39">kor</td> <td class="calibre39">kor</td> <td class="calibre39">Korean</td></tr>
+<tr class="calibre37"><td class="calibre39">Корнский</td> <td class="calibre39">kw</td> <td class="calibre39">cor</td> <td class="calibre39">cor</td> <td class="calibre39">Cornish</td></tr>
+<tr class="calibre37"><td class="calibre39">Корсиканский</td> <td class="calibre39">co</td> <td class="calibre39">cos</td> <td class="calibre39">cos</td> <td class="calibre39">Corsican</td></tr>
+<tr class="calibre37"><td class="calibre39">Корякский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">kpy</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Коса</td> <td class="calibre39">xh</td> <td class="calibre39">xho</td> <td class="calibre39">xho</td> <td class="calibre39">Xhosa</td></tr>
+<tr class="calibre37"><td class="calibre39">Кпелле</td> <td class="calibre39">—</td> <td class="calibre39">kpe</td> <td class="calibre39">kpe</td> <td class="calibre39">Kpelle</td></tr>
+<tr class="calibre37"><td class="calibre39">Крик</td> <td class="calibre39">—</td> <td class="calibre39">mus</td> <td class="calibre39">mus</td> <td class="calibre39">Creek</td></tr>
+<tr class="calibre37"><td class="calibre39">Крымско-татарский</td> <td class="calibre39">—</td> <td class="calibre39">crh</td> <td class="calibre39">crh</td> <td class="calibre39">Crimean Tatar; Crimean Turkish</td></tr>
+<tr class="calibre37"><td class="calibre39">Кумыкский</td> <td class="calibre39">—</td> <td class="calibre39">kum</td> <td class="calibre39">kum</td> <td class="calibre39">Kumyk</td></tr>
+<tr class="calibre37"><td class="calibre39">Курдский</td> <td class="calibre39">ku</td> <td class="calibre39">kur</td> <td class="calibre39">kur</td> <td class="calibre39">Kurdish</td></tr>
+<tr class="calibre37"><td class="calibre39">Курух</td> <td class="calibre39">—</td> <td class="calibre39">kru</td> <td class="calibre39">kru</td> <td class="calibre39">Kurukh</td></tr>
+<tr class="calibre37"><td class="calibre39">Кусайе</td> <td class="calibre39">—</td> <td class="calibre39">kos</td> <td class="calibre39">kos</td> <td class="calibre39">Kosraean</td></tr>
+<tr class="calibre37"><td class="calibre39">Кутенай</td> <td class="calibre39">—</td> <td class="calibre39">kut</td> <td class="calibre39">kut</td> <td class="calibre39">Kutenai</td></tr>
+<tr class="calibre37"><td class="calibre39">Кхаси</td> <td class="calibre39">—</td> <td class="calibre39">kha</td> <td class="calibre39">kha</td> <td class="calibre39">Khasi</td></tr>
+<tr class="calibre37"><td class="calibre39">Кхмерский</td> <td class="calibre39">km</td> <td class="calibre39">khm</td> <td class="calibre39">khm</td> <td class="calibre39">Central Khmer</td></tr>
+<tr class="calibre37"><td class="calibre39">Ладино</td> <td class="calibre39">—</td> <td class="calibre39">lad</td> <td class="calibre39">lad</td> <td class="calibre39">Ladino</td></tr>
+<tr class="calibre37"><td class="calibre39">Лакский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">lbe</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Ламба</td> <td class="calibre39">—</td> <td class="calibre39">lam</td> <td class="calibre39">lam</td> <td class="calibre39">Lamba</td></tr>
+<tr class="calibre37"><td class="calibre39">Лаосский</td> <td class="calibre39">lo</td> <td class="calibre39">lao</td> <td class="calibre39">lao</td> <td class="calibre39">Lao</td></tr>
+<tr class="calibre37"><td class="calibre39">Латинский</td> <td class="calibre39">la</td> <td class="calibre39">lat</td> <td class="calibre39">lat</td> <td class="calibre39">Latin</td></tr>
+<tr class="calibre37"><td class="calibre39">Латышский</td> <td class="calibre39">lv</td> <td class="calibre39">lav</td> <td class="calibre39">lav</td> <td class="calibre39">Latvian</td></tr>
+<tr class="calibre37"><td class="calibre39">Лахнда</td> <td class="calibre39">—</td> <td class="calibre39">lah</td> <td class="calibre39">lah</td> <td class="calibre39">Lahnda</td></tr>
+<tr class="calibre37"><td class="calibre39">Лезгинский</td> <td class="calibre39">—</td> <td class="calibre39">lez</td> <td class="calibre39">lez</td> <td class="calibre39">Lezghian</td></tr>
+<tr class="calibre37"><td class="calibre39">Лингала</td> <td class="calibre39">ln</td> <td class="calibre39">lin</td> <td class="calibre39">lin</td> <td class="calibre39">Lingala</td></tr>
+<tr class="calibre37"><td class="calibre39">Литовский</td> <td class="calibre39">lt</td> <td class="calibre39">lit</td> <td class="calibre39">lit</td> <td class="calibre39">Lithuanian</td></tr>
+<tr class="calibre37"><td class="calibre39">Лози</td> <td class="calibre39">—</td> <td class="calibre39">loz</td> <td class="calibre39">loz</td> <td class="calibre39">Lozi</td></tr>
+<tr class="calibre37"><td class="calibre39">Луба-катанга</td> <td class="calibre39">lu</td> <td class="calibre39">lub</td> <td class="calibre39">lub</td> <td class="calibre39">Luba-Katanga</td></tr>
+<tr class="calibre37"><td class="calibre39">Луисеньо</td> <td class="calibre39">—</td> <td class="calibre39">lui</td> <td class="calibre39">lui</td> <td class="calibre39">Luiseno</td></tr>
+<tr class="calibre37"><td class="calibre39">Лунда</td> <td class="calibre39">—</td> <td class="calibre39">lun</td> <td class="calibre39">lun</td> <td class="calibre39">Lunda</td></tr>
+<tr class="calibre37"><td class="calibre39">Луо<br class="calibre1"/>(Кения и Танзания)</td> <td class="calibre39">—</td> <td class="calibre39">luo</td> <td class="calibre39">luo</td> <td class="calibre39">Luo (Kenya and Tanzania)</td></tr>
+<tr class="calibre37"><td class="calibre39">Люксембургский</td> <td class="calibre39">lb</td> <td class="calibre39">ltz</td> <td class="calibre39">ltz</td> <td class="calibre39">Luxembourgish; Letzeburgesch</td></tr>
+<tr class="calibre37"><td class="calibre39">Магахи</td> <td class="calibre39">—</td> <td class="calibre39">mag</td> <td class="calibre39">mag</td> <td class="calibre39">Magahi</td></tr>
+<tr class="calibre37"><td class="calibre39">Мадурский</td> <td class="calibre39">—</td> <td class="calibre39">mad</td> <td class="calibre39">mad</td> <td class="calibre39">Madurese</td></tr>
+<tr class="calibre37"><td class="calibre39">Майтхили</td> <td class="calibre39">—</td> <td class="calibre39">mai</td> <td class="calibre39">mai</td> <td class="calibre39">Maithili</td></tr>
+<tr class="calibre37"><td class="calibre39">Макассарский</td> <td class="calibre39">—</td> <td class="calibre39">mak</td> <td class="calibre39">mak</td> <td class="calibre39">Makasar</td></tr>
+<tr class="calibre37"><td class="calibre39">Македонский</td> <td class="calibre39">mk</td> <td class="calibre39">mac (<abbr title="Bibliographic" class="calibre22">B</abbr>)<br class="calibre1"/>mkd (<abbr title="Terminology" class="calibre22">T</abbr>)</td> <td class="calibre39">mkd</td> <td class="calibre39">Macedonian</td></tr>
+<tr class="calibre37"><td class="calibre39">Малагасийский</td> <td class="calibre39">mg</td> <td class="calibre39">mlg</td> <td class="calibre39">mlg</td> <td class="calibre39">Malagasy</td></tr>
+<tr class="calibre37"><td class="calibre39">Малайский</td> <td class="calibre39">ms</td> <td class="calibre39">may (<abbr title="Bibliographic" class="calibre22">B</abbr>)<br class="calibre1"/>msa (<abbr title="Terminology" class="calibre22">T</abbr>)</td> <td class="calibre39">msa</td> <td class="calibre39">Malay</td></tr>
+<tr class="calibre37"><td class="calibre39">Малаялам</td> <td class="calibre39">ml</td> <td class="calibre39">mal</td> <td class="calibre39">mal</td> <td class="calibre39">Malayalam</td></tr>
+<tr class="calibre37"><td class="calibre39">Мальтийский</td> <td class="calibre39">mt</td> <td class="calibre39">mlt</td> <td class="calibre39">mlt</td> <td class="calibre39">Maltese</td></tr>
+<tr class="calibre37"><td class="calibre39">Мандинго</td> <td class="calibre39">—</td> <td class="calibre39">man</td> <td class="calibre39">man</td> <td class="calibre39">Mandingo</td></tr>
+<tr class="calibre37"><td class="calibre39">Манипури</td> <td class="calibre39">—</td> <td class="calibre39">mni</td> <td class="calibre39">mni</td> <td class="calibre39">Manipuri</td></tr>
+<tr class="calibre37"><td class="calibre39">Мансийский<br class="calibre1"/>(Вогульский)</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">mns</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Маори</td> <td class="calibre39">mi</td> <td class="calibre39">mao (<abbr title="Bibliographic" class="calibre22">B</abbr>)<br class="calibre1"/>mri (<abbr title="Terminology" class="calibre22">T</abbr>)</td> <td class="calibre39">mri</td> <td class="calibre39">Maori</td></tr>
+<tr class="calibre37"><td class="calibre39">Маратхи</td> <td class="calibre39">mr</td> <td class="calibre39">mar</td> <td class="calibre39">mar</td> <td class="calibre39">Marathi</td></tr>
+<tr class="calibre37"><td class="calibre39">Марвари</td> <td class="calibre39">—</td> <td class="calibre39">mwr</td> <td class="calibre39">mwr</td> <td class="calibre39">Marwari</td></tr>
+<tr class="calibre37"><td class="calibre39">Марийский<br class="calibre1"/>(черемисский)</td> <td class="calibre39">—</td> <td class="calibre39">chm</td> <td class="calibre39">chm</td> <td class="calibre39">Mari</td></tr>
+<tr class="calibre37"><td class="calibre39">Маршалльский</td> <td class="calibre39">mh</td> <td class="calibre39">mah</td> <td class="calibre39">mah</td> <td class="calibre39">Marshallese</td></tr>
+<tr class="calibre37"><td class="calibre39">Масаи</td> <td class="calibre39">—</td> <td class="calibre39">mas</td> <td class="calibre39">mas</td> <td class="calibre39">Masai</td></tr>
+<tr class="calibre37"><td class="calibre39">Менде</td> <td class="calibre39">—</td> <td class="calibre39">men</td> <td class="calibre39">men</td> <td class="calibre39">Mende</td></tr>
+<tr class="calibre37"><td class="calibre39">Микмак</td> <td class="calibre39">—</td> <td class="calibre39">mic</td> <td class="calibre39">mic</td> <td class="calibre39">Mi'kmaq; Micmac</td></tr>
+<tr class="calibre37"><td class="calibre39">Минангкабау</td> <td class="calibre39">—</td> <td class="calibre39">min</td> <td class="calibre39">min</td> <td class="calibre39">Minangkabau</td></tr>
+<tr class="calibre37"><td class="calibre39">Мокшанский</td> <td class="calibre39">—</td> <td class="calibre39">mdf</td> <td class="calibre39">mdf</td> <td class="calibre39">Moksha</td></tr>
+<tr class="calibre37"><td class="calibre39">Молдавский</td> <td class="calibre39">mo</td> <td class="calibre39">—</td> <td class="calibre39">mol</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Монго</td> <td class="calibre39">—</td> <td class="calibre39">lol</td> <td class="calibre39">lol</td> <td class="calibre39">Mongo</td></tr>
+<tr class="calibre37"><td class="calibre39">Монгольский</td> <td class="calibre39">mn</td> <td class="calibre39">mon</td> <td class="calibre39">mon</td> <td class="calibre39">Mongolian</td></tr>
+<tr class="calibre37"><td class="calibre39">Мооре</td> <td class="calibre39">—</td> <td class="calibre39">mos</td> <td class="calibre39">mos</td> <td class="calibre39">Mossi</td></tr>
+<tr class="calibre37"><td class="calibre39">Мохаук</td> <td class="calibre39">—</td> <td class="calibre39">moh</td> <td class="calibre39">moh</td> <td class="calibre39">Mohawk</td></tr>
+<tr class="calibre37"><td class="calibre39">Мэнский<br class="calibre1"/>(Мэнкский)</td> <td class="calibre39">gv</td> <td class="calibre39">glv</td> <td class="calibre39">glv</td> <td class="calibre39">Manx</td></tr>
+<tr class="calibre37"><td class="calibre39">Навахо</td> <td class="calibre39">nv</td> <td class="calibre39">nav</td> <td class="calibre39">nav</td> <td class="calibre39">Navajo; Navaho</td></tr>
+<tr class="calibre37"><td class="calibre39">Нанайский<br class="calibre1"/>(гольдский)</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">gld</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Науру</td> <td class="calibre39">na</td> <td class="calibre39">nau</td> <td class="calibre39">nau</td> <td class="calibre39">Nauru</td></tr>
+<tr class="calibre37"><td class="calibre39">Ндебеле северный</td> <td class="calibre39">nd</td> <td class="calibre39">nde</td> <td class="calibre39">nde</td> <td class="calibre39">Ndebele, North; North Ndebele</td></tr>
+<tr class="calibre37"><td class="calibre39">Ндебеле южный</td> <td class="calibre39">nr</td> <td class="calibre39">nbl</td> <td class="calibre39">nbl</td> <td class="calibre39">Ndebele, South; South Ndebele</td></tr>
+<tr class="calibre37"><td class="calibre39">Ндунга</td> <td class="calibre39">ng</td> <td class="calibre39">ndo</td> <td class="calibre39">ndo</td> <td class="calibre39">Ndonga</td></tr>
+<tr class="calibre37"><td class="calibre39">Неварский</td> <td class="calibre39">—</td> <td class="calibre39">new</td> <td class="calibre39">new</td> <td class="calibre39">Nepal Bhasa; Newari</td></tr>
+<tr class="calibre37"><td class="calibre39">Неидентифицированный</td> <td class="calibre39">—</td> <td class="calibre39">und</td> <td class="calibre39">und</td> <td class="calibre39">Undetermined</td></tr>
+<tr class="calibre37"><td class="calibre39">Немецкий</td> <td class="calibre39">de</td> <td class="calibre39">deu (<abbr title="Terminology" class="calibre22">T</abbr>)<br class="calibre1"/>ger (<abbr title="Bibliographic" class="calibre22">B</abbr>)</td> <td class="calibre39">deu</td> <td class="calibre39">German</td></tr>
+<tr class="calibre37"><td class="calibre39">Ненецкий<br class="calibre1"/>(юрако-самоедский)</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">yrk</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Непальский</td> <td class="calibre39">ne</td> <td class="calibre39">nep</td> <td class="calibre39">nep</td> <td class="calibre39">Nepali</td></tr>
+<tr class="calibre37"><td class="calibre39">Нзима</td> <td class="calibre39">—</td> <td class="calibre39">nzi</td> <td class="calibre39">nzi</td> <td class="calibre39">Nzima</td></tr>
+<tr class="calibre37"><td class="calibre39">Нивхский<br class="calibre1"/>(гиляцкий)</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">niv</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Нидерландский<br class="calibre1"/>(Голландский)</td> <td class="calibre39">nl</td> <td class="calibre39">dut (<abbr title="Bibliographic" class="calibre22">B</abbr>)<br class="calibre1"/>nld (<abbr title="Terminology" class="calibre22">T</abbr>)</td> <td class="calibre39">nld</td> <td class="calibre39">Dutch; Flemish</td></tr>
+<tr class="calibre37"><td class="calibre39">Нидерландский средневековый</td> <td class="calibre39">—</td> <td class="calibre39">dum</td> <td class="calibre39">dum</td> <td class="calibre39">Dutch, Middle (ca.1050-1350)</td></tr>
+<tr class="calibre37"><td class="calibre39">Ниуэ</td> <td class="calibre39">—</td> <td class="calibre39">niu</td> <td class="calibre39">niu</td> <td class="calibre39">Niuean</td></tr>
+<tr class="calibre37"><td class="calibre39">Ногайский</td> <td class="calibre39">—</td> <td class="calibre39">nog</td> <td class="calibre39">nog</td> <td class="calibre39">Nogai</td></tr>
+<tr class="calibre37"><td class="calibre39">Норвежский<br class="calibre1"/>(букмол)</td> <td class="calibre39">no<br class="calibre1"/>nb</td> <td class="calibre39">nor<br class="calibre1"/>nob</td> <td class="calibre39">nor</td> <td class="calibre39">Norwegian Bokmål; Bokmål, Norwegian</td></tr>
+<tr class="calibre37"><td class="calibre39">Норвежский<br class="calibre1"/>(нюнорск, новонорвежский)</td> <td class="calibre39">nn</td> <td class="calibre39">nno</td> <td class="calibre39">nno</td> <td class="calibre39">Norwegian Nynorsk; Nynorsk, Norwegian</td></tr>
+<tr class="calibre37"><td class="calibre39">Ньоро</td> <td class="calibre39">—</td> <td class="calibre39">nyo</td> <td class="calibre39">nyo</td> <td class="calibre39">Nyoro</td></tr>
+<tr class="calibre37"><td class="calibre39">Ньямвези</td> <td class="calibre39">—</td> <td class="calibre39">nym</td> <td class="calibre39">nym</td> <td class="calibre39">Nyamwezi</td></tr>
+<tr class="calibre37"><td class="calibre39">Ньянджа</td> <td class="calibre39">ny</td> <td class="calibre39">nya</td> <td class="calibre39">nya</td> <td class="calibre39">Chichewa; Chewa; Nyanja</td></tr>
+<tr class="calibre37"><td class="calibre39">Ньянколе</td> <td class="calibre39">—</td> <td class="calibre39">nyn</td> <td class="calibre39">nyn</td> <td class="calibre39">Nyankole</td></tr>
+<tr class="calibre37"><td class="calibre39">Оджибве</td> <td class="calibre39">oj</td> <td class="calibre39">oji</td> <td class="calibre39">oji</td> <td class="calibre39">Ojibwa</td></tr>
+<tr class="calibre37"><td class="calibre39">Окситанский</td> <td class="calibre39">oc</td> <td class="calibre39">oci</td> <td class="calibre39">oci</td> <td class="calibre39">Occitan (post 1500)</td></tr>
+<tr class="calibre37"><td class="calibre39">Ория</td> <td class="calibre39">or</td> <td class="calibre39">ori</td> <td class="calibre39">ori</td> <td class="calibre39">Oriya</td></tr>
+<tr class="calibre37"><td class="calibre39">Оромо</td> <td class="calibre39">om</td> <td class="calibre39">orm</td> <td class="calibre39">orm</td> <td class="calibre39">Oromo</td></tr>
+<tr class="calibre37"><td class="calibre39">Оседжи</td> <td class="calibre39">—</td> <td class="calibre39">osa</td> <td class="calibre39">osa</td> <td class="calibre39">Osage</td></tr>
+<tr class="calibre37"><td class="calibre39">Осетинский</td> <td class="calibre39">os</td> <td class="calibre39">oss</td> <td class="calibre39">oss</td> <td class="calibre39">Ossetian; Ossetic</td></tr>
+<tr class="calibre37"><td class="calibre39">Палау</td> <td class="calibre39">—</td> <td class="calibre39">pau</td> <td class="calibre39">pau</td> <td class="calibre39">Palauan</td></tr>
+<tr class="calibre37"><td class="calibre39">Пали</td> <td class="calibre39">pi</td> <td class="calibre39">pli</td> <td class="calibre39">pli</td> <td class="calibre39">Pali</td></tr>
+<tr class="calibre37"><td class="calibre39">Пампанга</td> <td class="calibre39">—</td> <td class="calibre39">pam</td> <td class="calibre39">pam</td> <td class="calibre39">Pampanga; Kapampangan</td></tr>
+<tr class="calibre37"><td class="calibre39">Пангасинан</td> <td class="calibre39">—</td> <td class="calibre39">pag</td> <td class="calibre39">pag</td> <td class="calibre39">Pangasinan</td></tr>
+<tr class="calibre37"><td class="calibre39">Папьяменто</td> <td class="calibre39">—</td> <td class="calibre39">pap</td> <td class="calibre39">pap</td> <td class="calibre39">Papiamento</td></tr>
+<tr class="calibre37"><td class="calibre39">Пенджабский</td> <td class="calibre39">pa</td> <td class="calibre39">pan</td> <td class="calibre39">pan</td> <td class="calibre39">Panjabi; Punjabi</td></tr>
+<tr class="calibre37"><td class="calibre39">Персидский</td> <td class="calibre39">fa</td> <td class="calibre39">fas (<abbr title="Terminology" class="calibre22">T</abbr>)<br class="calibre1"/>per (<abbr title="Bibliographic" class="calibre22">B</abbr>)</td> <td class="calibre39">fas</td> <td class="calibre39">Persian</td></tr>
+<tr class="calibre37"><td class="calibre39">Пехлевийский</td> <td class="calibre39">—</td> <td class="calibre39">pal</td> <td class="calibre39">pal</td> <td class="calibre39">Pahlavi</td></tr>
+<tr class="calibre37"><td class="calibre39">Польский</td> <td class="calibre39">pl</td> <td class="calibre39">pol</td> <td class="calibre39">pol</td> <td class="calibre39">Polish</td></tr>
+<tr class="calibre37"><td class="calibre39">Понапе</td> <td class="calibre39">—</td> <td class="calibre39">pon</td> <td class="calibre39">pon</td> <td class="calibre39">Pohnpeian</td></tr>
+<tr class="calibre37"><td class="calibre39">Португальский</td> <td class="calibre39">pt</td> <td class="calibre39">por</td> <td class="calibre39">por</td> <td class="calibre39">Portuguese</td></tr>
+<tr class="calibre37"><td class="calibre39">Пушту</td> <td class="calibre39">ps</td> <td class="calibre39">pus</td> <td class="calibre39">pus</td> <td class="calibre39">Pushto; Pashto</td></tr>
+<tr class="calibre37"><td class="calibre39">Раджастхани</td> <td class="calibre39">—</td> <td class="calibre39">raj</td> <td class="calibre39">raj</td> <td class="calibre39">Rajasthani</td></tr>
+<tr class="calibre37"><td class="calibre39">Разных семей языки</td> <td class="calibre39">—</td> <td class="calibre39">mul</td> <td class="calibre39">mul</td> <td class="calibre39">Multiple languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Раротонга</td> <td class="calibre39">—</td> <td class="calibre39">rar</td> <td class="calibre39">rar</td> <td class="calibre39">Rarotongan; Cook Islands Maori</td></tr>
+<tr class="calibre37"><td class="calibre39">Ретороманский</td> <td class="calibre39">rm</td> <td class="calibre39">roh</td> <td class="calibre39">roh</td> <td class="calibre39">Romansh</td></tr>
+<tr class="calibre37"><td class="calibre39">Романские языки</td> <td class="calibre39">—</td> <td class="calibre39">roa</td> <td class="calibre39">—</td> <td class="calibre39">Romance languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Руанда</td> <td class="calibre39">rw</td> <td class="calibre39">kin</td> <td class="calibre39">kin</td> <td class="calibre39">Kinyarwanda</td></tr>
+<tr class="calibre37"><td class="calibre39">Румынский</td> <td class="calibre39">ro</td> <td class="calibre39">ron (<abbr title="Terminology" class="calibre22">T</abbr>)<br class="calibre1"/>rum (<abbr title="Bibliographic" class="calibre22">B</abbr>)</td> <td class="calibre39">ron</td> <td class="calibre39">Romanian; Moldavian; Moldovan</td></tr>
+<tr class="calibre37"><td class="calibre39">Рунди</td> <td class="calibre39">rn</td> <td class="calibre39">run</td> <td class="calibre39">run</td> <td class="calibre39">Rundi</td></tr>
+<tr class="calibre37"><td class="calibre39">Русский</td> <td class="calibre39">ru</td> <td class="calibre39">rus</td> <td class="calibre39">rus</td> <td class="calibre39">Russian</td></tr>
+<tr class="calibre37"><td class="calibre39">Русский древний</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">orv</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Саамский</td> <td class="calibre39">—</td> <td class="calibre39">smi</td> <td class="calibre39">smi</td> <td class="calibre39">Sami languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Самаритянский арамейский</td> <td class="calibre39">—</td> <td class="calibre39">sam</td> <td class="calibre39">sam</td> <td class="calibre39">Samaritan Aramaic</td></tr>
+<tr class="calibre37"><td class="calibre39">Самоанский</td> <td class="calibre39">sm</td> <td class="calibre39">smo</td> <td class="calibre39">smo</td> <td class="calibre39">Samoan</td></tr>
+<tr class="calibre37"><td class="calibre39">Санго</td> <td class="calibre39">sg</td> <td class="calibre39">sag</td> <td class="calibre39">sag</td> <td class="calibre39">Sango</td></tr>
+<tr class="calibre37"><td class="calibre39">Сандаве</td> <td class="calibre39">—</td> <td class="calibre39">sad</td> <td class="calibre39">sad</td> <td class="calibre39">Sandawe</td></tr>
+<tr class="calibre37"><td class="calibre39">Санскрит</td> <td class="calibre39">sa</td> <td class="calibre39">san</td> <td class="calibre39">san</td> <td class="calibre39">Sanskrit</td></tr>
+<tr class="calibre37"><td class="calibre39">Сапотекский</td> <td class="calibre39">—</td> <td class="calibre39">zap</td> <td class="calibre39">zap</td> <td class="calibre39">Zapotec</td></tr>
+<tr class="calibre37"><td class="calibre39">Сардинский</td> <td class="calibre39">sc</td> <td class="calibre39">srd</td> <td class="calibre39">srd</td> <td class="calibre39">Sardinian</td></tr>
+<tr class="calibre37"><td class="calibre39">Свази</td> <td class="calibre39">ss</td> <td class="calibre39">ssw</td> <td class="calibre39">ssw</td> <td class="calibre39">Swati</td></tr>
+<tr class="calibre37"><td class="calibre39">Себуано</td> <td class="calibre39">—</td> <td class="calibre39">ceb</td> <td class="calibre39">ceb</td> <td class="calibre39">Cebuano</td></tr>
+<tr class="calibre37"><td class="calibre39">Селькупский</td> <td class="calibre39">—</td> <td class="calibre39">sel</td> <td class="calibre39">sel</td> <td class="calibre39">Selkup</td></tr>
+<tr class="calibre37"><td class="calibre39">Семитские языки</td> <td class="calibre39">—</td> <td class="calibre39">sem</td> <td class="calibre39">—</td> <td class="calibre39">Semitic languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Сербский</td> <td class="calibre39">sr</td> <td class="calibre39">srp</td> <td class="calibre39">srp</td> <td class="calibre39">Serbian</td></tr>
+<tr class="calibre37"><td class="calibre39">Серер</td> <td class="calibre39">—</td> <td class="calibre39">srr</td> <td class="calibre39">srr</td> <td class="calibre39">Serer</td></tr>
+<tr class="calibre37"><td class="calibre39">Сидама</td> <td class="calibre39">—</td> <td class="calibre39">sid</td> <td class="calibre39">sid</td> <td class="calibre39">Sidamo</td></tr>
+<tr class="calibre37"><td class="calibre39">Сиксика</td> <td class="calibre39">—</td> <td class="calibre39">bla</td> <td class="calibre39">bla</td> <td class="calibre39">Siksika</td></tr>
+<tr class="calibre37"><td class="calibre39">Сингальский</td> <td class="calibre39">si</td> <td class="calibre39">sin</td> <td class="calibre39">sin</td> <td class="calibre39">Sinhala; Sinhalese</td></tr>
+<tr class="calibre37"><td class="calibre39">Синдхи</td> <td class="calibre39">sd</td> <td class="calibre39">snd</td> <td class="calibre39">snd</td> <td class="calibre39">Sindhi</td></tr>
+<tr class="calibre37"><td class="calibre39">Сирийский</td> <td class="calibre39">—</td> <td class="calibre39">syr</td> <td class="calibre39">syr</td> <td class="calibre39">Syriac</td></tr>
+<tr class="calibre37"><td class="calibre39">Сирийский классический</td> <td class="calibre39">—</td> <td class="calibre39">syc</td> <td class="calibre39">—</td> <td class="calibre39">Classical Syriac</td></tr>
+<tr class="calibre37"><td class="calibre39">Славянские языки</td> <td class="calibre39">—</td> <td class="calibre39">sla</td> <td class="calibre39">—</td> <td class="calibre39">Slavic languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Славянский<br class="calibre1"/>(Церковно-, Старославянский)</td> <td class="calibre39">cu</td> <td class="calibre39">chu</td> <td class="calibre39">chu</td> <td class="calibre39">Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic</td></tr>
+<tr class="calibre37"><td class="calibre39">Словацкий</td> <td class="calibre39">sk</td> <td class="calibre39">slk (<abbr title="Terminology" class="calibre22">T</abbr>)<br class="calibre1"/>slo (<abbr title="Bibliographic" class="calibre22">B</abbr>)</td> <td class="calibre39">slk</td> <td class="calibre39">Slovak</td></tr>
+<tr class="calibre37"><td class="calibre39">Словенский</td> <td class="calibre39">sl</td> <td class="calibre39">slv</td> <td class="calibre39">slv</td> <td class="calibre39">Slovenian</td></tr>
+<tr class="calibre37"><td class="calibre39">Согдийский</td> <td class="calibre39">—</td> <td class="calibre39">sog</td> <td class="calibre39">sog</td> <td class="calibre39">Sogdian</td></tr>
+<tr class="calibre37"><td class="calibre39">Сомали</td> <td class="calibre39">so</td> <td class="calibre39">som</td> <td class="calibre39">som</td> <td class="calibre39">Somali</td></tr>
+<tr class="calibre37"><td class="calibre39">Сото северный</td> <td class="calibre39">—</td> <td class="calibre39">nso</td> <td class="calibre39">nso</td> <td class="calibre39">Pedi; Sepedi; Northern Sotho</td></tr>
+<tr class="calibre37"><td class="calibre39">Сото южный</td> <td class="calibre39">st</td> <td class="calibre39">sot</td> <td class="calibre39">sot</td> <td class="calibre39">Sotho, Southern</td></tr>
+<tr class="calibre37"><td class="calibre39">Среднеанглийский</td> <td class="calibre39">—</td> <td class="calibre39">enm</td> <td class="calibre39">enm</td> <td class="calibre39">English, Middle (1100-1500)</td></tr>
+<tr class="calibre37"><td class="calibre39">Средневерхненемецкий</td> <td class="calibre39">—</td> <td class="calibre39">gmh</td> <td class="calibre39">gmh</td> <td class="calibre39">German, Middle High (ca.1050-1500)</td></tr>
+<tr class="calibre37"><td class="calibre39">Среднеирландский</td> <td class="calibre39">—</td> <td class="calibre39">mga</td> <td class="calibre39">mga</td> <td class="calibre39">Irish, Middle (900-1200)</td></tr>
+<tr class="calibre37"><td class="calibre39">Среднефранцузский</td> <td class="calibre39">—</td> <td class="calibre39">frm</td> <td class="calibre39">frm</td> <td class="calibre39">French, Middle (ca.1400-1600)</td></tr>
+<tr class="calibre37"><td class="calibre39">Староанглийский</td> <td class="calibre39">—</td> <td class="calibre39">ang</td> <td class="calibre39">ang</td> <td class="calibre39">English, Old (ca.450-1100)</td></tr>
+<tr class="calibre37"><td class="calibre39">Староверхненемецкий</td> <td class="calibre39">—</td> <td class="calibre39">goh</td> <td class="calibre39">goh</td> <td class="calibre39">German, Old High (ca.750-1050)</td></tr>
+<tr class="calibre37"><td class="calibre39">Староирландский</td> <td class="calibre39">—</td> <td class="calibre39">sga</td> <td class="calibre39">sga</td> <td class="calibre39">Irish, Old (to 900)</td></tr>
+<tr class="calibre37"><td class="calibre39">Старонорвежский</td> <td class="calibre39">—</td> <td class="calibre39">non</td> <td class="calibre39">non</td> <td class="calibre39">Norse, Old</td></tr>
+<tr class="calibre37"><td class="calibre39">Староперсидский</td> <td class="calibre39">—</td> <td class="calibre39">peo</td> <td class="calibre39">peo</td> <td class="calibre39">Persian, Old (ca.600-400 B.C.)</td></tr>
+<tr class="calibre37"><td class="calibre39">Старопровансальский</td> <td class="calibre39">—</td> <td class="calibre39">pro</td> <td class="calibre39">pro</td> <td class="calibre39">Provençal, Old (to 1500); Occitan, Old (to 1500)</td></tr>
+<tr class="calibre37"><td class="calibre39">Старославянский<br class="calibre1"/>(Церковно-славянский)</td> <td class="calibre39">cu</td> <td class="calibre39">chu</td> <td class="calibre39">chu</td> <td class="calibre39">Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic</td></tr>
+<tr class="calibre37"><td class="calibre39">Старотурецкий</td> <td class="calibre39">—</td> <td class="calibre39">ota</td> <td class="calibre39">ota</td> <td class="calibre39">Turkish, Ottoman (1500-1928)</td></tr>
+<tr class="calibre37"><td class="calibre39">Старофранцузский</td> <td class="calibre39">—</td> <td class="calibre39">fro</td> <td class="calibre39">fro</td> <td class="calibre39">French, Old (842-ca.1400)</td></tr>
+<tr class="calibre37"><td class="calibre39">Суахили</td> <td class="calibre39">sw</td> <td class="calibre39">swa</td> <td class="calibre39">swa</td> <td class="calibre39">Swahili</td></tr>
+<tr class="calibre37"><td class="calibre39">Сукума</td> <td class="calibre39">—</td> <td class="calibre39">suk</td> <td class="calibre39">suk</td> <td class="calibre39">Sukuma</td></tr>
+<tr class="calibre37"><td class="calibre39">Сунданский</td> <td class="calibre39">su</td> <td class="calibre39">sun</td> <td class="calibre39">sun</td> <td class="calibre39">Sundanese</td></tr>
+<tr class="calibre37"><td class="calibre39">Сусу</td> <td class="calibre39">—</td> <td class="calibre39">sus</td> <td class="calibre39">sus</td> <td class="calibre39">Susu</td></tr>
+<tr class="calibre37"><td class="calibre39">Табасаранский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">tab</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Тагальский</td> <td class="calibre39">tl</td> <td class="calibre39">tgl</td> <td class="calibre39">tgl</td> <td class="calibre39">Tagalog</td></tr>
+<tr class="calibre37"><td class="calibre39">Таджикский</td> <td class="calibre39">tg</td> <td class="calibre39">tgk</td> <td class="calibre39">tgk</td> <td class="calibre39">Tajik</td></tr>
+<tr class="calibre37"><td class="calibre39">Таитянский</td> <td class="calibre39">ty</td> <td class="calibre39">tah</td> <td class="calibre39">tah</td> <td class="calibre39">Tahitian</td></tr>
+<tr class="calibre37"><td class="calibre39">Тайский</td> <td class="calibre39">th</td> <td class="calibre39">tha</td> <td class="calibre39">tha</td> <td class="calibre39">Thai</td></tr>
+<tr class="calibre37"><td class="calibre39">Талышский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">tly</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Тамашек</td> <td class="calibre39">—</td> <td class="calibre39">tmh</td> <td class="calibre39">tmh</td> <td class="calibre39">Tamashek</td></tr>
+<tr class="calibre37"><td class="calibre39">Тамильский</td> <td class="calibre39">ta</td> <td class="calibre39">tam</td> <td class="calibre39">tam</td> <td class="calibre39">Tamil</td></tr>
+<tr class="calibre37"><td class="calibre39">Татарский</td> <td class="calibre39">tt</td> <td class="calibre39">tat</td> <td class="calibre39">tat</td> <td class="calibre39">Tatar</td></tr>
+<tr class="calibre37"><td class="calibre39">Тви</td> <td class="calibre39">tw</td> <td class="calibre39">twi</td> <td class="calibre39">twi</td> <td class="calibre39">Twi</td></tr>
+<tr class="calibre37"><td class="calibre39">Телугу</td> <td class="calibre39">te</td> <td class="calibre39">tel</td> <td class="calibre39">tel</td> <td class="calibre39">Telugu</td></tr>
+<tr class="calibre37"><td class="calibre39">Темне</td> <td class="calibre39">—</td> <td class="calibre39">tem</td> <td class="calibre39">tem</td> <td class="calibre39">Timne</td></tr>
+<tr class="calibre37"><td class="calibre39">Терено</td> <td class="calibre39">—</td> <td class="calibre39">ter</td> <td class="calibre39">ter</td> <td class="calibre39">Tereno</td></tr>
+<tr class="calibre37"><td class="calibre39">Тибетский</td> <td class="calibre39">bo</td> <td class="calibre39">bod (<abbr title="Terminology" class="calibre22">T</abbr>)<br class="calibre1"/>tib (<abbr title="Bibliographic" class="calibre22">B</abbr>)</td> <td class="calibre39">bod</td> <td class="calibre39">Tibetan</td></tr>
+<tr class="calibre37"><td class="calibre39">Тиви</td> <td class="calibre39">—</td> <td class="calibre39">tiv</td> <td class="calibre39">tiw</td> <td class="calibre39">Tiv</td></tr>
+<tr class="calibre37"><td class="calibre39">Тигре</td> <td class="calibre39">—</td> <td class="calibre39">tig</td> <td class="calibre39">tig</td> <td class="calibre39">Tigre</td></tr>
+<tr class="calibre37"><td class="calibre39">Тигринья</td> <td class="calibre39">ti</td> <td class="calibre39">tir</td> <td class="calibre39">tir</td> <td class="calibre39">Tigrinya</td></tr>
+<tr class="calibre37"><td class="calibre39">Тлингит</td> <td class="calibre39">—</td> <td class="calibre39">tli</td> <td class="calibre39">tli</td> <td class="calibre39">Tlingit</td></tr>
+<tr class="calibre37"><td class="calibre39">Тонга (Ньяса)</td> <td class="calibre39">—</td> <td class="calibre39">tog</td> <td class="calibre39">tog</td> <td class="calibre39">Tonga (Nyasa)</td></tr>
+<tr class="calibre37"><td class="calibre39">Тонганский</td> <td class="calibre39">to</td> <td class="calibre39">ton</td> <td class="calibre39">ton</td> <td class="calibre39">Tonga (Tonga Islands)</td></tr>
+<tr class="calibre37"><td class="calibre39">Трукский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">chk</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Тсвана</td> <td class="calibre39">tn</td> <td class="calibre39">tsn</td> <td class="calibre39">tsn</td> <td class="calibre39">Tswana</td></tr>
+<tr class="calibre37"><td class="calibre39">Тсонга</td> <td class="calibre39">ts</td> <td class="calibre39">tso</td> <td class="calibre39">tso</td> <td class="calibre39">Tsonga</td></tr>
+<tr class="calibre37"><td class="calibre39">Тувинский</td> <td class="calibre39">—</td> <td class="calibre39">tyv</td> <td class="calibre39">tyv</td> <td class="calibre39">Tuvinian</td></tr>
+<tr class="calibre37"><td class="calibre39">Тумбука</td> <td class="calibre39">—</td> <td class="calibre39">tum</td> <td class="calibre39">tum</td> <td class="calibre39">Tumbuka</td></tr>
+<tr class="calibre37"><td class="calibre39">Турецкий</td> <td class="calibre39">tr</td> <td class="calibre39">tur</td> <td class="calibre39">tur</td> <td class="calibre39">Turkish</td></tr>
+<tr class="calibre37"><td class="calibre39">Туркменский</td> <td class="calibre39">tk/ tu</td> <td class="calibre39">tuk</td> <td class="calibre39">tuk</td> <td class="calibre39">Turkmen</td></tr>
+<tr class="calibre37"><td class="calibre39">Угаритский</td> <td class="calibre39">—</td> <td class="calibre39">uga</td> <td class="calibre39">uga</td> <td class="calibre39">Ugaritic</td></tr>
+<tr class="calibre37"><td class="calibre39">Удмуртский<br class="calibre1"/>(вотяцкий)</td> <td class="calibre39">—</td> <td class="calibre39">udm</td> <td class="calibre39">udm</td> <td class="calibre39">Udmurt</td></tr>
+<tr class="calibre37"><td class="calibre39">Удэгейский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">ude</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Узбекский</td> <td class="calibre39">uz</td> <td class="calibre39">uzb</td> <td class="calibre39">uzb</td> <td class="calibre39">Uzbek</td></tr>
+<tr class="calibre37"><td class="calibre39">Уйгурский</td> <td class="calibre39">ug</td> <td class="calibre39">uig</td> <td class="calibre39">uig</td> <td class="calibre39">Uighur; Uyghur</td></tr>
+<tr class="calibre37"><td class="calibre39">Украинский</td> <td class="calibre39">uk</td> <td class="calibre39">ukr</td> <td class="calibre39">ukr</td> <td class="calibre39">Ukrainian</td></tr>
+<tr class="calibre37"><td class="calibre39">Ульчский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">ulc</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Умбунду</td> <td class="calibre39">—</td> <td class="calibre39">umb</td> <td class="calibre39">umb</td> <td class="calibre39">Umbundu</td></tr>
+<tr class="calibre37"><td class="calibre39">Урду</td> <td class="calibre39">ur</td> <td class="calibre39">urd</td> <td class="calibre39">urd</td> <td class="calibre39">Urdu</td></tr>
+<tr class="calibre37"><td class="calibre39">Фанг</td> <td class="calibre39">—</td> <td class="calibre39">fan</td> <td class="calibre39">fan</td> <td class="calibre39">Fang</td></tr>
+<tr class="calibre37"><td class="calibre39">Фанти</td> <td class="calibre39">—</td> <td class="calibre39">fat</td> <td class="calibre39">fat</td> <td class="calibre39">Fanti</td></tr>
+<tr class="calibre37"><td class="calibre39">Фарерский</td> <td class="calibre39">fo</td> <td class="calibre39">fao</td> <td class="calibre39">fao</td> <td class="calibre39">Faroese</td></tr>
+<tr class="calibre37"><td class="calibre39">Фиджи</td> <td class="calibre39">fj</td> <td class="calibre39">fij</td> <td class="calibre39">fij</td> <td class="calibre39">Fijian</td></tr>
+<tr class="calibre37"><td class="calibre39">Филиппинский</td> <td class="calibre39">fl</td> <td class="calibre39">fil</td> <td class="calibre39">fil</td> <td class="calibre39">Filipino; Pilipino</td></tr>
+<tr class="calibre37"><td class="calibre39">Финикийский</td> <td class="calibre39">—</td> <td class="calibre39">phn</td> <td class="calibre39">phn</td> <td class="calibre39">Phoenician</td></tr>
+<tr class="calibre37"><td class="calibre39">Финно-Угорские языки</td> <td class="calibre39">—</td> <td class="calibre39">fiu</td> <td class="calibre39">—</td> <td class="calibre39">Finno-Ugrian languages</td></tr>
+<tr class="calibre37"><td class="calibre39">Финский<br class="calibre1"/>(Suomi)</td> <td class="calibre39">fi</td> <td class="calibre39">fin</td> <td class="calibre39">fin</td> <td class="calibre39">Finnish</td></tr>
+<tr class="calibre37"><td class="calibre39">Фон</td> <td class="calibre39">—</td> <td class="calibre39">fon</td> <td class="calibre39">fon</td> <td class="calibre39">Fon</td></tr>
+<tr class="calibre37"><td class="calibre39">Французский</td> <td class="calibre39">fr</td> <td class="calibre39">fra (<abbr title="Terminology" class="calibre22">T</abbr>)<br class="calibre1"/>fre (<abbr title="Bibliographic" class="calibre22">B</abbr>)</td> <td class="calibre39">fra</td> <td class="calibre39">French</td></tr>
+<tr class="calibre37"><td class="calibre39">Фризский</td> <td class="calibre39">fy</td> <td class="calibre39">fry</td> <td class="calibre39">fry</td> <td class="calibre39">Western Frisian</td></tr>
+<tr class="calibre37"><td class="calibre39">Фулах</td> <td class="calibre39">ff</td> <td class="calibre39">ful</td> <td class="calibre39">ful</td> <td class="calibre39">Fulah</td></tr>
+<tr class="calibre37"><td class="calibre39">Хайда</td> <td class="calibre39">—</td> <td class="calibre39">hai</td> <td class="calibre39">hai</td> <td class="calibre39">Haida</td></tr>
+<tr class="calibre37"><td class="calibre39">Хакасский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">kjh</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Хантыйский<br class="calibre1"/>(остяцкий)</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">kca</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Хауса</td> <td class="calibre39">ha</td> <td class="calibre39">hau</td> <td class="calibre39">hau</td> <td class="calibre39">Hausa</td></tr>
+<tr class="calibre37"><td class="calibre39">Хилигайнон</td> <td class="calibre39">—</td> <td class="calibre39">hil</td> <td class="calibre39">hil</td> <td class="calibre39">Hiligaynon</td></tr>
+<tr class="calibre37"><td class="calibre39">Хинди</td> <td class="calibre39">hi</td> <td class="calibre39">hin</td> <td class="calibre39">hin</td> <td class="calibre39">Hindi</td></tr>
+<tr class="calibre37"><td class="calibre39">Хиримоту</td> <td class="calibre39">ho</td> <td class="calibre39">hmo</td> <td class="calibre39">hmo</td> <td class="calibre39">Hiri Motu</td></tr>
+<tr class="calibre37"><td class="calibre39">Хорватский</td> <td class="calibre39">hr</td> <td class="calibre39">hrv<br class="calibre1"/>scr</td> <td class="calibre39">hrv</td> <td class="calibre39">Croatian</td></tr>
+<tr class="calibre37"><td class="calibre39">Хотанский</td> <td class="calibre39">—</td> <td class="calibre39">kho</td> <td class="calibre39">kho</td> <td class="calibre39">Khotanese; Sakan</td></tr>
+<tr class="calibre37"><td class="calibre39">Хупа</td> <td class="calibre39">—</td> <td class="calibre39">hup</td> <td class="calibre39">hup</td> <td class="calibre39">Hupa</td></tr>
+<tr class="calibre37"><td class="calibre39">Цахурский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">tkr</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Церковно-славянский<br class="calibre1"/>(Старославянский)</td> <td class="calibre39">cu</td> <td class="calibre39">chu</td> <td class="calibre39">chu</td> <td class="calibre39">Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic</td></tr>
+<tr class="calibre37"><td class="calibre39">Цимшиан</td> <td class="calibre39">—</td> <td class="calibre39">tsi</td> <td class="calibre39">tsi</td> <td class="calibre39">Tsimshian</td></tr>
+<tr class="calibre37"><td class="calibre39">Цыганский</td> <td class="calibre39">—</td> <td class="calibre39">rom</td> <td class="calibre39">rom</td> <td class="calibre39">Romany</td></tr>
+<tr class="calibre37"><td class="calibre39">Чагатайский</td> <td class="calibre39">—</td> <td class="calibre39">chg</td> <td class="calibre39">chg</td> <td class="calibre39">Chagatai</td></tr>
+<tr class="calibre37"><td class="calibre39">Чаморро</td> <td class="calibre39">ch</td> <td class="calibre39">cha</td> <td class="calibre39">cha</td> <td class="calibre39">Chamorro</td></tr>
+<tr class="calibre37"><td class="calibre39">Чероки</td> <td class="calibre39">—</td> <td class="calibre39">chr</td> <td class="calibre39">chr</td> <td class="calibre39">Cherokee</td></tr>
+<tr class="calibre37"><td class="calibre39">Чеченский</td> <td class="calibre39">ce</td> <td class="calibre39">che</td> <td class="calibre39">che</td> <td class="calibre39">Chechen</td></tr>
+<tr class="calibre37"><td class="calibre39">Чешский</td> <td class="calibre39">cs</td> <td class="calibre39">ces (<abbr title="Terminology" class="calibre22">T</abbr>)<br class="calibre1"/>cze (<abbr title="Bibliographic" class="calibre22">B</abbr>)</td> <td class="calibre39">ces</td> <td class="calibre39">Czech</td></tr>
+<tr class="calibre37"><td class="calibre39">Чжуанский</td> <td class="calibre39">za</td> <td class="calibre39">zha</td> <td class="calibre39">zha</td> <td class="calibre39">Zhuang; Chuang</td></tr>
+<tr class="calibre37"><td class="calibre39">Чибча</td> <td class="calibre39">—</td> <td class="calibre39">chb</td> <td class="calibre39">chb</td> <td class="calibre39">Chibcha</td></tr>
+<tr class="calibre37"><td class="calibre39">Чинук жаргон</td> <td class="calibre39">—</td> <td class="calibre39">chn</td> <td class="calibre39">chn</td> <td class="calibre39">Chinook jargon</td></tr>
+<tr class="calibre37"><td class="calibre39">Чоктав</td> <td class="calibre39">—</td> <td class="calibre39">cho</td> <td class="calibre39">cho</td> <td class="calibre39">Choctaw</td></tr>
+<tr class="calibre37"><td class="calibre39">Чувашский</td> <td class="calibre39">cv</td> <td class="calibre39">chv</td> <td class="calibre39">chv</td> <td class="calibre39">Chuvash</td></tr>
+<tr class="calibre37"><td class="calibre39">Чукотский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">ckt</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Шайенн<br class="calibre1"/>(Чейенн)</td> <td class="calibre39">—</td> <td class="calibre39">chy</td> <td class="calibre39">chy</td> <td class="calibre39">Cheyenne</td></tr>
+<tr class="calibre37"><td class="calibre39">Шанский</td> <td class="calibre39">—</td> <td class="calibre39">shn</td> <td class="calibre39">shn</td> <td class="calibre39">Shan</td></tr>
+<tr class="calibre37"><td class="calibre39">Шведский</td> <td class="calibre39">sv</td> <td class="calibre39">swe<br class="calibre1"/>sve</td> <td class="calibre39">swe</td> <td class="calibre39">Swedish</td></tr>
+<tr class="calibre37"><td class="calibre39">Шона</td> <td class="calibre39">sn</td> <td class="calibre39">sna</td> <td class="calibre39">sna</td> <td class="calibre39">Shona</td></tr>
+<tr class="calibre37"><td class="calibre39">Шорский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">cjs</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Шотландский<br class="calibre1"/>(англо-шотландский)</td> <td class="calibre39">—</td> <td class="calibre39">sco</td> <td class="calibre39">sco</td> <td class="calibre39">Scots</td></tr>
+<tr class="calibre37"><td class="calibre39">Шугнанский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">sgh</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Шумерский</td> <td class="calibre39">—</td> <td class="calibre39">sux</td> <td class="calibre39">sux</td> <td class="calibre39">Sumerian</td></tr>
+<tr class="calibre37"><td class="calibre39">Эве</td> <td class="calibre39">ee</td> <td class="calibre39">ewe</td> <td class="calibre39">ewe</td> <td class="calibre39">Ewe</td></tr>
+<tr class="calibre37"><td class="calibre39">Эвенкийский<br class="calibre1"/>(тунгусский)</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">evn</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Эвенский</td> <td class="calibre39">—</td> <td class="calibre39">—</td> <td class="calibre39">eve</td> <td class="calibre39">—</td></tr>
+<tr class="calibre37"><td class="calibre39">Эвондо</td> <td class="calibre39">—</td> <td class="calibre39">ewo</td> <td class="calibre39">ewo</td> <td class="calibre39">Ewondo</td></tr>
+<tr class="calibre37"><td class="calibre39">Экаджук</td> <td class="calibre39">—</td> <td class="calibre39">eka</td> <td class="calibre39">eka</td> <td class="calibre39">Ekajuk</td></tr>
+<tr class="calibre37"><td class="calibre39">Эламский</td> <td class="calibre39">—</td> <td class="calibre39">elx</td> <td class="calibre39">elx</td> <td class="calibre39">Elamite</td></tr>
+<tr class="calibre37"><td class="calibre39">Эрзянский</td> <td class="calibre39">—</td> <td class="calibre39">myv</td> <td class="calibre39">myv</td> <td class="calibre39">Erzya</td></tr>
+<tr class="calibre37"><td class="calibre39">Эсперанто</td> <td class="calibre39">eo</td> <td class="calibre39">epo</td> <td class="calibre39">epo</td> <td class="calibre39">Esperanto</td></tr>
+<tr class="calibre37"><td class="calibre39">Эстонский</td> <td class="calibre39">et</td> <td class="calibre39">est</td> <td class="calibre39">est</td> <td class="calibre39">Estonian</td></tr>
+<tr class="calibre37"><td class="calibre39">Эфик</td> <td class="calibre39">—</td> <td class="calibre39">efi</td> <td class="calibre39">efi</td> <td class="calibre39">Efik</td></tr>
+<tr class="calibre37"><td class="calibre39">Яванский</td> <td class="calibre39">jv</td> <td class="calibre39">jav<br class="calibre1"/>jaw</td> <td class="calibre39">jav</td> <td class="calibre39">Javanese</td></tr>
+<tr class="calibre37"><td class="calibre39">Якутский<br class="calibre1"/>(Саха)</td> <td class="calibre39">—</td> <td class="calibre39">sah</td> <td class="calibre39">sah</td> <td class="calibre39">Yakut</td></tr>
+<tr class="calibre37"><td class="calibre39">Яо</td> <td class="calibre39">—</td> <td class="calibre39">yao</td> <td class="calibre39">yao</td> <td class="calibre39">Yao</td></tr>
+<tr class="calibre37"><td class="calibre39">Яп</td> <td class="calibre39">—</td> <td class="calibre39">yap</td> <td class="calibre39">yap</td> <td class="calibre39">Yapese</td></tr>
+<tr class="calibre37"><td class="calibre39">Японский</td> <td class="calibre39">ja</td> <td class="calibre39">jpn</td> <td class="calibre39">jpn</td> <td class="calibre39">Japanese</td></tr>
+</table>
+<a name="lcid" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Коды локалей Microsoft</h2>
+<p class="calibre13">Таблица составлена по материалам:</p>
+<ol class="calibre17">
+<li class="calibre18"><a href="https://msdn.microsoft.com/en-us/library/ms912047%28v=winembedded.10%29.aspx" class="pcalibre calibre11">Microsoft Locale ID Values</a>, Microsoft Developer Network (MSDN).</li>
+<li class="calibre18"><a href="http://www.science.co.il/Language/Locale-codes.asp" class="pcalibre calibre11">Locale Codes</a>, Israel Science and Technology Homepage.</li>
+</ol>
+<p class="calibre13">С помощью данной таблицы можно узнать принадлежность языков определённой кодовой странице – информация для использования при работе с директивой <span class="code1">#SOURCE_CODE_PAGE</span>.</p>
+<table class="calibre36">
+<tr class="calibre37"><th class="calibre38">Language</th> <th class="calibre38">Country/Region</th> <th class="calibre38">LCID Dec</th> <th class="calibre38">Code Page</th></tr>
+<tr class="calibre37"><td class="calibre39">Afrikaans</td> <td class="calibre39">South Africa</td> <td class="calibre39">1078</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Albanian</td> <td class="calibre39">Albania</td> <td class="calibre39">1052</td> <td class="calibre39">1250</td></tr>
+<tr class="calibre37"><td class="calibre39">Amharic</td> <td class="calibre39"/> <td class="calibre39">1118</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Algeria</td> <td class="calibre39">5121</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Bahrain</td> <td class="calibre39">15361</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Egypt</td> <td class="calibre39">3073</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Iraq</td> <td class="calibre39">2049</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Jordan</td> <td class="calibre39">11265</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Kuwait</td> <td class="calibre39">13313</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Lebanon</td> <td class="calibre39">12289</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Libya</td> <td class="calibre39">4097</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Morocco</td> <td class="calibre39">6145</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Oman</td> <td class="calibre39">8193</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Qatar</td> <td class="calibre39">16385</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Saudi Arabia</td> <td class="calibre39">1025</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Syria</td> <td class="calibre39">10241</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Tunisia</td> <td class="calibre39">7169</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">U.A.E.</td> <td class="calibre39">14337</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Arabic</td> <td class="calibre39">Yemen</td> <td class="calibre39">9217</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Armenian</td> <td class="calibre39">Armenia</td> <td class="calibre39">1067</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Assamese</td> <td class="calibre39"/> <td class="calibre39">1101</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Azeri (<em class="calibre16">Cyrillic</em>)</td> <td class="calibre39">Azerbaijan</td> <td class="calibre39">2092</td> <td class="calibre39">1251</td></tr>
+<tr class="calibre37"><td class="calibre39">Azeri (<em class="calibre16">Latin</em>)</td> <td class="calibre39">Azerbaijan</td> <td class="calibre39">1068</td> <td class="calibre39">1254</td></tr>
+<tr class="calibre37"><td class="calibre39">Basque</td> <td class="calibre39">Spain</td> <td class="calibre39">1069</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Belarusian</td> <td class="calibre39">Belarus</td> <td class="calibre39">1059</td> <td class="calibre39">1251</td></tr>
+<tr class="calibre37"><td class="calibre39">Bengali</td> <td class="calibre39">Bangladesh</td> <td class="calibre39">2117</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Bengali</td> <td class="calibre39">India</td> <td class="calibre39">1093</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Bosnian</td> <td class="calibre39"/> <td class="calibre39">5146</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Bulgarian</td> <td class="calibre39">Bulgaria</td> <td class="calibre39">1026</td> <td class="calibre39">1251</td></tr>
+<tr class="calibre37"><td class="calibre39">Burmese</td> <td class="calibre39"/> <td class="calibre39">1109</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Catalan</td> <td class="calibre39">Spain</td> <td class="calibre39">1027</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Chinese</td> <td class="calibre39">Hong Kong S.A.R.</td> <td class="calibre39">3076</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Chinese</td> <td class="calibre39">Macau S.A.R.</td> <td class="calibre39">5124</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Chinese<br class="calibre1"/>(<em class="calibre16">Default Chinese-Simplified Locale ID</em>)</td> <td class="calibre39">People's Republic of China</td> <td class="calibre39">2052</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Chinese</td> <td class="calibre39">Singapore</td> <td class="calibre39">4100</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Chinese</td> <td class="calibre39">Taiwan</td> <td class="calibre39">1028</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Croatian</td> <td class="calibre39">Croatia</td> <td class="calibre39">1050</td> <td class="calibre39">1250</td></tr>
+<tr class="calibre37"><td class="calibre39">Czech</td> <td class="calibre39">Czech Republic</td> <td class="calibre39">1029</td> <td class="calibre39">1250</td></tr>
+<tr class="calibre37"><td class="calibre39">Danish</td> <td class="calibre39">Denmark</td> <td class="calibre39">1030</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Divehi</td> <td class="calibre39">Maldives</td> <td class="calibre39">1125</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Dutch</td> <td class="calibre39">Belgium</td> <td class="calibre39">2067</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Dutch</td> <td class="calibre39">Netherlands</td> <td class="calibre39">1043</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Edo</td> <td class="calibre39"/> <td class="calibre39">1126</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">Australia</td> <td class="calibre39">3081</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">Belize</td> <td class="calibre39">10249</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">Canada</td> <td class="calibre39">4105</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">Caribbean</td> <td class="calibre39">9225</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">India</td> <td class="calibre39">16393</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">Ireland</td> <td class="calibre39">6153</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">Jamaica</td> <td class="calibre39">8201</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">New Zealand</td> <td class="calibre39">5129</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">Republic of the Philippines</td> <td class="calibre39">13321</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">South Africa</td> <td class="calibre39">7177</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">Trinidad and Tobago</td> <td class="calibre39">11273</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">United Kingdom</td> <td class="calibre39">2057</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">English<br class="calibre1"/>(<em class="calibre16">Default English Locale ID</em>)</td> <td class="calibre39">United States</td> <td class="calibre39">1033</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">English</td> <td class="calibre39">Zimbabwe</td> <td class="calibre39">12297</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Estonian</td> <td class="calibre39">Estonia</td> <td class="calibre39">1061</td> <td class="calibre39">1257</td></tr>
+<tr class="calibre37"><td class="calibre39">Faroese</td> <td class="calibre39">Faeroe Islands</td> <td class="calibre39">1080</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Farsi</td> <td class="calibre39">Iran</td> <td class="calibre39">1065</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Filipino</td> <td class="calibre39"/> <td class="calibre39">1124</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Finnish</td> <td class="calibre39">Finland</td> <td class="calibre39">1035</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">French</td> <td class="calibre39">Belgium</td> <td class="calibre39">2060</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">French</td> <td class="calibre39">Cameroon</td> <td class="calibre39">11276</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">French</td> <td class="calibre39">Canada</td> <td class="calibre39">3084</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">French</td> <td class="calibre39">Congo</td> <td class="calibre39">9228</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">French</td> <td class="calibre39">Cote d'Ivoire</td> <td class="calibre39">12300</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">French<br class="calibre1"/>(<em class="calibre16">Default French Locale ID</em>)</td> <td class="calibre39">France</td> <td class="calibre39">1036</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">French</td> <td class="calibre39">Luxembourg</td> <td class="calibre39">5132</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">French</td> <td class="calibre39">Mali</td> <td class="calibre39">13324</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">French</td> <td class="calibre39">Morocco</td> <td class="calibre39">14348</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">French</td> <td class="calibre39">Principality of Monaco</td> <td class="calibre39">6156</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">French</td> <td class="calibre39">Senegal</td> <td class="calibre39">10252</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">French</td> <td class="calibre39">Switzerland</td> <td class="calibre39">4108</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">French</td> <td class="calibre39">West Indies</td> <td class="calibre39">7180</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Frisian</td> <td class="calibre39">Netherlands</td> <td class="calibre39">1122</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">FYRO Macedonian</td> <td class="calibre39">Former Yugoslav Republic of Macedonia</td> <td class="calibre39">1071</td> <td class="calibre39">1251</td></tr>
+<tr class="calibre37"><td class="calibre39">Gaelic</td> <td class="calibre39">Ireland</td> <td class="calibre39">2108</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Gaelic</td> <td class="calibre39">Scotland</td> <td class="calibre39">1084</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Galician</td> <td class="calibre39">Spain</td> <td class="calibre39">1110</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Georgian</td> <td class="calibre39">Georgia</td> <td class="calibre39">1079</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">German</td> <td class="calibre39">Austria</td> <td class="calibre39">3079</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">German<br class="calibre1"/>(<em class="calibre16">Default German Locale ID</em>)</td> <td class="calibre39">Germany</td> <td class="calibre39">1031</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">German</td> <td class="calibre39">Liechtenstein</td> <td class="calibre39">5127</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">German</td> <td class="calibre39">Luxembourg</td> <td class="calibre39">4103</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">German</td> <td class="calibre39">Switzerland</td> <td class="calibre39">2055</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Greek</td> <td class="calibre39">Greece</td> <td class="calibre39">1032</td> <td class="calibre39">1253</td></tr>
+<tr class="calibre37"><td class="calibre39">Guarani</td> <td class="calibre39">Paraguay</td> <td class="calibre39">1140</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Gujarati</td> <td class="calibre39">India</td> <td class="calibre39">1095</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Hebrew</td> <td class="calibre39">Israel</td> <td class="calibre39">1037</td> <td class="calibre39">1255</td></tr>
+<tr class="calibre37"><td class="calibre39">HID<br class="calibre1"/>(<em class="calibre16">Human Interface Device</em>)</td> <td class="calibre39"/> <td class="calibre39">1279</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Hindi</td> <td class="calibre39">India</td> <td class="calibre39">1081</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Hungarian</td> <td class="calibre39">Hungary</td> <td class="calibre39">1038</td> <td class="calibre39">1250</td></tr>
+<tr class="calibre37"><td class="calibre39">Icelandic</td> <td class="calibre39">Iceland</td> <td class="calibre39">1039</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Igbo</td> <td class="calibre39">Nigeria</td> <td class="calibre39">1136</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Indonesian</td> <td class="calibre39">Indonesia</td> <td class="calibre39">1057</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Italian<br class="calibre1"/>(<em class="calibre16">Default Italian Locale ID</em>)</td> <td class="calibre39">Italy</td> <td class="calibre39">1040</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Italian</td> <td class="calibre39">Switzerland</td> <td class="calibre39">2064</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Japanese</td> <td class="calibre39">Japan</td> <td class="calibre39">1041</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Kannada</td> <td class="calibre39">India</td> <td class="calibre39">1099</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Kashmiri</td> <td class="calibre39"/> <td class="calibre39">1120</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Kazakh</td> <td class="calibre39">Kazakhstan</td> <td class="calibre39">1087</td> <td class="calibre39">1251</td></tr>
+<tr class="calibre37"><td class="calibre39">Khmer</td> <td class="calibre39"/> <td class="calibre39">1107</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Konkani</td> <td class="calibre39">India</td> <td class="calibre39">1111</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Korean</td> <td class="calibre39">Korea</td> <td class="calibre39">1042</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Kyrgyz</td> <td class="calibre39">Kyrgyzstan</td> <td class="calibre39">1088</td> <td class="calibre39">1251</td></tr>
+<tr class="calibre37"><td class="calibre39">Lao</td> <td class="calibre39"/> <td class="calibre39">1108</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Latin</td> <td class="calibre39"/> <td class="calibre39">1142</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Latvian</td> <td class="calibre39">Latvia</td> <td class="calibre39">1062</td> <td class="calibre39">1257</td></tr>
+<tr class="calibre37"><td class="calibre39">Lithuanian</td> <td class="calibre39">Lithuania</td> <td class="calibre39">1063</td> <td class="calibre39">1257</td></tr>
+<tr class="calibre37"><td class="calibre39">Malay</td> <td class="calibre39">Brunei Darussalam</td> <td class="calibre39">2110</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Malay</td> <td class="calibre39">Malaysia</td> <td class="calibre39">1086</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Malayalam</td> <td class="calibre39"/> <td class="calibre39">1100</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Maltese</td> <td class="calibre39"/> <td class="calibre39">1082</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Manipuri</td> <td class="calibre39"/> <td class="calibre39">1112</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Maori</td> <td class="calibre39"/> <td class="calibre39">1153</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Marathi</td> <td class="calibre39">India</td> <td class="calibre39">1102</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Mongolian</td> <td class="calibre39">Mongolia</td> <td class="calibre39">1104</td> <td class="calibre39">1251</td></tr>
+<tr class="calibre37"><td class="calibre39">Mongolian</td> <td class="calibre39"/> <td class="calibre39">2128</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Nepali</td> <td class="calibre39"/> <td class="calibre39">1121</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Norwegian (<em class="calibre16">Bokmål</em>)</td> <td class="calibre39">Norway</td> <td class="calibre39">1044</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Norwegian (<em class="calibre16">Nynorsk</em>)</td> <td class="calibre39">Norway</td> <td class="calibre39">2068</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Oriya</td> <td class="calibre39"/> <td class="calibre39">1096</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Polish</td> <td class="calibre39">Poland</td> <td class="calibre39">1045</td> <td class="calibre39">1250</td></tr>
+<tr class="calibre37"><td class="calibre39">Portuguese</td> <td class="calibre39">Brazil</td> <td class="calibre39">1046</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Portuguese</td> <td class="calibre39">Portugal</td> <td class="calibre39">2070</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Punjabi</td> <td class="calibre39">India</td> <td class="calibre39">1094</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Raeto</td> <td class="calibre39">Romance</td> <td class="calibre39">1047</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Romanian</td> <td class="calibre39">Moldova</td> <td class="calibre39">2072</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Romanian</td> <td class="calibre39">Romania</td> <td class="calibre39">1048</td> <td class="calibre39">1250</td></tr>
+<tr class="calibre37"><td class="calibre39">Russian</td> <td class="calibre39">Moldova</td> <td class="calibre39">2073</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Russian</td> <td class="calibre39">Russia</td> <td class="calibre39">1049</td> <td class="calibre39">1251</td></tr>
+<tr class="calibre37"><td class="calibre39">Sami Lappish</td> <td class="calibre39"/> <td class="calibre39">1083</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Sanskrit</td> <td class="calibre39">India</td> <td class="calibre39">1103</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Serbian (<em class="calibre16">Cyrillic</em>)</td> <td class="calibre39">Serbia and Montenegro</td> <td class="calibre39">3098</td> <td class="calibre39">1251</td></tr>
+<tr class="calibre37"><td class="calibre39">Serbian (<em class="calibre16">Latin</em>)</td> <td class="calibre39">Serbia and Montenegro</td> <td class="calibre39">2074</td> <td class="calibre39">1250</td></tr>
+<tr class="calibre37"><td class="calibre39">Sesotho (<em class="calibre16">Sutu</em>)</td> <td class="calibre39"/> <td class="calibre39">1072</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Setsuana</td> <td class="calibre39"/> <td class="calibre39">1074</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Sindhi</td> <td class="calibre39"/> <td class="calibre39">1113</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Sinhala; Sinhalese</td> <td class="calibre39"/> <td class="calibre39">1115</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Slovak</td> <td class="calibre39">Slovakia</td> <td class="calibre39">1051</td> <td class="calibre39">1250</td></tr>
+<tr class="calibre37"><td class="calibre39">Slovenian</td> <td class="calibre39">Slovenia</td> <td class="calibre39">1060</td> <td class="calibre39">1250</td></tr>
+<tr class="calibre37"><td class="calibre39">Somali</td> <td class="calibre39"/> <td class="calibre39">1143</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Sorbian</td> <td class="calibre39"/> <td class="calibre39">1070</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Argentina</td> <td class="calibre39">11274</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Bolivia</td> <td class="calibre39">16394</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Chile</td> <td class="calibre39">13322</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Colombia</td> <td class="calibre39">9226</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Costa Rica</td> <td class="calibre39">5130</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Dominican Republic</td> <td class="calibre39">7178</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Ecuador</td> <td class="calibre39">12298</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">El Salvador</td> <td class="calibre39">17418</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Guatemala</td> <td class="calibre39">4106</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Honduras</td> <td class="calibre39">18442</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Mexico</td> <td class="calibre39">2058</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Nicaragua</td> <td class="calibre39">19466</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Panama</td> <td class="calibre39">6154</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Paraguay</td> <td class="calibre39">15370</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Peru</td> <td class="calibre39">10250</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Puerto Rico</td> <td class="calibre39">20490</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Spain</td> <td class="calibre39">1034</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Uruguay</td> <td class="calibre39">14346</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish</td> <td class="calibre39">Venezuela</td> <td class="calibre39">8202</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Spanish – Modern Sort<br class="calibre1"/>(<em class="calibre16">Default Spanish Locale ID</em>)</td> <td class="calibre39">Spain</td> <td class="calibre39">3082</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Swahili</td> <td class="calibre39">Kenya</td> <td class="calibre39">1089</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Swedish</td> <td class="calibre39">Finland</td> <td class="calibre39">2077</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Swedish</td> <td class="calibre39">Sweden</td> <td class="calibre39">1053</td> <td class="calibre39">1252</td></tr>
+<tr class="calibre37"><td class="calibre39">Syriac</td> <td class="calibre39">Syria</td> <td class="calibre39">1114</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Tajik</td> <td class="calibre39"/> <td class="calibre39">1064</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Tamil</td> <td class="calibre39">India</td> <td class="calibre39">1097</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Tatar</td> <td class="calibre39">Tatarstan</td> <td class="calibre39">1092</td> <td class="calibre39">1251</td></tr>
+<tr class="calibre37"><td class="calibre39">Telugu</td> <td class="calibre39">India</td> <td class="calibre39">1098</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Thai</td> <td class="calibre39">Thailand</td> <td class="calibre39">1054</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Tibetan</td> <td class="calibre39"/> <td class="calibre39">1105</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Tsonga</td> <td class="calibre39"/> <td class="calibre39">1073</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Turkish</td> <td class="calibre39">Turkey</td> <td class="calibre39">1055</td> <td class="calibre39">1254</td></tr>
+<tr class="calibre37"><td class="calibre39">Turkmen</td> <td class="calibre39"/> <td class="calibre39">1090</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Ukrainian</td> <td class="calibre39">Ukraine</td> <td class="calibre39">1058</td> <td class="calibre39">1251</td></tr>
+<tr class="calibre37"><td class="calibre39">Urdu</td> <td class="calibre39">Islamic Republic of Pakistan</td> <td class="calibre39">1056</td> <td class="calibre39">1256</td></tr>
+<tr class="calibre37"><td class="calibre39">Uzbek (<em class="calibre16">Cyrillic</em>)</td> <td class="calibre39">Uzbekistan</td> <td class="calibre39">2115</td> <td class="calibre39">1251</td></tr>
+<tr class="calibre37"><td class="calibre39">Uzbek (<em class="calibre16">Latin</em>)</td> <td class="calibre39">Uzbekistan</td> <td class="calibre39">1091</td> <td class="calibre39">1254</td></tr>
+<tr class="calibre37"><td class="calibre39">Venda</td> <td class="calibre39"/> <td class="calibre39">1075</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Vietnamese</td> <td class="calibre39">Viet Nam</td> <td class="calibre39">1066</td> <td class="calibre39">1258</td></tr>
+<tr class="calibre37"><td class="calibre39">Welsh</td> <td class="calibre39">United Kingdom</td> <td class="calibre39">1106</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Xhosa</td> <td class="calibre39"/> <td class="calibre39">1076</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Yiddish</td> <td class="calibre39"/> <td class="calibre39">1085</td> <td class="calibre39"/></tr>
+<tr class="calibre37"><td class="calibre39">Zulu</td> <td class="calibre39"/> <td class="calibre39">1077</td> <td class="calibre39"/></tr>
+</table>
+<a name="ansi" class="pcalibre calibre11"></a>
+<h2 class="calibre12">Кодовые страницы ANSI в Windows</h2>
+<p class="calibre13">Таблица составлена по материалам: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd317756%28v=vs.85%29.aspx" class="pcalibre calibre11">Code Page Identifiers</a>, Microsoft Developer Network (MSDN).</p>
+<p class="calibre13">К исходной таблице от MSDN добавлена колонка «Наименование в Lingvo» с формой наименований, используемых в директиве <span class="code1">#SOURCE_CODE_PAGE</span>. <em class="calibre16">Знаки вопроса в некоторых строках означают, что работоспособность данных наименований выяснить не удалось.</em></p>
+<table class="calibre36">
+<tr class="calibre37"><th class="calibre38">Code Page</th> <th class="calibre38">.NET наименование</th> <th class="calibre38">Дополнительная информация</th> <th class="calibre38">Наименование в Lingvo</th></tr>
+<tr class="calibre37"><td class="calibre39">874</td> <td class="calibre39">windows-874</td> <td class="calibre39">ANSI/OEM Thai (ISO 8859-11); Thai (Windows)</td> <td class="calibre39">?</td></tr>
+<tr class="calibre37"><td class="calibre39">1250</td> <td class="calibre39">windows-1250</td> <td class="calibre39">ANSI Central European; Central European (Windows)</td> <td class="calibre39">EasternEuropean</td></tr>
+<tr class="calibre37"><td class="calibre39">1251</td> <td class="calibre39">windows-1251</td> <td class="calibre39">ANSI Cyrillic; Cyrillic (Windows)</td> <td class="calibre39">Cyrillic</td></tr>
+<tr class="calibre37"><td class="calibre39">1252</td> <td class="calibre39">windows-1252</td> <td class="calibre39">ANSI Latin 1; Western European (Windows)</td> <td class="calibre39">Latin</td></tr>
+<tr class="calibre37"><td class="calibre39">1253</td> <td class="calibre39">windows-1253</td> <td class="calibre39">ANSI Greek; Greek (Windows)</td> <td class="calibre39">Greek</td></tr>
+<tr class="calibre37"><td class="calibre39">1254</td> <td class="calibre39">windows-1254</td> <td class="calibre39">ANSI Turkish; Turkish (Windows)</td> <td class="calibre39">Turkish</td></tr>
+<tr class="calibre37"><td class="calibre39">1255</td> <td class="calibre39">windows-1255</td> <td class="calibre39">ANSI Hebrew; Hebrew (Windows)</td> <td class="calibre39">?</td></tr>
+<tr class="calibre37"><td class="calibre39">1256</td> <td class="calibre39">windows-1256</td> <td class="calibre39">ANSI Arabic; Arabic (Windows)</td> <td class="calibre39">Arabic</td></tr>
+<tr class="calibre37"><td class="calibre39">1257</td> <td class="calibre39">windows-1257</td> <td class="calibre39">ANSI Baltic; Baltic (Windows)</td> <td class="calibre39">Baltic</td></tr>
+<tr class="calibre37"><td class="calibre39">1258</td> <td class="calibre39">windows-1258</td> <td class="calibre39">ANSI/OEM Vietnamese; Vietnamese (Windows)</td> <td class="calibre39">?</td></tr>
+</table>
+</div>
+<div id="footer" class="calibre14">
+<p class="calibre15">Справочник по DSL • Версия 0.9.3 beta • 22.09.2015</p>
+<p class="calibre15">Copyleft (ɔ) 2015 yozhic. Свободный контент. Все права открыты и неограничены. Никаких гарантий и ответственности.</p>
+</div>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+        <h2><a href="../index.html"> Table of contents</a></h2>
+        <div>
+            <ul>
+                <li>
+                    <a href="index.html">Титульный лист</a>
+                </li>
+                <li>
+                    <a href="preface.html">Предисловие</a>
+                    <ul>
+                        <li>
+                            <a href="preface.html#author">От составителя</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#terms">Особенности терминологии</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#legend">Условные обозначения</a>
+                        </li>
+                        <li>
+                            <a href="preface.html#thanks">Благодарности</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dsl.html">Что такое DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dsl.html#lang">О языке DSL</a>
+                        </li>
+                        <li>
+                            <a href="dsl.html#format">О формате DSL</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="create.html">О создании словарей DSL</a>
+                    <ul>
+                        <li>
+                            <a href="create.html#easy">Простой словарь DSL</a>
+                        </li>
+                        <li>
+                            <a href="create.html#cool">Структурированный словарь DSL
+                                с форматированием</a>
+                        </li>
+                        <li>
+                            <a href="create.html#tools">Рекомендуемые инструменты</a>
+                        </li>
+                        <li>
+                            <a href="create.html#books">Рекомендуемая литература</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dict.html">Строение словаря DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dict.html#main">Общие сведения</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#names">Наименование файлов словаря</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#dsl">Файл основного текста</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#ann">Файл аннотации</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#bmp">Иконка</a>
+                        </li>
+                        <li>
+                            <a href="dict.html#abrv">Файл аббревиатур</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="entry.html">Структура словарной статьи</a>
+                    <ul>
+                        <li>
+                            <a href="entry.html#article">Словарная статья</a>
+                        </li>
+                        <li>
+                            <a href="entry.html#headword">Заголовок статьи</a>
+                        </li>
+                        <li>
+                            <a href="entry.html#body">Тело статьи</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="tag_list.html">Тэги DSL</a>
+                    <ul>
+                        <li>
+                            <a href="tag_system.html">О тэгах DSL</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_system.html#main">Устройство тегов</a>
+                                </li>
+                                <li>
+                                    <a href="tag_system.html#meta_lit">Метасимволы и
+                                        литералы</a>
+                                </li>
+                                <li>
+                                    <a href="tag_system.html#comments">Общие замечания</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_list.html">Перечень тэгов и команд DSL</a>
+                        </li>
+                        <li>
+                            <a href="tag_format.html">Тэги форматирования текста</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_format.html#b">Тэг B</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#i">Тэг I</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#u">Тэг U</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#c">Тэг C</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#sup">Тэг SUP</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#sub">Тэг SUB</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#m">Тэг M</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#str">Тэг ударения</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#br">Тэг BR</a>
+                                </li>
+                                <li>
+                                    <a href="tag_format.html#circ">Команда ^</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_struct.html">Тэги словарной структуры</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_struct.html#p">Тэг P</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#t">Тэг T</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#ast">Тэг *</a>
+                                </li>
+                                <li>
+                                    <a href="tag_struct.html#at">Команда @</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_handling.html">Тэги поисковой обработки</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_handling.html#ex">Тэг EX</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#com">Тэг COM</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trn">Тэг TRN</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trn1">Тэг TRN1</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#trs">Тэг !TRS</a>
+                                </li>
+                                <li>
+                                    <a href="tag_handling.html#lang">Тэг LANG</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_mm.html">Тэги мультимедиа</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_mm.html#s">Тэг S</a>
+                                    <ul>
+                                        <li>
+                                            <a href="tag_mm.html#images">Изображения</a>
+                                        </li>
+                                        <li>
+                                            <a href="tag_mm.html#sound">Звук</a>
+                                        </li>
+                                        <li>
+                                            <a href="tag_mm.html#movie">Видео</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="tag_mm.html#video">Тэг VIDEO</a>
+                                </li>
+                                <li>
+                                    <a href="tag_mm.html#preview">Тэг PREVIEW</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_links.html">Ссылки</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_links.html#main">Общие сведения</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#ref1">Тэг &lt;&lt; &gt;&gt;</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#ref2">Тэг REF</a>
+                                </li>
+                                <li>
+                                    <a href="tag_links.html#url">Тэг URL</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tag_service.html">Служебные тэги и команды</a>
+                            <ul>
+                                <li>
+                                    <a href="tag_service.html#comm">Тэг {{ }}</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#alt">Команда ( )</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#unsort">Команда { }</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#tilde">Команда ~</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#backslash">Команда \</a>
+                                </li>
+                                <li>
+                                    <a href="tag_service.html#number">Команда #</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="directives.html">Директивы предварительной
+                                обработки</a>
+                            <ul>
+                                <li>
+                                    <a href="directives.html#main">Общее описание</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#name">Директива #NAME</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#index">Директива
+                                        #INDEX_LANGUAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#contents">Директива
+                                        #CONTENTS_LANGUAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#source">Директива
+                                        #SOURCE_CODE_PAGE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#include">Директива
+                                        #INCLUDE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#icon">Директива #ICON_FILE</a>
+                                </li>
+                                <li>
+                                    <a href="directives.html#lang">Директива
+                                        #LANGUAGE</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dsl_comp.html">Компиляция и компилятор DSL</a>
+                    <ul>
+                        <li>
+                            <a href="dsl_comp.html#main">Общие сведения</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#gui">Графический интерфейс
+                                пользователя</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#cmd">Командная строка</a>
+                        </li>
+                        <li>
+                            <a href="dsl_comp.html#syntax">Отчёт об ошибках</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="colors.html">Цветовая палитра DSL</a>
+                    <ul>
+                        <li>
+                            <a href="colors.html#colors_hue">Сортировка по группам
+                                оттенков</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_gamma1">Сортировка по цветовой
+                                гамме (первый способ)</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_gamma2">Сортировка по цветовой
+                                гамме (второй способ)</a>
+                        </li>
+                        <li>
+                            <a href="colors.html#colors_abc">Сортировка по
+                                алфавиту</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="langs.html">Списки языков</a>
+                    <ul>
+                        <li>
+                            <a href="langs.html#supported">Языки, поддерживаемые
+                                Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#iso">Коды наименований языков</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#lcid">Коды локалей Microsoft</a>
+                        </li>
+                        <li>
+                            <a href="langs.html#ansi">Кодовые страницы ANSI в
+                                Windows</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="additional.html">Сопутствующие сведения</a>
+                    <ul>
+                        <li>
+                            <a href="search.html">Поиск и индексирование в Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="var_dicts.html">Виды файлов словарей в Lingvo</a>
+                        </li>
+                        <li>
+                            <a href="spaces.html">Об использовании нестандартных
+                                пробелов</a>
+                        </li>
+                        <li>
+                            <a href="lexicography.html">Немного о лексикографии</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="history.html">Из истории Lingvo</a>
+                    <ul>
+                        <li>
+                            <a href="history.html#table">Сводная таблица по истории
+                                развития синтаксиса языка DSL</a>
+                        </li>
+                        <li>
+                            <a href="lingvo4.html">Lingvo 4.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo5.html">Lingvo 5.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo6.html">Lingvo 6.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo6_5.html">Lingvo 6.5</a>
+                        </li>
+                        <li>
+                            <a href="lingvo7.html">Lingvo 7.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo8.html">Lingvo 8.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo9.html">Lingvo 9.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo10.html">Lingvo 10.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo11.html">Lingvo 11.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo12.html">Lingvo 12.0</a>
+                        </li>
+                        <li>
+                            <a href="lingvo14.html">Lingvo x3 (14.0)</a>
+                        </li>
+                        <li>
+                            <a href="lingvo15.html">Lingvo x5 (15.0)</a>
+                        </li>
+                        <li>
+                            <a href="lingvo16.html">Lingvo x6 (16.0)</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="colors.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="additional.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>
