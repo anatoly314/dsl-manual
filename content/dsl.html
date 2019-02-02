@@ -4,108 +4,143 @@
 
     <title>Что такое DSL</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
-<link href="page_styles.css" rel="stylesheet" type="text/css"/>
-
-  
+    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <link href="page_styles.css" rel="stylesheet" type="text/css"/>
 
 
-<link href="calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+    <link href="calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet"/>
 
 </head>
 <body>
 
 <div class="calibreMeta">
-  <div class="calibreMetaTitle">
-  
-  
-    
-    <h1>
-      <a href="../index.html">Справочник по DSL
-</a>
-    </h1>
-    
-    
-  
-  </div>
-  <div class="calibreMetaAuthor">
-    Unknown
+    <div class="calibreMetaTitle">
 
-  </div>
+
+        <h1>
+            <a href="../index.html">Справочник по DSL
+            </a>
+        </h1>
+
+
+    </div>
+    <div class="calibreMetaAuthor">
+        Unknown
+
+    </div>
 </div>
 
 <div class="calibreMain">
 
-  <div class="calibreEbookContent">
-    
-      <div class="calibreEbNavTop">
-        
-          <a href="preface.html" class="calibreAPrev">previous page</a>
-        
+    <div class="calibreEbookContent">
 
-        
-          <a href="create.html" class="calibreANext"> next page</a>
-        
-      </div>
-    
+        <div class="calibreEbNavTop">
 
-    
-<div id="header" class="calibre7">Справочник по DSL</div>
-<div id="main" class="calibre8">
-<h1 class="calibre9">Что такое DSL</h1>
-<p class="content"><img src="line.png" class="calibre10"/></p>
-<p class="content"><a href="#lang" class="content1 pcalibre">О языке DSL</a></p>
-<p class="content"><a href="#format" class="content1 pcalibre">О формате DSL</a></p>
-<p class="content"><img src="line.png" class="calibre10"/></p>
-<a name="lang" class="pcalibre calibre11"></a>
-<h2 class="calibre12">О языке DSL</h2>
-<p class="calibre13"><strong class="calibre4">DSL</strong> (<strong class="calibre4">D</strong>ictionary <strong class="calibre4">S</strong>pecification <strong class="calibre4">L</strong>anguage) – это язык описания словарей. Основное его назначение – описание внешнего вида словарной статьи. Эта задача решается в DSL путём разметки текста при помощи небольшого набора структурных и семантических элементов – дескрипторов или тэгов. Использование тэгов причисляет DSL к компьютерным формальным языкам разметки гипертекстовых документов, таким как HTML, XML и другим. На сегодняшний день синтаксис DSL включает в себя 32 тэга и команд, а также 7 директив предварительной обработки. Язык DSL не сложен в освоении, с его помощью можно легко создать относительно простой, но красиво оформленный словарь.</p>
-<p class="calibre13">Язык DSL был разработан специалистами российской компании ABBYY. Изначально он предназначался для создания электронных словарей с целью использования их в словарной программе Lingvo. Идея создания Lingvo принадлежит Давиду Евгеньевичу Яну, ныне председателю совета директоров ABBYY. К разработке Lingvo он приступил в 1989 году совместно с программистом Александром Москалёвым, будучи тогда студентом факультета общей и прикладной физики МФТИ. Первая версия 1.0 была выпущена в 1990 году. В 1993 Давид Ян защитил диплом на тему «Язык описания словарей DSL».</p>
-<p class="calibre13">Справочные материалы по DSL стали включать в дистрибутив программы, начиная с первых версий. Поначалу это были краткие комментарии внутри демонстрационного словарика <span class="code_names">EXAMPLE.DSL</span>, затем, со временем, было составлено отдельное руководство. Утилита для компиляции пользовательских словарей также входила в самые ранние дистрибутивы. Тогда она именовалась <span class="code_names">LC.COM</span> (Lingvo Compiler), и впоследствии, начиная с версии 6.0, приобрела своё современное название – DSL Compiler. Обнародование материалов по языку DSL и рекомендаций по созданию собственных словарей положили начало широкому распространению DSL и пробудили интерес пользователей к активному словаределанию.</p>
-<a name="format" class="pcalibre calibre11"></a>
-<h2 class="calibre12">О формате DSL</h2>
-<p class="calibre13">Говоря о формате DSL, справедливо выделять два случая употребления этого понятия: формат файла и формат словаря.</p>
-<p class="calibre13">Файл в формате DSL представляет собой простой текстовый документ с расширением <span class="code_names">*.dsl</span>, в кодировке ANSI или Unicode (UTF-16 LE), содержащий текст с разметкой на языке DSL.</p>
-<p class="calibre13">Словарь в формате DSL – это электронный словарь, состоящий из четырёх отдельных, редактируемых файлов: основного текста словаря, аннотации, иконки и списка аббревиатур.</p>
-<p class="calibre13">Авторы DSL, разработчики из компании ABBYY, по факту рассматривают его, как формат исходный и неокончательный. В чистом виде он не может быть подключен к программе ABBYY Lingvo – для этого его необходимо компилировать в формат LSD. Компиляцией называется процесс, во время которого происходит перевод (трансляция) из формы, ориентированной на лучшее понимание человеком, в форму, ориентированную на лучшее понимание компьютером. При этом данные из четырёх исходных файлов словаря объединяются, сжимаются, кодируются и помещаются в один контейнер – файл <span class="code_names">*.lsd</span>. Результирующий LSD, будучи сжатым и закодированным, редактированию уже не подлежит. Таким образом, мы можем заключить, что, по замыслу разработчиков, DSL является исходным редактируемым форматом электронного словаря Lingvo, предназначенным для преобразования в целевой нередактируемый формат LSD.</p>
-<p class="calibre13">Однако свойства, которыми обладает DSL, предполагают бо́льшую самостоятельность и независимость. Он обладает достаточными средствами для отображения в программах без дополнительных преобразований и компиляций и, кроме того, является форматом открытым.</p>
-<p class="calibre13">Действительно, мы видим, что в настоящее время DSL получил распространение бо́льшее, чем LSD – объект его предназначения. Разработчики других словарных оболочек предпочитают реализовывать в программах поддержку DSL напрямую, без компиляций и крайне редко проявляют интерес в формату LSD. Относительно последнего известен только один случай: GoldenDict под Android, который позволяет подключать LSD только версии x3, хотя и DSL поддерживает тоже.</p>
-<p class="calibre13">На сегодняшний день словари DSL понимают следующие программы.</p>
-<table class="list">
-<tr class="list1">
-<td class="list2">В системе Windows:</td>
-<td class="list2">GoldenDict, SimpleDict.</td>
-</tr>
-<tr class="list1">
-<td class="list2">В системе Mac OS X:</td>
-<td class="list2">GoldenDict, TranslateIt!, Leopard Dictionary.</td>
-</tr>
-<tr class="list1">
-<td class="list2">В системе Linux:</td>
-<td class="list2">GoldenDict.</td>
-</tr>
-<tr class="list1">
-<td class="list2">В системе Android:</td>
-<td class="list2">GoldenDict, Fora Dictionary, JaLingo, SlovoEd, ColorDict.</td>
-</tr>
-<tr class="list1">
-<td class="list2">В системе iOS:</td>
-<td class="list2">Dictionary Universal.</td>
-</tr>
-</table>
-<p class="calibre13">Приведённый список является неполным и его состав может меняться, поскольку формат набирает популярность и его поддержка включается в новые разработки. При этом некоторые программы не отображают DSL в исходном виде, но предоставляют средства для его конвертации в свой собственный словарный формат.</p>
-</div>
-<div id="footer" class="calibre14">
-<p class="calibre15">Справочник по DSL • Версия 0.9.3 beta • 22.09.2015</p>
-<p class="calibre15">Copyleft (ɔ) 2015 yozhic. Свободный контент. Все права открыты и неограничены. Никаких гарантий и ответственности.</p>
-</div>
+            <a href="preface.html" class="calibreAPrev">previous page</a>
 
 
+            <a href="create.html" class="calibreANext"> next page</a>
 
-  </div>
+        </div>
 
-  
-  <div class="calibreToc">
+
+        <div id="header" class="calibre7">Справочник по DSL</div>
+        <div id="main" class="calibre8">
+            <h1 class="calibre9">Что такое DSL</h1>
+            <p class="content"><img src="line.png" class="calibre10"/></p>
+            <p class="content"><a href="#lang" class="content1 pcalibre">О языке DSL</a></p>
+            <p class="content"><a href="#format" class="content1 pcalibre">О формате DSL</a></p>
+            <p class="content"><img src="line.png" class="calibre10"/></p>
+            <a name="lang" class="pcalibre calibre11"></a>
+            <h2 class="calibre12">О языке DSL</h2>
+            <p class="calibre13"><strong class="calibre4">DSL</strong> (<strong class="calibre4">D</strong>ictionary
+                <strong class="calibre4">S</strong>pecification <strong class="calibre4">L</strong>anguage) – это язык
+                описания словарей. Основное его назначение – описание внешнего вида словарной статьи. Эта задача
+                решается в DSL путём разметки текста при помощи небольшого набора структурных и семантических элементов
+                – дескрипторов или тэгов. Использование тэгов причисляет DSL к компьютерным формальным языкам разметки
+                гипертекстовых документов, таким как HTML, XML и другим. На сегодняшний день синтаксис DSL включает в
+                себя 32 тэга и команд, а также 7 директив предварительной обработки. Язык DSL не сложен в освоении, с
+                его помощью можно легко создать относительно простой, но красиво оформленный словарь.</p>
+            <p class="calibre13">Язык DSL был разработан специалистами российской компании ABBYY. Изначально он
+                предназначался для создания электронных словарей с целью использования их в словарной программе Lingvo.
+                Идея создания Lingvo принадлежит Давиду Евгеньевичу Яну, ныне председателю совета директоров ABBYY. К
+                разработке Lingvo он приступил в 1989 году совместно с программистом Александром Москалёвым, будучи
+                тогда студентом факультета общей и прикладной физики МФТИ. Первая версия 1.0 была выпущена в 1990 году.
+                В 1993 Давид Ян защитил диплом на тему «Язык описания словарей DSL».</p>
+            <p class="calibre13">Справочные материалы по DSL стали включать в дистрибутив программы, начиная с первых
+                версий. Поначалу это были краткие комментарии внутри демонстрационного словарика <span
+                        class="code_names">EXAMPLE.DSL</span>, затем, со временем, было составлено отдельное
+                руководство. Утилита для компиляции пользовательских словарей также входила в самые ранние дистрибутивы.
+                Тогда она именовалась <span class="code_names">LC.COM</span> (Lingvo Compiler), и впоследствии, начиная
+                с версии 6.0, приобрела своё современное название – DSL Compiler. Обнародование материалов по языку DSL
+                и рекомендаций по созданию собственных словарей положили начало широкому распространению DSL и пробудили
+                интерес пользователей к активному словаределанию.</p>
+            <a name="format" class="pcalibre calibre11"></a>
+            <h2 class="calibre12">О формате DSL</h2>
+            <p class="calibre13">Говоря о формате DSL, справедливо выделять два случая употребления этого понятия:
+                формат файла и формат словаря.</p>
+            <p class="calibre13">Файл в формате DSL представляет собой простой текстовый документ с расширением <span
+                    class="code_names">*.dsl</span>, в кодировке ANSI или Unicode (UTF-16 LE), содержащий текст с
+                разметкой на языке DSL.</p>
+            <p class="calibre13">Словарь в формате DSL – это электронный словарь, состоящий из четырёх отдельных,
+                редактируемых файлов: основного текста словаря, аннотации, иконки и списка аббревиатур.</p>
+            <p class="calibre13">Авторы DSL, разработчики из компании ABBYY, по факту рассматривают его, как формат
+                исходный и неокончательный. В чистом виде он не может быть подключен к программе ABBYY Lingvo – для
+                этого его необходимо компилировать в формат LSD. Компиляцией называется процесс, во время которого
+                происходит перевод (трансляция) из формы, ориентированной на лучшее понимание человеком, в форму,
+                ориентированную на лучшее понимание компьютером. При этом данные из четырёх исходных файлов словаря
+                объединяются, сжимаются, кодируются и помещаются в один контейнер – файл <span
+                        class="code_names">*.lsd</span>. Результирующий LSD, будучи сжатым и закодированным,
+                редактированию уже не подлежит. Таким образом, мы можем заключить, что, по замыслу разработчиков, DSL
+                является исходным редактируемым форматом электронного словаря Lingvo, предназначенным для преобразования
+                в целевой нередактируемый формат LSD.</p>
+            <p class="calibre13">Однако свойства, которыми обладает DSL, предполагают бо́льшую самостоятельность и
+                независимость. Он обладает достаточными средствами для отображения в программах без дополнительных
+                преобразований и компиляций и, кроме того, является форматом открытым.</p>
+            <p class="calibre13">Действительно, мы видим, что в настоящее время DSL получил распространение бо́льшее,
+                чем LSD – объект его предназначения. Разработчики других словарных оболочек предпочитают реализовывать в
+                программах поддержку DSL напрямую, без компиляций и крайне редко проявляют интерес в формату LSD.
+                Относительно последнего известен только один случай: GoldenDict под Android, который позволяет
+                подключать LSD только версии x3, хотя и DSL поддерживает тоже.</p>
+            <p class="calibre13">На сегодняшний день словари DSL понимают следующие программы.</p>
+            <table class="list">
+                <tr class="list1">
+                    <td class="list2">В системе Windows:</td>
+                    <td class="list2">GoldenDict, SimpleDict.</td>
+                </tr>
+                <tr class="list1">
+                    <td class="list2">В системе Mac OS X:</td>
+                    <td class="list2">GoldenDict, TranslateIt!, Leopard Dictionary.</td>
+                </tr>
+                <tr class="list1">
+                    <td class="list2">В системе Linux:</td>
+                    <td class="list2">GoldenDict.</td>
+                </tr>
+                <tr class="list1">
+                    <td class="list2">В системе Android:</td>
+                    <td class="list2">GoldenDict, Fora Dictionary, JaLingo, SlovoEd, ColorDict.</td>
+                </tr>
+                <tr class="list1">
+                    <td class="list2">В системе iOS:</td>
+                    <td class="list2">Dictionary Universal.</td>
+                </tr>
+            </table>
+            <p class="calibre13">Приведённый список является неполным и его состав может меняться, поскольку формат
+                набирает популярность и его поддержка включается в новые разработки. При этом некоторые программы не
+                отображают DSL в исходном виде, но предоставляют средства для его конвертации в свой собственный
+                словарный формат.</p>
+        </div>
+        <div id="footer" class="calibre14">
+            <p class="calibre15">Справочник по DSL • Версия 0.9.3 beta • 22.09.2015</p>
+            <p class="calibre15">Copyleft (ɔ) 2015 yozhic. Свободный контент. Все права открыты и неограничены. Никаких
+                гарантий и ответственности.</p>
+        </div>
+
+
+    </div>
+
+
+    <div class="calibreToc">
         <h2><a href="../index.html"> Table of contents</a></h2>
         <div>
             <ul>
@@ -522,19 +557,19 @@
 
 
     </div>
-  
 
-  <div class="calibreEbNav">
-    
-      <a href="preface.html" class="calibreAPrev">previous page</a>
-    
 
-    <a href="../index.html" class="calibreAHome"> start</a>
+    <div class="calibreEbNav">
 
-    
-      <a href="create.html" class="calibreANext"> next page</a>
-    
-  </div>
+        <a href="preface.html" class="calibreAPrev">previous page</a>
+
+
+        <a href="../index.html" class="calibreAHome"> start</a>
+
+
+        <a href="create.html" class="calibreANext"> next page</a>
+
+    </div>
 
 </div>
 
