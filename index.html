@@ -8,10 +8,28 @@
 
 
     <link href="calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet"/>
+    <style>
+        #calibreToc {
+            position: fixed;
+            width: 20%;
+            height:100vh;
+            overflow-y: scroll;
+        }
+
+        #content {
+            margin: 60px 0 0 20%;
+            padding: 0 30px 0 30px;
+            overflow-y: scroll;
+            position: fixed;
+            width: 80%;
+            height:100vh;
+        }
+
+    </style>
 
 </head>
 <body>
-<div class="calibreToc">
+<div id="calibreToc">
     <h2><a href="#../index.html"> Table of contents</a></h2>
     <div>
         <ul>
