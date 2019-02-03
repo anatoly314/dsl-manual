@@ -7629,7 +7629,7 @@
     margin-top: 5px
     }
 .content1 {
-    background: url(bkm.png) no-repeat 0 3px;
+    background: url(../pictures/bkm.png) no-repeat 0 3px;
     color: black;
     font-size: 1.125em;
     line-height: 1.2;
@@ -8021,11 +8021,11 @@
     margin-top: 20px
     }
 .ninja-td {
-    background: url(ninja.png) no-repeat;
+    background: url(../pictures/ninja.png) no-repeat;
     padding-left: 30px
     }
 .ninja1 {
-    background: #FFFFE1 url(ninja.png) no-repeat 10px 8px;
+    background: #FFFFE1 url(../pictures/ninja.png) no-repeat 10px 8px;
     border-bottom-color: #FFEF82;
     border-bottom-style: solid;
     border-bottom-width: 1px;
